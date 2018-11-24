@@ -1,0 +1,23 @@
+[
+
+  {
+    "degree":"PhD",
+    "number": 2,
+    "category":"Literature"
+  },
+  {
+    "degree":"McS",
+    "number": 2,
+    "category":"Literature"
+  },
+  {
+    "degree":"graduate",
+    "number": 1,
+    "category":"Literature"
+  },
+  {
+    "degree":"nograd",
+    "number": 1,
+    "category":"Literature"
+  }
+]

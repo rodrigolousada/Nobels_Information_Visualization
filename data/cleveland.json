@@ -6,7 +6,8 @@
     "degree": "McS",
     "category":"Literature",
     "countryAffiliation":"Russia",
-    "countryBorn": "China"
+    "countryBorn": "China",
+    "Affiliation": "NYU"
   },
 
   {
@@ -16,7 +17,9 @@
     "degree": "PhD",
     "category":"Literature",
     "countryAffiliation":"Portugal",
-    "countryBorn": "Portugal"
+    "countryBorn": "Portugal",
+    "Affiliation": "MIT"
+
   },
   {
     "name": "Pedro Pires",
@@ -25,7 +28,9 @@
     "degree": "PhD",
     "category":"Literature",
     "countryAffiliation":"United States",
-    "countryBorn": "Spain"
+    "countryBorn": "Spain",
+    "Affiliation": "Harvard"
+
   },
   {
     "name": "Zé Isildro",
@@ -33,7 +38,8 @@
     "age": 65,
     "degree": "graduate",
     "category":"Literature",
-    "countryBorn": "Russia"
+    "countryBorn": "Russia",
+    "Affiliation": "NYU"
 
   },
   {
@@ -41,14 +47,18 @@
     "year": 1984,
     "age": 34,
     "degree": "McS",
-    "category":"Literature"
+    "category":"Literature",
+    "Affiliation": "Harvard"
+
   },
   {
     "name": "Ilda Jesus",
     "year": 1990,
     "age": 67,
     "degree": "nograd",
-    "category":"Literature"
+    "category":"Literature",
+    "Affiliation": "NYU"
+
 
   }
 ]

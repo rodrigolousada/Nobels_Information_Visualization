@@ -1,0 +1,12 @@
+{
+"nodes":[
+{"node":0,"name":"Literature"},
+{"node":1,"name":"MIT"},
+{"node":2,"name":"Harvard"},
+{"node":3,"name":"NYU"}
+],
+"links":[
+{"source":0,"target":2,"value":2},
+{"source":0,"target":3,"value":3},
+{"source":0,"target":1,"value":1}
+]}

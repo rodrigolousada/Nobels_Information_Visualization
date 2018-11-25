@@ -445,8 +445,6 @@ function world_map(){
       }
 }
 
-//==================== End  world_map   ========================
-
 //==================== Sankey Diagram   ========================
 
 function gen_sankey(){
@@ -454,7 +452,7 @@ function gen_sankey(){
 
 
   var units = "Widgets";
-
+  var rect;
   // set the dimensions and margins of the graph
   var margin = {top: 10, right: 10, bottom: 10, left: 10},
       width = 250 - margin.left - margin.right,
@@ -498,7 +496,30 @@ function gen_sankey(){
         .attr("class", "link")
         .attr("d", path)
         .style("stroke-width", function(d) { return Math.max(1, d.dy); })
-        .sort(function(a, b) { return b.dy - a.dy; });
+        .sort(function(a, b) { return b.dy - a.dy; })
+        .on("mouseover", function(d){
+            d3.selectAll("circle,rect,path")
+              .transition()
+              .duration("500")
+              .style("opacity",0.5);
+            d3.selectAll("circle[Affiliation=\'" + d.target.name + "\']")
+              .transition()
+              .duration("200")
+              .style('r',r*2 )
+              .attr("fill","green");
+         })
+         .on("mouseout", function(d){
+             d3.selectAll("circle,rect,path")
+               .transition()
+               .duration("200")
+               .style("opacity",1);
+             d3.selectAll("circle[Affiliation=\'" + d.target.name + "\']")
+               .transition()
+               .duration("200")
+               .style('r',r )
+               .attr("fill","purple");
+          })
+        ;
 
   // add the link titles
     link.append("title")
@@ -520,20 +541,50 @@ function gen_sankey(){
           .on("start", function() {
             this.parentNode.appendChild(this);
           })
-          .on("drag", dragmove));
+          .on("drag", dragmove))
+          .on("mouseover", function(d){
+              d3.selectAll("circle,rect,path")
+                .transition()
+                .duration("200")
+                .style("opacity",0.5);
+              d3.select(this)
+                .style("opacity", 1);
+              d3.selectAll("circle[Affiliation=\'" + d.name + "\']")
+                .transition()
+                .duration("200")
+                .style('r',r*2 )
+                .attr("fill","green");
+           })
+           .on("mouseout", function(d){
+               d3.selectAll("circle,rect,path")
+                 .transition()
+                 .duration("200")
+                 .style("opacity",1);
+               d3.selectAll("circle[Affiliation=\'" + d.name + "\']")
+                 .transition()
+                 .duration("200")
+                 .style('r',r )
+                 .attr("fill","purple");
+            })
+          ;
 
   // add the rectangles for the nodes
-    node.append("rect")
+    rect = node.append("rect")
         .attr("height", function(d) { return d.dy; })
         .attr("width", sankey.nodeWidth())
         .attr("AffiliationName",function(d){ return d.name })
-        .style("fill", function(d) {
-  		  return d.color = color(d.name.replace(/ .*/, "")); })
-        .style("stroke", function(d) {
-  		  return d3.rgb(d.color).darker(2); })
-      .append("title")
-        .text(function(d) {
-  		  return d.name + "\n" + format(d.value); });
+        .style("fill", function(d) {return d.color = color(d.name.replace(/ .*/, "")); })
+        .style("stroke", function(d) {return d3.rgb(d.color).darker(2); })
+        .append("title")
+        .text(function(d) {return d.name + "\n" + format(d.value); })
+        ;
+    // rect.on("mouseover", function(d){
+    //     d3.selectAll("circle[Affiliation=\'" + d.AffiliationName + "\']")
+    //       // .transition()
+    //       // .duration("200")
+    //       // .style('r',r )
+    //       .attr("fill","green");
+    // });
 
   // add in the title for the nodes
     node.append("text")
@@ -543,10 +594,13 @@ function gen_sankey(){
         .attr("text-anchor", "end")
         .attr("transform", null)
         .text(function(d) { return d.name; })
-      .filter(function(d) { return d.x < width / 2; })
+        .filter(function(d) { return d.x < width / 2; })
         .attr("x", 6 + sankey.nodeWidth())
         .attr("text-anchor", "start");
-
+    //
+    // d3.append("rect")
+    //
+    // ;
   // the function for moving the nodes
     function dragmove(d) {
   		d3.select(this).attr("transform",
@@ -702,4 +756,11 @@ function gen_sankey(){
   //     link.attr("d", path);
   // }
   // });
+}
+
+//=================== Chord Chart   ======================
+
+function chord_chart(){
+
+
 }

@@ -1,0 +1,16 @@
+{
+"nodes":[
+{"node":0,"name":"Physics"},
+{"node":1,"name":"Chemistry"},
+{"node":2,"name":"MIT", "country":"United States"},
+{"node":3,"name":"Harvard", "country":"United States"},
+{"node":4,"name":"NYU", "country": "Russia"}
+],
+"links":[
+{"source":0,"target":3,"value":2},
+{"source":0,"target":4,"value":3},
+{"source":0,"target":2,"value":1},
+{"source":1,"target":3,"value":1},
+{"source":1,"target":4,"value":1},
+{"source":1,"target":2,"value":1}
+]}

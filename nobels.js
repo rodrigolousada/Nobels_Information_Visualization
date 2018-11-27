@@ -47,8 +47,7 @@ function choose_sankey_color(name) {
 
 //====================   dataset_extraction   ========================
 d3.json("data/bars.json").then(function(data) {
-    var full_dataset = data;
-    var bar_chart_dataset = full_dataset.slice(0,35);
+    var bar_chart_dataset = data.slice(0,35);
 
     gen_bar_chart(bar_chart_dataset, "chemistry");
     gen_bar_chart(bar_chart_dataset, "physics");
@@ -59,8 +58,7 @@ d3.json("data/bars.json").then(function(data) {
 });
 
 d3.json("data/cleveland.json").then(function(data) {
-    var full_dataset = data;
-    var cleveland_dataset = full_dataset.slice(0,35);
+    var cleveland_dataset = data.slice(0,35);
 
     gen_scatterplot(cleveland_dataset, "chemistry");
     gen_scatterplot(cleveland_dataset, "physics");
@@ -275,8 +273,24 @@ function gen_scatterplot(dataset, chart) {
         svg.selectAll("circle")
             .transition()
             .delay(3000)
-            .duration(5000)
+            .duration(3000)
             .attr("r",r);
+
+        // Average Line creation
+        d3.json("data/statistics.json", function(data) {
+            data = data.filter(function(d) { return d.category.toLowerCase() == chart; })[0];
+            line = svg.append('line')
+                      .attr('id', 'average_age')
+                      .attr('x1', padding)
+                      .attr('y1', hscale(data.averageAge))
+                      .attr('x2', padding)
+                      .attr('y2', hscale(data.averageAge))
+                      .style('stroke', prize_color(chart))
+                      .transition()
+                      .delay(4500)
+                      .duration(3000)
+                      .attr('x2', w);
+        });
 
         //Tooltip
         var tooltip = svg.append("g")
@@ -546,7 +560,7 @@ function gen_sankey(){
 
     // Set the sankey diagram properties
     var sankey = d3.sankey()
-                    .nodeWidth(36)
+                    .nodeWidth(20)
                     .nodePadding(40)
                     .size([width, height]);
 

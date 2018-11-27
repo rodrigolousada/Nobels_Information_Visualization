@@ -56,6 +56,10 @@ h1 {
    z-index: 2; /* Specify a stack order in case you're using a different order for other
 */}
 
+line#average_age {
+    stroke-width: 1;
+    stroke-dasharray: 6 4;
+}
 
 /*======================== World Map ===========================*/
 

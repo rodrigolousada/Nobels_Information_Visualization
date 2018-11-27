@@ -2,22 +2,42 @@
 
   {
     "degree":"PhD",
-    "number": 2,
-    "category":"Literature"
+    "number": 1,
+    "category":"Chemistry"
   },
   {
     "degree":"McS",
     "number": 2,
-    "category":"Literature"
+    "category":"Chemistry"
+  },
+  {
+    "degree":"graduate",
+    "number": 0,
+    "category":"Chemistry"
+  },
+  {
+    "degree":"nograd",
+    "number": 0,
+    "category":"Chemistry"
+  },
+  {
+    "degree":"PhD",
+    "number": 1,
+    "category":"Physics"
+  },
+  {
+    "degree":"McS",
+    "number": 0,
+    "category":"Physics"
   },
   {
     "degree":"graduate",
     "number": 1,
-    "category":"Literature"
+    "category":"Physics"
   },
   {
     "degree":"nograd",
     "number": 1,
-    "category":"Literature"
+    "category":"Physics"
   }
 ]

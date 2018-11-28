@@ -403,6 +403,7 @@ function gen_bar_chart(dataset, chart){
 
 //====================   world_map   ========================
 function world_map(){
+    var zoom = d3.zoom();
 
     var format = d3.format(",");
 
@@ -415,20 +416,20 @@ function world_map(){
                       })
 
     var margin = {top: 0, right: 0, bottom: 0, left: 0},
-                width = 960 - margin.left - margin.right,
+                width = 1000 - margin.left - margin.right,
                 height = 500 - margin.top - margin.bottom;
 
     var path = d3.geoPath();
 
     var svg = d3.select("#worldmap")
                 .append("svg")
-                .attr("width", width)
+                .attr("width", 500)
                 .attr("height", 300)
                 .append('g')
                 .attr('class', 'map');
 
     var projection = d3.geoMercator()
-                       .scale(70)
+                       .scale(70) //zoom alterar scale ver depois
                        .translate( [(width/4), (height / 2.5 )] );
 
     var path = d3.geoPath()
@@ -459,6 +460,11 @@ function world_map(){
             // tooltips
             .style("stroke","white")
             .style('stroke-width', 0.3)
+            // .on('click' , function(d){
+            //     d3.select("#worldmap")
+            //     .style("width", 5000)
+            //     .style("height", 3000);
+            // })
             .on('mouseover',function(d){
                                 //Opacity 0.5
                                 d3.selectAll("circle,rect,path")
@@ -758,53 +764,8 @@ function gen_sankey(){
 //=================== Chord Chart   ======================
 
 
-// Lazily construct the package hierarchy from class names.
-function packageHierarchy(classes) {
-  var map = {};
-
-  function find(name, data) {
-    var node = map[name], i;
-    if (!node) {
-      node = map[name] = data || {name: name, children: []};
-      if (name.length) {
-        node.parent = find(name.substring(0, i = name.lastIndexOf(".")));
-        node.parent.children.push(node);
-        node.key = name.substring(i + 1);
-      }
-    }
-    return node;
-  }
-
-  classes.forEach(function(d) {
-    find(d.name, d);
-  });
-
-  return d3.hierarchy(map[""]);
-}
-
-// Return a list of imports for the given array of nodes.
-function packageImports(nodes) {
-  var map = {},
-      imports = [];
-
-  // Compute a map from name to node.
-  nodes.forEach(function(d) {
-    map[d.data.name] = d;
-  });
-
-  // For each import, construct a link from the source to target node.
-  nodes.forEach(function(d) {
-    if (d.data.imports) d.data.imports.forEach(function(i) {
-      imports.push(map[d.data.name].path(map[i]));
-    });
-  });
-
-  return imports;
-}
-
 function chord_chart(){
-  src="https://d3js.org/d3.v4.min.js"
-  var diameter = 600,
+  var diameter = 560,
       radius = diameter / 2,
       innerRadius = radius - 120;
 
@@ -819,13 +780,13 @@ function chord_chart(){
   var svg = d3.select("#chord").append("svg")
       .attr("width", diameter)
       .attr("height", diameter)
-    .append("g")
+      .append("g")
       .attr("transform", "translate(" + radius + "," + radius + ")");
 
   var link = svg.append("g").selectAll(".link"),
       node = svg.append("g").selectAll(".node");
 
-  d3.json("data/flare.json", function(error, classes) {
+  d3.json("data/flare3nodes.json", function(error, classes) {
     if (error) throw error;
 
     var root = packageHierarchy(classes)
@@ -834,28 +795,154 @@ function chord_chart(){
     cluster(root);
 
     link = link
-          .data(packageImports(root.leaves()))
-          .enter().append("path")
-          .each(function(d) { d.source = d[0], d.target = d[d.length - 1]; })
-          .attr("class", "link")
-          .attr("d", line)
-          .on("mouseover", function(d){
-                              d3.selectAll("circle,rect,path")
-                                .transition()
-                                .duration("500")
-                                .style("opacity",0.5);
-                              d3.select(this)
-                                .style("opacity",1)
-                                .attr("fill", "red")})
-        ;
+      .data(packageImports(root.leaves()))
+      .enter().append("path")
+        .each(function(d) { d.source = d[0], d.target = d[d.length - 1]; })
+        .attr("class", "link")
+        .attr("d", line);
 
-    node = node
-      .data(root.leaves())
+
+
+     node.data(root.leaves())
       .enter().append("text")
         .attr("class", "node")
         .attr("dy", "0.31em")
-        .attr("transform", function(d) { return "rotate(" + (d.x - 90) + ")translate(" + (d.y + 8) + ",0)" + (d.x < 180 ? "" : "rotate(180)"); })
+        .attr("affiliation", function (d) { return (d.data.name).substr(0, (d.data.name).indexOf('.')); })
+        .attr("transform", function(d) { return "rotate(" + (d.x - 90) + ")translate(" + (d.y + 20) + ",0)" + (d.x < 180 ? "" : "rotate(180)"); })
         .attr("text-anchor", function(d) { return d.x < 180 ? "start" : "end"; })
-        .text(function(d) { return d.data.key; });
+        // .text(function(d) { return d.data.key; })
+
+
+        // .attr("x", function(d) { return d.x < Math.PI ? 6 : -6; })
+        // .style("text-anchor", function(d) { return d.x < Math.PI ? "start" : "end"; })
+        // .attr("transform", function(d) { return "rotate(" + (d.x < Math.PI ? d.x - Math.PI / 2 : d.x + Math.PI / 2) * 180 / Math.PI + ")"; })
+        .text(function(d) { return d.data.key; })
+        // .style("fill", findColor)
+
+
+        .on("mouseover", mouseovered)
+        .on("mouseout", mouseouted);
+
+
+        node.data(root.leaves())
+            .enter()
+            .append('circle')
+            .attr("name",function (d) { return d.data.key; })
+            .attr("affiliation", function (d) { return (d.data.name).substr(0, (d.data.name).indexOf('.')); })
+            .attr("dy", "0.31em")
+            .attr("transform", function(d) { return "rotate(" + (d.x - 90) + ")translate(" + (d.y + 8) + ",0)" + (d.x < 180 ? "" : "rotate(180)"); })
+            .attr('r', 4)
+            .style("fill", determinecolor)
+
+            // .append('title')
+  });
+
+  // function findColor(d) {
+  // 	let c = "";
+  //   if (d.depth == 0 || d.depth == 1 || d.depth === 2) {
+  // 		c = color(d.data.name);
+  // 	}
+  // 	else {
+  // 		c = findColor(d.parent);
+  // 	}
+  // 	return c;
+  // }
+  function determinecolor(d) {
+      if ((d.data.name).substr(0, (d.data.name).indexOf('.')) == "mit" ) {
+        return "#51bfdb";
+      } else if ((d.data.name).substr(0, (d.data.name).indexOf('.')) == "nyu") {
+        return "orange";
+      }
+      return "00cc00";
+    }
+
+  function mouseovered(d) {
+
+    node
+        .each(function(n) { n.target = n.source = false; });
+
+    link
+        .classed("link--target", function(l) { if (l.target === d) return l.source.source = true; })
+        .classed("link--source", function(l) { if (l.source === d) return l.target.target = true; })
+      .filter(function(l) { return l.target === d || l.source === d; })
+        .raise();
+
+    node
+        .classed("node--target", function(n) { return n.target; })
+        .classed("node--source", function(n) { return n.source; });
+    d3.selectAll("circle,rect,path")
+      .transition()
+      .duration(500)
+      .style("opacity",0.5);
+    d3.select("#chemistry").selectAll("circle[name=\'" + d.data.key + "\']")
+      .transition()
+      .style('r',r * 2)
+      .duration("500")
+      .style("opacity", 1)
+      .style("fill", "red");
+  }
+
+  function mouseouted(d) {
+    link
+        .classed("link--target", false)
+        .classed("link--source", false);
+
+    node
+        .classed("node--target", false)
+        .classed("node--source", false);
+    d3.selectAll("circle,rect,path")
+        .style("opacity",1);
+
+    d3.select("#chemistry").selectAll("circle[name=\'" + d.data.key + "\']")
+        .transition()
+        .style('r',r )
+        .duration("500")
+        .style("opacity", 1)
+        .style("fill",prize_color("chemistry"));
+
+  }
+
+  // Lazily construct the package hierarchy from class names.
+  function packageHierarchy(classes) {
+    var map = {};
+
+    function find(name, data) {
+      var node = map[name], i;
+      if (!node) {
+        node = map[name] = data || {name: name, children: []};
+        if (name.length) {
+          node.parent = find(name.substring(0, i = name.lastIndexOf(".")));
+          node.parent.children.push(node);
+          node.key = name.substring(i + 1);
+        }
+      }
+      return node;
+    }
+
+    classes.forEach(function(d) {
+      find(d.name, d);
+    });
+
+    return d3.hierarchy(map[""]);
+  }
+
+  // Return a list of imports for the given array of nodes.
+  function packageImports(nodes) {
+    var map = {},
+        imports = [];
+
+    // Compute a map from name to node.
+    nodes.forEach(function(d) {
+      map[d.data.name] = d;
+    });
+
+    // For each import, construct a link from the source to target node.
+    nodes.forEach(function(d) {
+      if (d.data.imports) d.data.imports.forEach(function(i) {
+        imports.push(map[d.data.name].path(map[i]));
       });
+    });
+
+    return imports;
+  }
 }

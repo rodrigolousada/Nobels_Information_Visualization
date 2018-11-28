@@ -6,6 +6,16 @@
     <title>Nobel Prize: Tracking Human Excellence</title>
     <link rel="shortcut icon" href="#">
     <link rel="stylesheet" href="nobels.css">
+    <!-- <link rel="stylesheet" href="bs/css/bootstrap.min.css" > -->
+
+
+    <!-- <script src="tippyjs-2.0.0-beta/dist/tippy.all.min.js"></script>
+    <script src="jQuery/jquery.min.js"></script> -->
+
+    <!-- Latest compiled JavaScript -->
+    <!-- <script src="popper/popper.min.js"></script>
+    <script src="bs/js/bootstrap.min.js" ></script> -->
+
     <script src="d3.v5.js" charset="utf-8"></script>
     <script src="d3-tip.js"></script>
     <script src="http://d3js.org/topojson.v1.min.js"></script>
@@ -19,17 +29,26 @@
     <div style="display: inline-flex; width:100%;background-color:midnightblue; color:white;">
       <img src="img/nobelprize.png" style="padding:2px; padding-top:10px;" width ="40" height="40" alt="nobelprize">
       <h1>Nobel Prize: Tracking Human Excellence</h1>
-      <img src="img/searchbar.png"  style="padding:2px; padding-top:10px; padding-left:600px;" height="40" alt="searchbar">
+
+      <div class="input-group" style="padding:2px; padding-top:10px; padding-left:600px;" height="40">
+        <input id="inputMovie" list="movieList" name="movies" class="form-control" placeholder="Search Movie">
+        <datalist id="movieList"></datalist>
+        <div class="input-group-btn">
+            <button class="btn btn-default" type="button" id="submitBtn"><img src="img/search-icon.png"></button>
+        </div>
+      </div>
+      <!-- <img src="img/searchbar.png"  style="padding:2px; padding-top:10px; padding-left:600px;" height="40" alt="searchbar"> -->
     </div>
 
-    <div id="limit">
-      <table style="width:100%">
+    <div id="limit" style="height:400px">
+      <table height="500" >
         <tr>
-          <td>
+          <td style="width:600px">
             <div id="worldmap"></div>
           </td>
           <td>
-            <img src="img/chord.png" width="350" height="350" style="margin-left:200"><!-- <div id="chord"></div> -->
+            <!-- <img src="img/chord.png" width="350" height="350" style="margin-left:200"> -->
+            <div id="chord"></div>
           </td>
         </tr>
       </table>

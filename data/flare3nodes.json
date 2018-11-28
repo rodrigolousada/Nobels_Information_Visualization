@@ -1,10 +1,26 @@
-var data = [{
-  "name": "iit.mumbai.pub1",
-  "imports": ["iit.chennai.pub3"]
-}, {
-  "name": "iit.delhi.pub2",
-  "imports": ["iit.mumbai.pub1"]
-}, {
-  "name": "iit.chennai.pub3",
-  "imports": ["iit.delhi.pub2"]
-}];
+[{
+  "name": "mit.Sofia Aparicio",
+  "imports": ["nyu.Pedro Pires","harvard.Joana Margarida"]
+},
+
+{
+  "name": "harvard.Rodrigo Lousada",
+  "imports": ["mit.Sofia Aparicio"]
+},
+{
+  "name": "mit.Sofia Almeida",
+  "imports": ["mit.Sofia Aparicio"]
+},
+{
+  "name": "nyu.Pedro Pires",
+  "imports": ["harvard.Rodrigo Lousada"]
+},
+{
+  "name": "harvard.Joana Margarida",
+  "imports": ["mit.Joao Aparicio"]
+},
+{
+  "name": "mit.Joao Aparicio",
+  "imports": ["mit.Sofia Aparicio"]
+}
+]

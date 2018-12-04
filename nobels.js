@@ -9,7 +9,7 @@ src="http://d3js.org/d3.v4.min.js"
 var selectedBar, selectedCircle;
 
 //scaterplot Variables
-var r = 5;
+var r = 2;
 
 // World Map Variables
 var populationById = {};
@@ -57,8 +57,8 @@ d3.json("data/bars.json").then(function(data) {
     // gen_bar_chart(bar_chart_dataset, "peace");
 });
 
-d3.json("data/cleveland.json").then(function(data) {
-    var cleveland_dataset = data.slice(0,35);
+d3.json("data/NobelPrizeWinnersInfoClean.json").then(function(data) {
+    var cleveland_dataset = data.slice(0,900);
 
     gen_scatterplot(cleveland_dataset, "chemistry");
     gen_scatterplot(cleveland_dataset, "physics");
@@ -183,7 +183,7 @@ function gen_scatterplot(dataset, chart) {
                           }
                           return  xscale(d.year);
                   })
-        .attr("cy",function(d) { return hscale(d.age); })
+        .attr("cy",function(d) { return hscale(d.year - d.birthYear); })
         .attr("name", function(d) { return d.name; })
         .attr("degree", function(d){ return d.degree })
         .attr("countryAffiliation", function(d){ return d.countryAffiliation })
@@ -421,20 +421,20 @@ function world_map(){
                       })
 
     var margin = {top: 0, right: 0, bottom: 0, left: 0},
-                width = 1000 - margin.left - margin.right,
-                height = 500 - margin.top - margin.bottom;
+                width = 1200 - margin.left - margin.right,
+                height = 690 - margin.top - margin.bottom;
 
     var path = d3.geoPath();
 
     var svg = d3.select("#worldmap")
                 .append("svg")
-                .attr("width", 500)
-                .attr("height", 300)
+                .attr("width", 700)
+                .attr("height", 400)
                 .append('g')
                 .attr('class', 'map');
 
     var projection = d3.geoMercator()
-                       .scale(70) //zoom alterar scale ver depois
+                       .scale(100) // zoom alterar scale ver depois
                        .translate( [(width/4), (height / 2.5 )] );
 
     var path = d3.geoPath()
@@ -614,7 +614,7 @@ function gen_sankey(){
                                           d3.selectAll("circle[affiliation=\'" + d.target.name + "\']")
                                             .transition()
                                             .duration(200)
-                                            .style('r',r*2 )
+                                            .style('r',r*4 )
                                             .style("fill","green");
 
                                           //Map
@@ -688,7 +688,7 @@ function gen_sankey(){
                                           d3.selectAll("circle[affiliation=\'" + d.name + "\']")
                                             .transition()
                                             .duration(200)
-                                            .style('r',r*2)
+                                            .style('r',r*4)
                                             .style("fill","green");
 
                                           //Map
@@ -783,7 +783,7 @@ function chord_chart(){
       .angle(function(d) { return d.x / 180 * Math.PI; });
 
   var svg = d3.select("#chord").append("svg")
-      .attr("width", diameter)
+      .attr("width", diameter + 100)
       .attr("height", diameter)
       .append("g")
       .attr("transform", "translate(" + radius + "," + radius + ")");

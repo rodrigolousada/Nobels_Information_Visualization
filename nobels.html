@@ -33,13 +33,26 @@
     <script src="cartogram.js"></script>
 
     <script src="http://d3js.org/d3.v4.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body>
     <div style="display: inline-flex; width:100%;background-color:#007399; color:white;">
       <img src="img/nobelprize.png" style="padding:2px; padding-top:10px;" width ="40" height="40" alt="nobelprize">
       <h1>Nobel Prize: Tracking Human Excellence</h1>
-      <div class="topnav" style="padding:2px; padding-top:10px; padding-left:600px;" ><input type="text" placeholder="Search.."></div>
+      <div class="topnav" style="padding:2px; padding-top:10px; padding-left:500px;">
+        <form action="/action_page.php">
+            <select style="padding:7.5px; margin-top:8px;margin-right:10px" name="Search">
+              <option value="Person">Person</option>
+              <option value="Degree">Degree</option>
+              <option value="Country">Country</option>
+              <option value="Affiliation">Affiliation</option>
+            </select>
+            <input type="text" placeholder="Search..">
+        </form></div>
+        <button style="margin-left: -10px;height:35px; margin-top:16px;" type="submit"><i class="fa fa-search"></i></button>
+      </div>
 
 
       <!-- <div class="input-group" style="padding:2px; padding-top:10px; padding-left:600px;" height="40">
@@ -58,7 +71,7 @@
           <td id="categories" style="width:630px">
             <div id="worldmap"></div>
           </td>
-          <td style="width:300px">
+          <td style="width:100px">
             <div></div>
           </td>
           <td id="categories">

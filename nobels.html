@@ -16,73 +16,89 @@
     <!-- <script src="popper/popper.min.js"></script>
     <script src="bs/js/bootstrap.min.js" ></script> -->
 
+    <!-- scr's para o world map-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.5/dat.gui.js"></script>
+    <script src="//unpkg.com/cartogram-chart@1"></script>
+    <script src="//unpkg.com/d3-scale-chromatic"></script>
+    <script src="lib/colorbrewer.js"></script>
+    <script src="lib/topojson.js"></script>
+
     <script src="d3.v5.js" charset="utf-8"></script>
     <script src="d3-tip.js"></script>
     <script src="http://d3js.org/topojson.v1.min.js"></script>
     <script src="http://d3js.org/queue.v1.min.js"></script>
     <script src='sankey.js'></script>
     <script src="nobels.js"></script>
+    <script src="cartogram.js"></script>
+
     <script src="http://d3js.org/d3.v4.min.js"></script>
   </head>
 
   <body>
-    <div style="display: inline-flex; width:100%;background-color:midnightblue; color:white;">
+    <div style="display: inline-flex; width:100%;background-color:#007399; color:white;">
       <img src="img/nobelprize.png" style="padding:2px; padding-top:10px;" width ="40" height="40" alt="nobelprize">
       <h1>Nobel Prize: Tracking Human Excellence</h1>
+      <div class="topnav" style="padding:2px; padding-top:10px; padding-left:600px;" ><input type="text" placeholder="Search.."></div>
 
-      <div class="input-group" style="padding:2px; padding-top:10px; padding-left:600px;" height="40">
+
+      <!-- <div class="input-group" style="padding:2px; padding-top:10px; padding-left:600px;" height="40">
         <input id="inputMovie" list="movieList" name="movies" class="form-control" placeholder="Search Movie">
         <datalist id="movieList"></datalist>
         <div class="input-group-btn">
             <button class="btn btn-default" type="button" id="submitBtn"><img src="img/search-icon.png"></button>
         </div>
-      </div>
+      </div> -->
       <!-- <img src="img/searchbar.png"  style="padding:2px; padding-top:10px; padding-left:600px;" height="40" alt="searchbar"> -->
     </div>
 
-    <div id="limit" style="height:400px">
-      <table height="500" >
+    <div id="limit" style="height:430px" style="width:2000px">
+      <table id="table">
         <tr>
-          <td style="width:600px">
+          <td id="categories" style="width:630px">
             <div id="worldmap"></div>
           </td>
-          <td>
+          <td style="width:300px">
+            <div></div>
+          </td>
+          <td id="categories">
             <!-- <img src="img/chord.png" width="350" height="350" style="margin-left:200"> -->
-            <div id="chord"></div>
+            <div id="chord" align="center" ></div>
           </td>
         </tr>
       </table>
     </div>
 
-    <div>
+    <div id="categories" style="padding:20px; width:1300px" style="width:90%" style="border:300px; border-color:#f2f2f2;">
       <small style="font-family:verdana;" ><b>Nobel Prizes for each Category:</b></small>
+      <table  >
+        <tr>
+          <td  style="width:850px">
+              <table >
+                <tr>
+                  <td><div id="chemistry"></div></td>
+                </tr>
+                <tr>
+                  <td><div id="physics"></div></td>
+                </tr>
+                <tr>
+                  <td><div id="economics"></div></td>
+                </tr>
+                <tr>
+                  <td><div id="medicine"></div></td>
+                </tr>
+                <tr>
+                  <td><div id="literature"></div></td>
+                </tr>
+                <tr>
+                  <td><div id="peace"></div></td>
+                </tr>
+              </table>
+          </td>
+          <td style="width:auto"><div id="sankey_diagram"></div></td>
+        </tr>
+      </table>
     </div>
-    <table style="width:100%">
-      <tr>
-        <td style="width:850px">
-            <table style="width:100%">
-              <tr>
-                <td><div id="chemistry"></div></td>
-              </tr>
-              <tr>
-                <td><div id="physics"></div></td>
-              </tr>
-              <tr>
-                <td><div id="economics"></div></td>
-              </tr>
-              <tr>
-                <td><div id="medicine"></div></td>
-              </tr>
-              <tr>
-                <td><div id="literature"></div></td>
-              </tr>
-              <tr>
-                <td><div id="peace"></div></td>
-              </tr>
-            </table>
-        </td>
-        <td style="width:auto"><div id="sankey_diagram"></div></td>
-      </tr>
-    </table>
+
   </body>
 </html>

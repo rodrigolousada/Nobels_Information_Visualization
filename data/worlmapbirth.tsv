@@ -1,0 +1,180 @@
+population	name	id
+0	Afghanistan	AFG
+0	Albania	ALB
+3	Algeria	DZA
+0	Angola	AGO
+0	Antarctica	ATA
+4	Argentina	ARG
+0	Armenia	ARM
+11	Australia	AUS
+19	Austria	AUT
+1	Azerbaijan	AZE
+0	"Bahamas	 The"	BHS
+1	Bangladesh	BGD
+4	Belarus	BLR
+9	Belgium	BEL
+0	Belize	BLZ
+0	Benin	BEN
+0	Bhutan	BTN
+0	Bolivia	BOL
+2	Bosnia and Herzegovina	BIH
+0	Botswana	BWA
+1	Brazil	BRA
+0	Brunei	BRN
+1	Bulgaria	BGR
+0	Burkina Faso	BFA
+0	Burma	MMR
+0	Burundi	BDI
+0	Cambodia	KHM
+0	Cameroon	CMR
+18	Canada	CAN
+0	Central African Republic	CAF
+0	Chad	TCD
+2	Chile	CHL
+13	China	CHN
+2	Colombia	COL
+0	"Congo	 Democratic Republic of the"	COD
+0	"Congo	 Republic of the"	COG
+1	Costa Rica	CRI
+0	Cote d'Ivoire	CIV
+1	Croatia	HRV
+0	Cuba	CUB
+1	Cyprus	CYP
+6	Czech Republic	CZE
+12	Denmark	DNK
+0	Djibouti	DJI
+0	Dominica	DOM
+0	Dominican Republic	DOM
+0	Ecuador	ECU
+6	Egypt	EGY
+0	El Salvador	SLV
+0	Equatorial Guinea	GNQ
+0	Eritrea	ERI
+0	Estonia	EST
+0	Ethiopia	ETH
+0	Falkland Islands (Islas Malvinas)	FLK
+0	Fiji	FJI
+5	Finland	FIN
+56	France	FRA
+0	French Southern and Antarctic Lands	ATF
+0	Gabon	GAB
+0	"Gambia	 The"	GMB
+0	Georgia	GEO
+89	Germany	DEU
+1	Ghana	GHA
+1	Greece	GRC
+0	Greenland	GRL
+2	Guatemala	GTM
+0	Guinea	GIN
+0	Guinea-Bissau	GNB
+0	Guyana	GUY
+0	Haiti	HTI
+0	Honduras	HND
+0	Hong Kong	HKG
+9	Hungary	HUN
+1	Iceland	ISL
+9	India	IND
+1	Indonesia	IDN
+2	Iran	IRN
+0	Iraq	IRQ
+5	Ireland	IRL
+6	Israel	ISR
+20	Italy	ITA
+0	Jamaica	JAM
+29	Japan	JPN
+0	Jordan	JOR
+0	Kazakhstan	KAZ
+1	Kenya	KEN
+0	"Korea	 North"	PRK
+2	"Korea	 South"	KOR
+0	Kosovo	KWT
+0	Kosovo	OSA
+0	Kuwait	KWT
+0	Kyrgyzstan	KGZ
+0	Laos	LAO
+1	Latvia	LVA
+0	Lebanon	LBN
+0	Lesotho	LSO
+2	Liberia	LBR
+0	Libya	LBY
+3	Lithuania	LTU
+2	Luxembourg	LUX
+1	Macedonia	MKD
+1	Madagascar	MDG
+0	Malawi	MWI
+0	Malaysia	MYS
+0	Mali	MLI
+0	Mauritania	MRT
+3	Mexico	MEX
+0	Moldova	MDA
+0	Mongolia	MNG
+0	Montenegro	MNE
+2	Morocco	MAR
+0	Mozambique	MOZ
+0	Namibia	NAM
+0	Nepal	NPL
+19	Netherlands	NLD
+0	New Caledonia	NCL
+3	New Zealand	NZL
+0	Nicaragua	NIC
+0	Niger	NER
+1	Nigeria	NGA
+13	Norway	NOR
+0	Oman	OMN
+4	Pakistan	PAK
+0	Panama	PAN
+0	Papua New Guinea	PNG
+0	Paraguay	PRY
+1	Peru	PER
+0	Philippines	PHL
+30	Poland	POL
+3	Portugal	PRT
+0	Puerto Rico	PRI
+0	Qatar	QAT
+5	Romania	ROU
+30	Russia	RUS
+0	Rwanda	RWA
+0	Saudi Arabia	SAU
+0	Senegal	SEN
+0	Serbia	SRB
+0	Sierra Leone	SLE
+1	Slovakia	SVK
+1	Slovenia	SVN
+0	Solomon Islands	SLB
+0	Somalia	SOM
+0	Somaliland	ABV
+9	South Africa	ZAF
+0	South Sudan	SDS
+7	Spain	ESP
+0	Sri Lanka	LKA
+0	Sudan	SDN
+0	Suriname	SUR
+0	Swaziland	SWZ
+30	Sweden	SWE
+17	Switzerland	CHE
+0	Syria	SYR
+1	Taiwan	TWN
+0	Tajikistan	TJK
+0	Tanzania	TZA
+0	Thailand	THA
+0	Timor-Leste	TLS
+0	Togo	TGO
+0	Trinidad and Tobago	TTO
+0	Tunisia	TUN
+3	Turkey	TUR
+0	Turkmenistan	TKM
+0	Uganda	UGA
+4	Ukraine	UKR
+0	United Arab Emirates	ARE
+88	United Kingdom	GBR
+277	United States	USA
+0	Uruguay	URY
+0	Uzbekistan	UZB
+0	Vanuatu	VUT
+1	Venezuela	VEN
+1	Vietnam	VNM
+0	West Bank	PSE
+0	Western Sahara	ESH
+1	Yemen	YEM
+0	Zambia	ZMB
+1	Zimbabwe	ZWE

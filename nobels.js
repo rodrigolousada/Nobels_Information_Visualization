@@ -154,6 +154,23 @@ function gen_scatterplot(dataset, chart) {
         .duration(4000)
         .call(yaxis);
 
+
+        // Average Line creation
+    d3.json("data/statistics.json", function(data) {
+        data = data.filter(function(d) { return d.category.toLowerCase() == chart; })[0];
+        line = svg.append('line')
+                  .attr('id', 'average_age')
+                  .attr('x1', padding)
+                  .attr('y1', hscale(data.averageAge))
+                  .attr('x2', padding)
+                  .attr('y2', hscale(data.averageAge))
+                  .style('stroke', prize_color(chart))
+                  .style("opacity",1)
+                  .transition()
+                  .delay(4500)
+                  .duration(3000)
+                  .attr('x2', w);
+        });
     //Circles Creation
     svg.selectAll("circle")
         .data(dataset)
@@ -215,6 +232,8 @@ function gen_scatterplot(dataset, chart) {
                                 .duration(500)
                                 .style("fill","green")
                                 .style("opacity", 1);
+                              // d3.select('line')
+                              //   .style("opacity", 1);
                         })
         .on('mouseout', function(d){
                             //Opacity back to normal
@@ -276,21 +295,7 @@ function gen_scatterplot(dataset, chart) {
             .duration(3000)
             .attr("r",r);
 
-        // Average Line creation
-        d3.json("data/statistics.json", function(data) {
-            data = data.filter(function(d) { return d.category.toLowerCase() == chart; })[0];
-            line = svg.append('line')
-                      .attr('id', 'average_age')
-                      .attr('x1', padding)
-                      .attr('y1', hscale(data.averageAge))
-                      .attr('x2', padding)
-                      .attr('y2', hscale(data.averageAge))
-                      .style('stroke', prize_color(chart))
-                      .transition()
-                      .delay(4500)
-                      .duration(3000)
-                      .attr('x2', w);
-        });
+
 
         //Tooltip
         var tooltip = svg.append("g")
@@ -765,9 +770,9 @@ function gen_sankey(){
 
 
 function chord_chart(){
-  var diameter = 560,
+  var diameter = 400,
       radius = diameter / 2,
-      innerRadius = radius - 120;
+      innerRadius = radius - 60;
 
   var cluster = d3.cluster()
       .size([360, innerRadius]);
@@ -800,7 +805,6 @@ function chord_chart(){
         .each(function(d) { d.source = d[0], d.target = d[d.length - 1]; })
         .attr("class", "link")
         .attr("d", line);
-
 
 
      node.data(root.leaves())
@@ -897,7 +901,6 @@ function chord_chart(){
         .transition()
         .style('r',r )
         .duration("500")
-        .style("opacity", 1)
         .style("fill",prize_color("chemistry"));
 
   }

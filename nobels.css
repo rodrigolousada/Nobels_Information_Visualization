@@ -218,6 +218,15 @@ div.tooltip {
     pointer-events: none;
 }
 
+#worldmap {
+  overflow: hidden
+}
+
+#worldmap svg:active {
+  cursor: move;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
 
 /*========================Sankey Diagram===========================*/
 

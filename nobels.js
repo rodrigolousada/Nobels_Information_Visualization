@@ -132,7 +132,7 @@ function gen_scatterplot(dataset, chart) {
     //Axis Animation
     hscale.domain([100,0])
           .range([padding,h-padding]);
-    xscale.domain([1901,2020])
+    xscale.domain([1900,2020])
           .range([padding,w-padding]);
 
     svg.selectAll(".x")
@@ -408,8 +408,6 @@ function gen_bar_chart(dataset, chart){
 
 //====================   world_map   ========================
 function world_map(){
-    var zoom = d3.zoom();
-
     var format = d3.format(",");
 
     // Set tooltips
@@ -421,26 +419,78 @@ function world_map(){
                       })
 
     var margin = {top: 0, right: 0, bottom: 0, left: 0},
-                width = 1200 - margin.left - margin.right,
-                height = 690 - margin.top - margin.bottom;
-
-    var path = d3.geoPath();
-
-    var svg = d3.select("#worldmap")
-                .append("svg")
-                .attr("width", 700)
-                .attr("height", 400)
-                .append('g')
-                .attr('class', 'map');
+        width = 1200 - margin.left - margin.right,
+        height = 690 - margin.top - margin.bottom,
+        focus = [150, -40];
 
     var projection = d3.geoMercator()
                        .scale(100) // zoom alterar scale ver depois
-                       .translate( [(width/4), (height / 2.5 )] );
+                       .translate([(width / 2), (height / 2)])
+                       .center(focus);
 
     var path = d3.geoPath()
                   .projection(projection);
 
+    var zoom = d3.zoom()
+                  .scaleExtent([1, 4])
+                  .on("zoom", zoomed);
+
+        
+    var svg = d3.select("#worldmap")
+                .append("svg")
+                .attr("width", 700)
+                .attr("height", 400)
+                .attr("preserveAspectRatio", "xMinYMin meet")
+                .attr("viewBox", "0 0 700 400")
+                .classed("svg-content-responsive", true);
+                
+    var g = svg.append('g')
+                .attr('class', 'map');
+
     svg.call(tip);
+    
+    svg.call(zoom);
+
+    function reset() {
+      svg.transition()
+        .duration(750)
+        .call(zoom.transform,
+          d3.zoomIdentity
+          .translate(0, 0)
+          .scale(1)
+        );
+    }
+
+    function zoomed() {
+      g.attr("transform", d3.event.transform);
+      //var string = d3.event.transform
+      // svg.transition()
+      //   .duration(750)
+      //   .call(zoom.transform,
+      //     d3.zoomIdentity
+      //     .translate(width / 2, height / 2)
+      //     .scale(string.k)
+      //   );
+    }
+    
+    // svg.call(d3.zoom()
+    //             .scaleExtent([1, 4])
+    //             //.translateExtent([[0, 0], [width, height]])
+    //             //.extent([[0, 0], [width, height]])
+    //             .on("zoom", function () {
+    //                           console.log(d3.mouse(this));
+    //                           transformation = d3.event.transform
+    //                           console.log(transformation);
+    //                           transformation.x = d3.mouse(this)[0] + focus[0];
+    //                           transformation.y = d3.mouse(this)[1] + focus[1];
+    //                           //transformation.k;
+    //                           svg.attr("transform", transformation);
+    //                         }));
+
+    svg.call(d3.drag()
+                  .on("drag", function () {
+                              svg.attr("transform", d3.event.transform);
+                            }));
 
     queue().defer(d3.json, "data/world_countries.json")
             .defer(d3.tsv, "data/countrycount.tsv")
@@ -451,97 +501,97 @@ function world_map(){
         population.forEach(function(d) { nameById[d.id] = d.name; });
         data.features.forEach(function(d) { d.population = populationById[d.id] });
 
-        svg.append("g")
-            .attr("class", "countries")
-          .selectAll("path")
-            .data(data.features)
-          .enter().append("path")
-            .attr("d", path)
-            .attr("country", function(d) { return nameById[d.id]; })
-            .style("fill", function(d) { return world_colors(populationById[d.id]); })
-            .style('stroke', 'white')
-            .style('stroke-width', 1.5)
-            .style("opacity",0.8)
-            // tooltips
-            .style("stroke","white")
-            .style('stroke-width', 0.3)
-            // .on('click' , function(d){
-            //     d3.select("#worldmap")
-            //     .style("width", 5000)
-            //     .style("height", 3000);
-            // })
-            .on('mouseover',function(d){
-                                //Opacity 0.5
-                                d3.selectAll("circle,rect,path")
-                                  .style("opacity",0.5);
+        g = svg.append("g")
+                .attr("class", "countries")
+              .selectAll("path")
+                .data(data.features)
+              .enter().append("path")
+                .attr("d", path)
+                .attr("country", function(d) { return nameById[d.id]; })
+                .style("fill", function(d) { return world_colors(populationById[d.id]); })
+                .style('stroke', 'white')
+                .style('stroke-width', 1.5)
+                .style("opacity",0.8)
+                // tooltips
+                .style("stroke","white")
+                .style('stroke-width', 0.3)
+                // .on('click' , function(d){
+                //     d3.select("#worldmap")
+                //     .style("width", 5000)
+                //     .style("height", 3000);
+                // })
+                .on('mouseover',function(d){
+                                    //Opacity 0.5
+                                    d3.selectAll("circle,rect,path")
+                                      .style("opacity",0.5);
 
-                                //Change this
-                                tip.show(d);
-                                d3.select(this)
-                                  .style("opacity", 1)
-                                  .style("stroke","white")
-                                  .style("stroke-width",3);
+                                    //Change this
+                                    tip.show(d);
+                                    d3.select(this)
+                                      .style("opacity", 1)
+                                      .style("stroke","white")
+                                      .style("stroke-width",3);
 
-                                //Cleveland Plot
-                                d3.selectAll("circle[countryAffiliation=\'" + nameById[d.id] + "\']")
-                                  .transition()
-                                  .style('r',r * 2)
-                                  .duration("500")
-                                  .style("opacity", 1)
-                                  .style("fill", "red");
-                                d3.selectAll("circle[countryBorn=\'" + nameById[d.id] + "\']")
-                                  .transition()
-                                  .style('r',r * 2)
-                                  .duration("500")
-                                  .style("opacity", 1)
-                                  .style("fill", "blue");
+                                    //Cleveland Plot
+                                    d3.selectAll("circle[countryAffiliation=\'" + nameById[d.id] + "\']")
+                                      .transition()
+                                      .style('r',r * 2)
+                                      .duration("500")
+                                      .style("opacity", 1)
+                                      .style("fill", "red");
+                                    d3.selectAll("circle[countryBorn=\'" + nameById[d.id] + "\']")
+                                      .transition()
+                                      .style('r',r * 2)
+                                      .duration("500")
+                                      .style("opacity", 1)
+                                      .style("fill", "blue");
 
-                                //Sankey
-                                d3.selectAll("rect[affiliationCountry=\'" + nameById[d.id] + "\']")
-                                  .transition()
-                                  .duration("500")
-                                  .style("opacity", 1)
-                                  .style("fill", "green");
-                            })
-            .on('mouseout', function(d){
-                                //Opacity back to normal
-                                d3.selectAll("circle,rect")
-                                  .style("opacity",1);
-                                d3.selectAll("path")
-                                  .style("opacity",0.8);
+                                    //Sankey
+                                    d3.selectAll("rect[affiliationCountry=\'" + nameById[d.id] + "\']")
+                                      .transition()
+                                      .duration("500")
+                                      .style("opacity", 1)
+                                      .style("fill", "green");
+                                })
+                .on('mouseout', function(d){
+                                    //Opacity back to normal
+                                    d3.selectAll("circle,rect")
+                                      .style("opacity",1);
+                                    d3.selectAll("path")
+                                      .style("opacity",0.8);
 
-                                //Change this
-                                tip.hide(d);
-                                d3.select(this)
-                                  .style("opacity", 0.8)
-                                  .style("stroke","white")
-                                  .style("stroke-width",0.3);
+                                    //Change this
+                                    tip.hide(d);
+                                    d3.select(this)
+                                      .style("opacity", 0.8)
+                                      .style("stroke","white")
+                                      .style("stroke-width",0.3);
 
-                                //Cleveland Plot
-                                d3.selectAll("circle[countryAffiliation=\'" + nameById[d.id] + "\']")
-                                  .transition()
-                                  .duration("200")
-                                  .style('r',r)
-                                  .style("fill", function(d1) { return prize_color(d1.category);});
-                                d3.selectAll("circle[countryBorn=\'" + nameById[d.id] + "\']")
-                                  .transition()
-                                  .duration("200")
-                                  .style('r',r)
-                                  .style("fill", function(d1) { return prize_color(d1.category);});
+                                    //Cleveland Plot
+                                    d3.selectAll("circle[countryAffiliation=\'" + nameById[d.id] + "\']")
+                                      .transition()
+                                      .duration("200")
+                                      .style('r',r)
+                                      .style("fill", function(d1) { return prize_color(d1.category);});
+                                    d3.selectAll("circle[countryBorn=\'" + nameById[d.id] + "\']")
+                                      .transition()
+                                      .duration("200")
+                                      .style('r',r)
+                                      .style("fill", function(d1) { return prize_color(d1.category);});
 
-                                //Sankey
-                                d3.selectAll("rect[affiliationCountry=\'" + nameById[d.id] + "\']")
-                                  .transition()
-                                  .duration("500")
-                                  .style("fill", function(d1) { return choose_sankey_color(d1.name);})
-                                  .style("opacity", 1);
-                            });
+                                    //Sankey
+                                    d3.selectAll("rect[affiliationCountry=\'" + nameById[d.id] + "\']")
+                                      .transition()
+                                      .duration("500")
+                                      .style("fill", function(d1) { return choose_sankey_color(d1.name);})
+                                      .style("opacity", 1);
+                                });
 
         svg.append("path")
             .datum(topojson.mesh(data.features, function(a, b) { return a.id !== b.id; }))
             // .datum(topojson.mesh(data.features, function(a, b) { return a !== b; }))
             .attr("class", "names")
-            .attr("d", path);
+            .attr("d", path);          
       }
 }
 

@@ -493,11 +493,6 @@ function world_map(){
                 // tooltips
                 .style("stroke","white")
                 .style('stroke-width', 0.3)
-                // .on('click' , function(d){
-                //     d3.select("#worldmap")
-                //     .style("width", 5000)
-                //     .style("height", 3000);
-                // })
                 .on('mouseover',function(d){
                                     //Opacity 0.5
                                     d3.selectAll("circle,rect,path")
@@ -511,13 +506,13 @@ function world_map(){
                                       .style("stroke-width",3);
 
                                     //Cleveland Plot
-                                    d3.selectAll("circle[countryAffiliation=\'" + nameById[d.id] + "\']")
+                                    d3.selectAll("circle[countryAffiliation=\"" + nameById[d.id] + "\"]")
                                       .transition()
                                       .style('r',r * 2)
                                       .duration("500")
                                       .style("opacity", 1)
                                       .style("fill", "red");
-                                    d3.selectAll("circle[countryBorn=\'" + nameById[d.id] + "\']")
+                                    d3.selectAll("circle[countryBorn=\"" + nameById[d.id] + "\"]")
                                       .transition()
                                       .style('r',r * 2)
                                       .duration("500")
@@ -525,7 +520,7 @@ function world_map(){
                                       .style("fill", "blue");
 
                                     //Sankey
-                                    d3.selectAll("rect[affiliationCountry=\'" + nameById[d.id] + "\']")
+                                    d3.selectAll("rect[affiliationCountry=\"" + nameById[d.id] + "\"]")
                                       .transition()
                                       .duration("500")
                                       .style("opacity", 1)
@@ -546,19 +541,19 @@ function world_map(){
                                       .style("stroke-width",0.3);
 
                                     //Cleveland Plot
-                                    d3.selectAll("circle[countryAffiliation=\'" + nameById[d.id] + "\']")
+                                    d3.selectAll("circle[countryAffiliation=\"" + nameById[d.id] + "\"]")
                                       .transition()
                                       .duration("200")
                                       .style('r',r)
                                       .style("fill", function(d1) { return prize_color(d1.category);});
-                                    d3.selectAll("circle[countryBorn=\'" + nameById[d.id] + "\']")
+                                    d3.selectAll("circle[countryBorn=\"" + nameById[d.id] + "\"]")
                                       .transition()
                                       .duration("200")
                                       .style('r',r)
                                       .style("fill", function(d1) { return prize_color(d1.category);});
 
                                     //Sankey
-                                    d3.selectAll("rect[affiliationCountry=\'" + nameById[d.id] + "\']")
+                                    d3.selectAll("rect[affiliationCountry=\"" + nameById[d.id] + "\"]")
                                       .transition()
                                       .duration("500")
                                       .style("fill", function(d1) { return choose_sankey_color(d1.name);})
@@ -795,8 +790,6 @@ function gen_sankey(){
 }
 
 //=================== Chord Chart   ======================
-
-
 function chord_chart(){
   var diameter = 400,
       radius = diameter / 2,

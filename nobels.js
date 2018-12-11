@@ -463,29 +463,7 @@ function world_map(){
 
     function zoomed() {
       g.attr("transform", d3.event.transform);
-      //var string = d3.event.transform
-      // svg.transition()
-      //   .duration(750)
-      //   .call(zoom.transform,
-      //     d3.zoomIdentity
-      //     .translate(width / 2, height / 2)
-      //     .scale(string.k)
-      //   );
     }
-    
-    // svg.call(d3.zoom()
-    //             .scaleExtent([1, 4])
-    //             //.translateExtent([[0, 0], [width, height]])
-    //             //.extent([[0, 0], [width, height]])
-    //             .on("zoom", function () {
-    //                           console.log(d3.mouse(this));
-    //                           transformation = d3.event.transform
-    //                           console.log(transformation);
-    //                           transformation.x = d3.mouse(this)[0] + focus[0];
-    //                           transformation.y = d3.mouse(this)[1] + focus[1];
-    //                           //transformation.k;
-    //                           svg.attr("transform", transformation);
-    //                         }));
 
     svg.call(d3.drag()
                   .on("drag", function () {

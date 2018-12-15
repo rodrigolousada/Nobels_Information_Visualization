@@ -350,13 +350,13 @@ function gen_bar_chart(dataset, chart){
     svg.append("g")
         .attr("transform","translate(0," + (w-padding) + ")");
 
-      
+
     var bars = svg.selectAll("rect")
         .data(dataset)
         .enter().append("rect")
         .attr("height",Math.floor((h-padding*2)/dataset.length )-1) //dataset.length     (w-padding*2)/3)-1
         .style("fill",prize_color(chart))
-    
+
 
         .attr("y",function(d, i) {
                       return yscale(i);
@@ -458,7 +458,7 @@ function world_map(){
                   .scaleExtent([1, 4])
                   .on("zoom", zoomed);
 
-        
+
     var svg = d3.select("#worldmap")
                 .append("svg")
                 .attr("width", 700)
@@ -466,12 +466,12 @@ function world_map(){
                 .attr("preserveAspectRatio", "xMinYMin meet")
                 .attr("viewBox", "0 0 700 400")
                 .classed("svg-content-responsive", true);
-                
+
     var g = svg.append('g')
                 .attr('class', 'map');
 
     svg.call(tip);
-    
+
     svg.call(zoom);
 
     function reset() {
@@ -587,7 +587,7 @@ function world_map(){
             .datum(topojson.mesh(data.features, function(a, b) { return a.id !== b.id; }))
             // .datum(topojson.mesh(data.features, function(a, b) { return a !== b; }))
             .attr("class", "names")
-            .attr("d", path);          
+            .attr("d", path);
       }
 }
 
@@ -858,6 +858,7 @@ function chord_chart(){
         .attr("affiliation", function (d) { return (d.data.name).substr(0, (d.data.name).indexOf('.')); })
         .attr("transform", function(d) { return "rotate(" + (d.x - 90) + ")translate(" + (d.y + 20) + ",0)" + (d.x < 180 ? "" : "rotate(180)"); })
         .attr("text-anchor", function(d) { return d.x < 180 ? "start" : "end"; })
+        .attr("numberLinks", function(d) { for () })
         // .text(function(d) { return d.data.key; })
 
 
@@ -905,23 +906,31 @@ function chord_chart(){
     }
 
   function mouseentered(d) {
+    d3.selectAll("circle,rect,path, text")
+      .style("opacity",0.5);
 
     node
-        .each(function(n) { n.target = n.source = false; });
+        .each(function(n) { n.target = n.source = true; })
+        .style("font", "15px")
+        ;
 
     link
         .classed("link--target", function(l) { if (l.target === d) return l.source.source = true; })
         .classed("link--source", function(l) { if (l.source === d) return l.target.target = true; })
-      .filter(function(l) { return l.target === d || l.source === d; })
+        .filter(function(l) { return l.target === d || l.source === d; })
+        .style("opacity", 1)
         .raise();
 
     node
         .classed("node--target", function(n) { return n.target; })
-        .classed("node--source", function(n) { return n.source; });
-    d3.selectAll("circle,rect,path")
-      .transition()
-      .duration(250)
-      .style("opacity",0.5);
+        .classed("node--source", function(n) { return n.source; })
+        .style("font", "15px")
+        .raise()
+        ;
+    d3.select(this)
+      .style("opacity", 1)
+
+      ;
     d3.select("#chemistry").selectAll("circle[name=\'" + d.data.key + "\']")
       .transition()
       .style('r',r * 2)
@@ -938,7 +947,7 @@ function chord_chart(){
     node
         .classed("node--target", false)
         .classed("node--source", false);
-    d3.selectAll("circle,rect,path")
+    d3.selectAll("circle,rect,path, text")
         .style("opacity",1);
 
     d3.select("#chemistry").selectAll("circle[name=\'" + d.data.key + "\']")

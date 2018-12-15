@@ -255,11 +255,12 @@ div.tooltip {
 
 
 #limit .node {
-  font: 300 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 300 6px "Helvetica Neue", Helvetica, Arial, sans-serif;
   fill: #2b2727;
 }
 
 #limit .node:hover {
+  font: 300 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
   fill: #000;
 }
 

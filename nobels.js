@@ -57,8 +57,8 @@ d3.json("data/bars_new.json").then(function(data) {
     // gen_bar_chart(bar_chart_dataset, "peace");
 });
 
-d3.json("data/NobelPrizeWinnersInfoClean.json").then(function(data) {
-    var cleveland_dataset = data.slice(0,900);
+d3.json("data/clevelandClean1.json").then(function(data) {
+    var cleveland_dataset = data.slice(0,400);
 
     gen_scatterplot(cleveland_dataset, "chemistry");
     gen_scatterplot(cleveland_dataset, "physics");
@@ -185,7 +185,7 @@ function gen_scatterplot(dataset, chart) {
                   })
         .attr("cy",function(d) { return hscale(d.year - d.birthYear); })
         .attr("name", function(d) { return d.name; })
-        .attr("degree", function(d){ return d.degree })
+      .attr("prizeShare", function (d) { return d.prizeShare })
         .attr("countryAffiliation", function(d){ return d.countryAffiliation })
         .attr("countryBorn", function(d){ return d.countryBorn })
         .attr("affiliation", function(d){ return d.affiliation })
@@ -208,7 +208,7 @@ function gen_scatterplot(dataset, chart) {
 
                               //Bar Chart
                               d3.select("#" + chart)
-                                .selectAll("rect[degree=\'" + d.degree + "\']")
+                                .selectAll("rect[prizeShare=\'" + d.prizeShare + "\']")
                                 .transition()
                                 .duration(500)
                                 .style("opacity",1)
@@ -255,7 +255,7 @@ function gen_scatterplot(dataset, chart) {
                               .style("fill", prize_color(chart));
 
                             //Bar Chart
-                            d3.select("#" + chart).selectAll("rect[degree=\'" + d.degree + "\']")
+                            d3.select("#" + chart).selectAll("rect[prizeShare=\'" + d.prizeShare + "\']")
                               .transition()
                               .duration(200)
                               .style("fill", prize_color(chart));
@@ -350,11 +350,14 @@ function gen_bar_chart(dataset, chart){
     svg.append("g")
         .attr("transform","translate(0," + (w-padding) + ")");
 
-    svg.selectAll("rect")
+      
+    var bars = svg.selectAll("rect")
         .data(dataset)
         .enter().append("rect")
         .attr("height",Math.floor((h-padding*2)/dataset.length )-1) //dataset.length     (w-padding*2)/3)-1
         .style("fill",prize_color(chart))
+    
+
         .attr("y",function(d, i) {
                       return yscale(i);
                   })
@@ -390,7 +393,7 @@ function gen_bar_chart(dataset, chart){
                                 d3.select(this)
                                   .style("fill",prize_color(chart));
                                 d3.select("#" + chart)
-                                  .selectAll("circle[degree=\'" + d.degree + "\']")
+                                  .selectAll("circle[prizeShare=\'" + d.prizeShare + "\']")
                                   .transition()
                                   .duration("200")
                                   .style('r',r )
@@ -404,6 +407,26 @@ function gen_bar_chart(dataset, chart){
         .attr("width",function(d) {
                               return w-padding-wscale(d.number);
                      });
+
+
+  svg.selectAll("text")
+    .data(dataset)
+    .enter()
+    .append("text")
+    .text(function (d) {
+      return d.prizeShare;
+    })
+    .attr("y", function (d, i) {
+      return i * (90 / dataset.length) + 46;  // +5
+    })
+    .attr("x", function (d) {
+      return h -  + 0;              // +15
+    })
+    .attr("font-family", "sans-serif")
+    .attr("font-size", "11px")
+    .attr("fill", "white");
+
+
 }
 
 //====================   world_map   ========================
@@ -601,7 +624,7 @@ function gen_sankey(){
     var path = sankey.link();
 
     // load the data
-    d3.json("data/sankey.json", function(error, graph) {
+    d3.json("data/sankeyTop5.json", function(error, graph) {
 
         sankey.nodes(graph.nodes)
               .links(graph.links)
@@ -812,7 +835,7 @@ function chord_chart(){
   var link = svg.append("g").selectAll(".link"),
       node = svg.append("g").selectAll(".node");
 
-  d3.json("data/flare3nodes.json", function(error, classes) {
+  d3.json("data/chordchartPhysics.json", function(error, classes) {
     if (error) throw error;
 
     var root = packageHierarchy(classes)

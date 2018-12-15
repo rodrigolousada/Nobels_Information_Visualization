@@ -1,0 +1,2554 @@
+{
+    "nodes": [
+        {
+            "node": 0,
+            "name": "Physics"
+        },
+        {
+            "node": 1,
+            "name": "Chemistry"
+        },
+        {
+            "node": 2,
+            "name": "",
+            "country": ""
+        },
+        {
+            "node": 3,
+            "name": "Howard Hughes Medical Institute",
+            "country": ""
+        },
+        {
+            "node": 4,
+            "name": "Institute for Biochemical Research",
+            "country": "Argentina"
+        },
+        {
+            "node": 5,
+            "name": "Australian National University",
+            "country": "Australia"
+        },
+        {
+            "node": 6,
+            "name": "Graz University",
+            "country": "Austria"
+        },
+        {
+            "node": 7,
+            "name": "Innsbruck University",
+            "country": "Austria"
+        },
+        {
+            "node": 8,
+            "name": "UniversitÃ© Libre de Bruxelles",
+            "country": "Belgium"
+        },
+        {
+            "node": 9,
+            "name": "UniversitÃ© Libre de Bruxelles",
+            "country": "Belgium"
+        },
+        {
+            "node": 10,
+            "name": "McMaster University",
+            "country": "Canada"
+        },
+        {
+            "node": 11,
+            "name": "National Research Council of Canada",
+            "country": "Canada"
+        },
+        {
+            "node": 12,
+            "name": "Queen's University",
+            "country": "Canada"
+        },
+        {
+            "node": 13,
+            "name": "University of British Columbia",
+            "country": "Canada"
+        },
+        {
+            "node": 14,
+            "name": "University of Toronto",
+            "country": "Canada"
+        },
+        {
+            "node": 15,
+            "name": "Chinese University of Hong Kong",
+            "country": "China"
+        },
+        {
+            "node": 16,
+            "name": "Polarographic Institute of the Czechoslovak Academy of Science",
+            "country": "Czechoslovakia"
+        },
+        {
+            "node": 17,
+            "name": "Aarhus University",
+            "country": "Denmark"
+        },
+        {
+            "node": 18,
+            "name": "Copenhagen University",
+            "country": "Denmark"
+        },
+        {
+            "node": 19,
+            "name": "Niels Bohr Institute",
+            "country": "Denmark"
+        },
+        {
+            "node": 20,
+            "name": "Nordita",
+            "country": "Denmark"
+        },
+        {
+            "node": 21,
+            "name": "University of Helsinki",
+            "country": "Finland"
+        },
+        {
+            "node": 22,
+            "name": "CollÃ¨ge de France",
+            "country": "France"
+        },
+        {
+            "node": 23,
+            "name": "CollÃ¨ge de France",
+            "country": "France"
+        },
+        {
+            "node": 24,
+            "name": "Institut du Radium",
+            "country": "France"
+        },
+        {
+            "node": 25,
+            "name": "Institut FranÃ§ais du PÃ©trole",
+            "country": "France"
+        },
+        {
+            "node": 26,
+            "name": "International Bureau of Weights and Measures",
+            "country": "France"
+        },
+        {
+            "node": 27,
+            "name": "Municipal School of Industrial Physics and Chemistry",
+            "country": "France"
+        },
+        {
+            "node": 28,
+            "name": "Nancy University",
+            "country": "France"
+        },
+        {
+            "node": 29,
+            "name": "Sorbonne University",
+            "country": "France"
+        },
+        {
+            "node": 30,
+            "name": "Sorbonne University",
+            "country": "France"
+        },
+        {
+            "node": 31,
+            "name": "Strasbourg University",
+            "country": "France"
+        },
+        {
+            "node": 32,
+            "name": "Toulouse University",
+            "country": "France"
+        },
+        {
+            "node": 33,
+            "name": "Unit&eacute; Mixte de Physique CNRS/THALES",
+            "country": "France"
+        },
+        {
+            "node": 34,
+            "name": "Universit&eacute; Paris-Sud",
+            "country": "France"
+        },
+        {
+            "node": 35,
+            "name": "University of Grenoble",
+            "country": "France"
+        },
+        {
+            "node": 36,
+            "name": "University of Strasbourg",
+            "country": "France"
+        },
+        {
+            "node": 37,
+            "name": "UniversitÃ© de Strasbourg",
+            "country": "France"
+        },
+        {
+            "node": 38,
+            "name": "UniversitÃ© Louis Pasteur",
+            "country": "France"
+        },
+        {
+            "node": 39,
+            "name": "Ã‰cole Normale SupÃ©rieure",
+            "country": "France"
+        },
+        {
+            "node": 40,
+            "name": "Ã‰cole Polytechnique",
+            "country": "France"
+        },
+        {
+            "node": 41,
+            "name": "Ã‰cole SupÃ©rieure de Physique et Chimie",
+            "country": "France"
+        },
+        {
+            "node": 42,
+            "name": "Agricultural College",
+            "country": "Germany"
+        },
+        {
+            "node": 43,
+            "name": "Berlin University",
+            "country": "Germany"
+        },
+        {
+            "node": 44,
+            "name": "Berlin University",
+            "country": "Germany"
+        },
+        {
+            "node": 45,
+            "name": "Cologne University",
+            "country": "Germany"
+        },
+        {
+            "node": 46,
+            "name": "Forschungszentrum J&uuml;lich",
+            "country": "Germany"
+        },
+        {
+            "node": 47,
+            "name": "Frankfurt-on-the-Main University",
+            "country": "Germany"
+        },
+        {
+            "node": 48,
+            "name": "Fritz-Haber-Institut",
+            "country": "Germany"
+        },
+        {
+            "node": 49,
+            "name": "Fritz-Haber-Institut der Max-Planck-Gesellschaft",
+            "country": "Germany"
+        },
+        {
+            "node": 50,
+            "name": "Fritz-Haber-Institut der Max-Planck-Gesellschaft",
+            "country": "Germany"
+        },
+        {
+            "node": 51,
+            "name": "German Cancer Research Center",
+            "country": "Germany"
+        },
+        {
+            "node": 52,
+            "name": "Goettingen University",
+            "country": "Germany"
+        },
+        {
+            "node": 53,
+            "name": "Goettingen University",
+            "country": "Germany"
+        },
+        {
+            "node": 54,
+            "name": "Greifswald University",
+            "country": "Germany"
+        },
+        {
+            "node": 55,
+            "name": "Halle University",
+            "country": "Germany"
+        },
+        {
+            "node": 56,
+            "name": "I.G. Farbenindustrie A.G.",
+            "country": "Germany"
+        },
+        {
+            "node": 57,
+            "name": "Institute of Technology",
+            "country": "Germany"
+        },
+        {
+            "node": 58,
+            "name": "Kiel University",
+            "country": "Germany"
+        },
+        {
+            "node": 59,
+            "name": "Kiel University",
+            "country": "Germany"
+        },
+        {
+            "node": 60,
+            "name": "Leipzig University",
+            "country": "Germany"
+        },
+        {
+            "node": 61,
+            "name": "Leipzig University",
+            "country": "Germany"
+        },
+        {
+            "node": 62,
+            "name": "Ludwig-Maximilians- UniversitÃ¤t",
+            "country": "Germany"
+        },
+        {
+            "node": 63,
+            "name": "Max-Planck Institut",
+            "country": "Germany"
+        },
+        {
+            "node": 64,
+            "name": "Max-Planck Institut",
+            "country": "Germany"
+        },
+        {
+            "node": 65,
+            "name": "Max-Planck-Institut",
+            "country": "Germany"
+        },
+        {
+            "node": 66,
+            "name": "Max-Planck-Institut",
+            "country": "Germany"
+        },
+        {
+            "node": 67,
+            "name": "Munich University",
+            "country": "Germany"
+        },
+        {
+            "node": 68,
+            "name": "Munich University",
+            "country": "Germany"
+        },
+        {
+            "node": 69,
+            "name": "State Research Institute for Macromolecular Chemistry",
+            "country": "Germany"
+        },
+        {
+            "node": 70,
+            "name": "Technical University",
+            "country": "Germany"
+        },
+        {
+            "node": 71,
+            "name": "Technical University",
+            "country": "Germany"
+        },
+        {
+            "node": 72,
+            "name": "University of Bonn",
+            "country": "Germany"
+        },
+        {
+            "node": 73,
+            "name": "University of Freiburg",
+            "country": "Germany"
+        },
+        {
+            "node": 74,
+            "name": "University of Heidelberg",
+            "country": "Germany"
+        },
+        {
+            "node": 75,
+            "name": "University of Heidelberg",
+            "country": "Germany"
+        },
+        {
+            "node": 76,
+            "name": "WÃ¼rzburg University",
+            "country": "Germany"
+        },
+        {
+            "node": 77,
+            "name": "Calcutta University",
+            "country": "India"
+        },
+        {
+            "node": 78,
+            "name": "Trinity College",
+            "country": "Ireland"
+        },
+        {
+            "node": 79,
+            "name": "Technion - Israel Institute of Technology",
+            "country": "Israel"
+        },
+        {
+            "node": 80,
+            "name": "Weizmann Institute of Science",
+            "country": "Israel"
+        },
+        {
+            "node": 81,
+            "name": "Institute of Technology",
+            "country": "Italy"
+        },
+        {
+            "node": 82,
+            "name": "International Centre for Theoretical Physics",
+            "country": "Italy"
+        },
+        {
+            "node": 83,
+            "name": "Rome University",
+            "country": "Italy"
+        },
+        {
+            "node": 84,
+            "name": "Hokkaido University",
+            "country": "Japan"
+        },
+        {
+            "node": 85,
+            "name": "KEK",
+            "country": "Japan"
+        },
+        {
+            "node": 86,
+            "name": "Kyoto Imperial University",
+            "country": "Japan"
+        },
+        {
+            "node": 87,
+            "name": "Kyoto Sangyo University",
+            "country": "Japan"
+        },
+        {
+            "node": 88,
+            "name": "Kyoto University",
+            "country": "Japan"
+        },
+        {
+            "node": 89,
+            "name": "Kyoto University",
+            "country": "Japan"
+        },
+        {
+            "node": 90,
+            "name": "Meijo University",
+            "country": "Japan"
+        },
+        {
+            "node": 91,
+            "name": "Nagoya University",
+            "country": "Japan"
+        },
+        {
+            "node": 92,
+            "name": "Nagoya University",
+            "country": "Japan"
+        },
+        {
+            "node": 93,
+            "name": "Shimadzu Corp.",
+            "country": "Japan"
+        },
+        {
+            "node": 94,
+            "name": "Tokyo University of Education",
+            "country": "Japan"
+        },
+        {
+            "node": 95,
+            "name": "University of Tokyo",
+            "country": "Japan"
+        },
+        {
+            "node": 96,
+            "name": "University of Tsukuba",
+            "country": "Japan"
+        },
+        {
+            "node": 97,
+            "name": "",
+            "country": "Netherlands"
+        },
+        {
+            "node": 98,
+            "name": "Amsterdam University",
+            "country": "Netherlands"
+        },
+        {
+            "node": 99,
+            "name": "Groningen University",
+            "country": "Netherlands"
+        },
+        {
+            "node": 100,
+            "name": "Leiden University",
+            "country": "Netherlands"
+        },
+        {
+            "node": 101,
+            "name": "University of Groningen",
+            "country": "Netherlands"
+        },
+        {
+            "node": 102,
+            "name": "Utrecht University",
+            "country": "Netherlands"
+        },
+        {
+            "node": 103,
+            "name": "University of Oslo",
+            "country": "Norway"
+        },
+        {
+            "node": 104,
+            "name": "A.F. Ioffe Physico-Technical Institute",
+            "country": "Russia"
+        },
+        {
+            "node": 105,
+            "name": "P.N. Lebedev Physical Institute",
+            "country": "Russia"
+        },
+        {
+            "node": 106,
+            "name": "Royal Institute of Technology",
+            "country": "Sweden"
+        },
+        {
+            "node": 107,
+            "name": "Stockholm University",
+            "country": "Sweden"
+        },
+        {
+            "node": 108,
+            "name": "Swedish Gas-Accumulator Co.",
+            "country": "Sweden"
+        },
+        {
+            "node": 109,
+            "name": "Uppsala University",
+            "country": "Sweden"
+        },
+        {
+            "node": 110,
+            "name": "Uppsala University",
+            "country": "Sweden"
+        },
+        {
+            "node": 111,
+            "name": "CERN",
+            "country": "Switzerland"
+        },
+        {
+            "node": 112,
+            "name": "IBM Zurich Research Laboratory",
+            "country": "Switzerland"
+        },
+        {
+            "node": 113,
+            "name": "Swiss Federal Institute of Technology",
+            "country": "Switzerland"
+        },
+        {
+            "node": 114,
+            "name": "University of Zurich",
+            "country": "Switzerland"
+        },
+        {
+            "node": 115,
+            "name": "Academy of Sciences",
+            "country": "Union of Soviet Socialist Republics"
+        },
+        {
+            "node": 116,
+            "name": "Institute for Chemical Physics of the Academy of Sciences of the USSR",
+            "country": "Union of Soviet Socialist Republics"
+        },
+        {
+            "node": 117,
+            "name": "P.N. Lebedev Physical Institute",
+            "country": "Union of Soviet Socialist Republics"
+        },
+        {
+            "node": 118,
+            "name": "University of Moscow",
+            "country": "Union of Soviet Socialist Republics"
+        },
+        {
+            "node": 119,
+            "name": "Atomic Energy Research Establishment",
+            "country": "United Kingdom"
+        },
+        {
+            "node": 120,
+            "name": "Birmingham University",
+            "country": "United Kingdom"
+        },
+        {
+            "node": 121,
+            "name": "Bristol University",
+            "country": "United Kingdom"
+        },
+        {
+            "node": 122,
+            "name": "Clare Hall Laboratory",
+            "country": "United Kingdom"
+        },
+        {
+            "node": 123,
+            "name": "Department of Scientific and Industrial Research",
+            "country": "United Kingdom"
+        },
+        {
+            "node": 124,
+            "name": "Edinburgh University",
+            "country": "United Kingdom"
+        },
+        {
+            "node": 125,
+            "name": "Francis Crick Institute",
+            "country": "United Kingdom"
+        },
+        {
+            "node": 126,
+            "name": "Glynn Research Laboratories",
+            "country": "United Kingdom"
+        },
+        {
+            "node": 127,
+            "name": "Imperial College",
+            "country": "United Kingdom"
+        },
+        {
+            "node": 128,
+            "name": "Imperial College",
+            "country": "United Kingdom"
+        },
+        {
+            "node": 129,
+            "name": "Institute of Physical Chemistry",
+            "country": "United Kingdom"
+        },
+        {
+            "node": 130,
+            "name": "Liverpool University",
+            "country": "United Kingdom"
+        },
+        {
+            "node": 131,
+            "name": "London University",
+            "country": "United Kingdom"
+        },
+        {
+            "node": 132,
+            "name": "London University",
+            "country": "United Kingdom"
+        },
+        {
+            "node": 133,
+            "name": "Marconi Wireless Telegraph Co. Ltd.",
+            "country": "United Kingdom"
+        },
+        {
+            "node": 134,
+            "name": "MRC Laboratory of Molecular Biology",
+            "country": "United Kingdom"
+        },
+        {
+            "node": 135,
+            "name": "National Institute for Medical Research",
+            "country": "United Kingdom"
+        },
+        {
+            "node": 136,
+            "name": "Rowett Research Institute",
+            "country": "United Kingdom"
+        },
+        {
+            "node": 137,
+            "name": "Royal Institution of Great Britain",
+            "country": "United Kingdom"
+        },
+        {
+            "node": 138,
+            "name": "Royal Institution of Great Britain",
+            "country": "United Kingdom"
+        },
+        {
+            "node": 139,
+            "name": "Standard Telecommunication Laboratories",
+            "country": "United Kingdom"
+        },
+        {
+            "node": 140,
+            "name": "University College",
+            "country": "United Kingdom"
+        },
+        {
+            "node": 141,
+            "name": "University College",
+            "country": "United Kingdom"
+        },
+        {
+            "node": 142,
+            "name": "University of Cambridge",
+            "country": "United Kingdom"
+        },
+        {
+            "node": 143,
+            "name": "University of Cambridge",
+            "country": "United Kingdom"
+        },
+        {
+            "node": 144,
+            "name": "University of Edinburgh",
+            "country": "United Kingdom"
+        },
+        {
+            "node": 145,
+            "name": "University of Manchester",
+            "country": "United Kingdom"
+        },
+        {
+            "node": 146,
+            "name": "University of Oxford",
+            "country": "United Kingdom"
+        },
+        {
+            "node": 147,
+            "name": "University of Sussex",
+            "country": "United Kingdom"
+        },
+        {
+            "node": 148,
+            "name": "Victoria University",
+            "country": "United Kingdom"
+        },
+        {
+            "node": 149,
+            "name": "Victoria University",
+            "country": "United Kingdom"
+        },
+        {
+            "node": 150,
+            "name": "",
+            "country": "United States"
+        },
+        {
+            "node": 151,
+            "name": "Argonne National Laboratory",
+            "country": "United States"
+        },
+        {
+            "node": 152,
+            "name": "Associated Universities Inc.",
+            "country": "United States"
+        },
+        {
+            "node": 153,
+            "name": "Bell Laboratories",
+            "country": "United States"
+        },
+        {
+            "node": 154,
+            "name": "Bell Telephone Laboratories",
+            "country": "United States"
+        },
+        {
+            "node": 155,
+            "name": "Boston University Medical School",
+            "country": "United States"
+        },
+        {
+            "node": 156,
+            "name": "Brown University",
+            "country": "United States"
+        },
+        {
+            "node": 157,
+            "name": "Caltech",
+            "country": "United States"
+        },
+        {
+            "node": 158,
+            "name": "Caltech",
+            "country": "United States"
+        },
+        {
+            "node": 159,
+            "name": "Carnegie Institute of Technology",
+            "country": "United States"
+        },
+        {
+            "node": 160,
+            "name": "Columbia University",
+            "country": "United States"
+        },
+        {
+            "node": 161,
+            "name": "Columbia University",
+            "country": "United States"
+        },
+        {
+            "node": 162,
+            "name": "Cornell University",
+            "country": "United States"
+        },
+        {
+            "node": 163,
+            "name": "Cornell University",
+            "country": "United States"
+        },
+        {
+            "node": 164,
+            "name": "Digital Pathways, Inc.",
+            "country": "United States"
+        },
+        {
+            "node": 165,
+            "name": "Du Pont",
+            "country": "United States"
+        },
+        {
+            "node": 166,
+            "name": "Duke University",
+            "country": "United States"
+        },
+        {
+            "node": 167,
+            "name": "Enrico Fermi Institute, University of Chicago",
+            "country": "United States"
+        },
+        {
+            "node": 168,
+            "name": "Fermi National Accelerator Laboratory",
+            "country": "United States"
+        },
+        {
+            "node": 169,
+            "name": "General Electric Company",
+            "country": "United States"
+        },
+        {
+            "node": 170,
+            "name": "General Electric Company",
+            "country": "United States"
+        },
+        {
+            "node": 171,
+            "name": "Harvard University",
+            "country": "United States"
+        },
+        {
+            "node": 172,
+            "name": "Harvard University",
+            "country": "United States"
+        },
+        {
+            "node": 173,
+            "name": "Howard Hughes Medical Institute",
+            "country": "United States"
+        },
+        {
+            "node": 174,
+            "name": "IBM Thomas J. Watson Research Center",
+            "country": "United States"
+        },
+        {
+            "node": 175,
+            "name": "Institute for Advanced Study",
+            "country": "United States"
+        },
+        {
+            "node": 176,
+            "name": "Janelia Research Campus, Howard Hughes Medical Institute",
+            "country": "United States"
+        },
+        {
+            "node": 177,
+            "name": "Johns Hopkins University",
+            "country": "United States"
+        },
+        {
+            "node": 178,
+            "name": "Johns Hopkins University School of Medicine",
+            "country": "United States"
+        },
+        {
+            "node": 179,
+            "name": "Lawrence Berkeley National Laboratory",
+            "country": "United States"
+        },
+        {
+            "node": 180,
+            "name": "MBL",
+            "country": "United States"
+        },
+        {
+            "node": 181,
+            "name": "MIT",
+            "country": "United States"
+        },
+        {
+            "node": 182,
+            "name": "MIT",
+            "country": "United States"
+        },
+        {
+            "node": 183,
+            "name": "NASA Goddard Space Flight Center",
+            "country": "United States"
+        },
+        {
+            "node": 184,
+            "name": "National Institute of Standards and Technology",
+            "country": "United States"
+        },
+        {
+            "node": 185,
+            "name": "National Institutes of Health",
+            "country": "United States"
+        },
+        {
+            "node": 186,
+            "name": "Northwestern University",
+            "country": "United States"
+        },
+        {
+            "node": 187,
+            "name": "Princeton University",
+            "country": "United States"
+        },
+        {
+            "node": 188,
+            "name": "Purdue University",
+            "country": "United States"
+        },
+        {
+            "node": 189,
+            "name": "Rice University",
+            "country": "United States"
+        },
+        {
+            "node": 190,
+            "name": "Rockefeller Institute for Medical Research",
+            "country": "United States"
+        },
+        {
+            "node": 191,
+            "name": "Rockefeller University",
+            "country": "United States"
+        },
+        {
+            "node": 192,
+            "name": "Semiconductor Laboratory of Beckman Instruments, Inc.",
+            "country": "United States"
+        },
+        {
+            "node": 193,
+            "name": "Space Telescope Science Institute",
+            "country": "United States"
+        },
+        {
+            "node": 194,
+            "name": "Stanford Linear Accelerator Center",
+            "country": "United States"
+        },
+        {
+            "node": 195,
+            "name": "Stanford University",
+            "country": "United States"
+        },
+        {
+            "node": 196,
+            "name": "Stanford University",
+            "country": "United States"
+        },
+        {
+            "node": 197,
+            "name": "Texas Instruments",
+            "country": "United States"
+        },
+        {
+            "node": 198,
+            "name": "The Medical Foundation of Buffalo",
+            "country": "United States"
+        },
+        {
+            "node": 199,
+            "name": "The Scripps Research Institute",
+            "country": "United States"
+        },
+        {
+            "node": 200,
+            "name": "University of California",
+            "country": "United States"
+        },
+        {
+            "node": 201,
+            "name": "University of California",
+            "country": "United States"
+        },
+        {
+            "node": 202,
+            "name": "University of Chicago",
+            "country": "United States"
+        },
+        {
+            "node": 203,
+            "name": "University of Chicago",
+            "country": "United States"
+        },
+        {
+            "node": 204,
+            "name": "University of Colorado",
+            "country": "United States"
+        },
+        {
+            "node": 205,
+            "name": "University of Colorado",
+            "country": "United States"
+        },
+        {
+            "node": 206,
+            "name": "University of Delaware",
+            "country": "United States"
+        },
+        {
+            "node": 207,
+            "name": "University of Illinois",
+            "country": "United States"
+        },
+        {
+            "node": 208,
+            "name": "University of North Carolina",
+            "country": "United States"
+        },
+        {
+            "node": 209,
+            "name": "University of Pennsylvania",
+            "country": "United States"
+        },
+        {
+            "node": 210,
+            "name": "University of Pennsylvania",
+            "country": "United States"
+        },
+        {
+            "node": 211,
+            "name": "University of Southern California",
+            "country": "United States"
+        },
+        {
+            "node": 212,
+            "name": "University of Texas",
+            "country": "United States"
+        },
+        {
+            "node": 213,
+            "name": "University of Washington",
+            "country": "United States"
+        },
+        {
+            "node": 214,
+            "name": "US Naval Research Laboratory",
+            "country": "United States"
+        },
+        {
+            "node": 215,
+            "name": "Virginia Commonwealth University",
+            "country": "United States"
+        },
+        {
+            "node": 216,
+            "name": "Yale University",
+            "country": "United States"
+        }
+    ],
+    "links": [
+        {
+            "value": 1,
+            "source": 0,
+            "target": 2
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 2
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 5
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 7
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 8
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 9
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 10
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 12
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 15
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 18
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 19
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 20
+        },
+        {
+            "value": 3,
+            "source": 0,
+            "target": 22
+        },
+        {
+            "value": 3,
+            "source": 0,
+            "target": 23
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 26
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 27
+        },
+        {
+            "value": 3,
+            "source": 0,
+            "target": 29
+        },
+        {
+            "value": 3,
+            "source": 0,
+            "target": 30
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 31
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 33
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 34
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 35
+        },
+        {
+            "value": 3,
+            "source": 0,
+            "target": 39
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 40
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 41
+        },
+        {
+            "value": 2,
+            "source": 0,
+            "target": 43
+        },
+        {
+            "value": 2,
+            "source": 0,
+            "target": 44
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 46
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 47
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 49
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 50
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 52
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 53
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 54
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 55
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 58
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 59
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 60
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 61
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 62
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 63
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 64
+        },
+        {
+            "value": 3,
+            "source": 0,
+            "target": 65
+        },
+        {
+            "value": 3,
+            "source": 0,
+            "target": 66
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 67
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 68
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 70
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 71
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 72
+        },
+        {
+            "value": 2,
+            "source": 0,
+            "target": 74
+        },
+        {
+            "value": 2,
+            "source": 0,
+            "target": 75
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 76
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 77
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 78
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 82
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 83
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 85
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 86
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 87
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 88
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 89
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 90
+        },
+        {
+            "value": 2,
+            "source": 0,
+            "target": 91
+        },
+        {
+            "value": 2,
+            "source": 0,
+            "target": 92
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 94
+        },
+        {
+            "value": 2,
+            "source": 0,
+            "target": 95
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 97
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 97
+        },
+        {
+            "value": 2,
+            "source": 0,
+            "target": 98
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 99
+        },
+        {
+            "value": 2,
+            "source": 0,
+            "target": 100
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 102
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 104
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 105
+        },
+        {
+            "value": 5,
+            "source": 0,
+            "target": 105
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 106
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 108
+        },
+        {
+            "value": 2,
+            "source": 0,
+            "target": 109
+        },
+        {
+            "value": 2,
+            "source": 0,
+            "target": 110
+        },
+        {
+            "value": 4,
+            "source": 0,
+            "target": 111
+        },
+        {
+            "value": 4,
+            "source": 0,
+            "target": 112
+        },
+        {
+            "value": 2,
+            "source": 0,
+            "target": 115
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 117
+        },
+        {
+            "value": 5,
+            "source": 0,
+            "target": 117
+        },
+        {
+            "value": 2,
+            "source": 0,
+            "target": 118
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 119
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 121
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 123
+        },
+        {
+            "value": 2,
+            "source": 0,
+            "target": 124
+        },
+        {
+            "value": 2,
+            "source": 0,
+            "target": 127
+        },
+        {
+            "value": 2,
+            "source": 0,
+            "target": 128
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 130
+        },
+        {
+            "value": 2,
+            "source": 0,
+            "target": 131
+        },
+        {
+            "value": 2,
+            "source": 0,
+            "target": 132
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 133
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 137
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 138
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 139
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 140
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 141
+        },
+        {
+            "value": 7,
+            "source": 0,
+            "target": 142
+        },
+        {
+            "value": 7,
+            "source": 0,
+            "target": 143
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 144
+        },
+        {
+            "value": 2,
+            "source": 0,
+            "target": 145
+        },
+        {
+            "value": 2,
+            "source": 0,
+            "target": 148
+        },
+        {
+            "value": 2,
+            "source": 0,
+            "target": 149
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 150
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 150
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 151
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 152
+        },
+        {
+            "value": 5,
+            "source": 0,
+            "target": 153
+        },
+        {
+            "value": 3,
+            "source": 0,
+            "target": 154
+        },
+        {
+            "value": 2,
+            "source": 0,
+            "target": 156
+        },
+        {
+            "value": 7,
+            "source": 0,
+            "target": 157
+        },
+        {
+            "value": 7,
+            "source": 0,
+            "target": 158
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 159
+        },
+        {
+            "value": 6,
+            "source": 0,
+            "target": 160
+        },
+        {
+            "value": 6,
+            "source": 0,
+            "target": 161
+        },
+        {
+            "value": 4,
+            "source": 0,
+            "target": 162
+        },
+        {
+            "value": 4,
+            "source": 0,
+            "target": 163
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 164
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 167
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 168
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 169
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 170
+        },
+        {
+            "value": 9,
+            "source": 0,
+            "target": 171
+        },
+        {
+            "value": 9,
+            "source": 0,
+            "target": 172
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 174
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 175
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 177
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 179
+        },
+        {
+            "value": 7,
+            "source": 0,
+            "target": 181
+        },
+        {
+            "value": 7,
+            "source": 0,
+            "target": 182
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 183
+        },
+        {
+            "value": 3,
+            "source": 0,
+            "target": 184
+        },
+        {
+            "value": 7,
+            "source": 0,
+            "target": 187
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 192
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 193
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 194
+        },
+        {
+            "value": 9,
+            "source": 0,
+            "target": 195
+        },
+        {
+            "value": 9,
+            "source": 0,
+            "target": 196
+        },
+        {
+            "value": 1,
+            "source": 0,
+            "target": 197
+        },
+        {
+            "value": 12,
+            "source": 0,
+            "target": 200
+        },
+        {
+            "value": 12,
+            "source": 0,
+            "target": 201
+        },
+        {
+            "value": 4,
+            "source": 0,
+            "target": 202
+        },
+        {
+            "value": 4,
+            "source": 0,
+            "target": 203
+        },
+        {
+            "value": 4,
+            "source": 0,
+            "target": 204
+        },
+        {
+            "value": 4,
+            "source": 0,
+            "target": 205
+        },
+        {
+            "value": 3,
+            "source": 0,
+            "target": 207
+        },
+        {
+            "value": 2,
+            "source": 0,
+            "target": 209
+        },
+        {
+            "value": 2,
+            "source": 0,
+            "target": 210
+        },
+        {
+            "value": 2,
+            "source": 0,
+            "target": 213
+        },
+        {
+            "value": 2,
+            "source": 1,
+            "target": 2
+        },
+        {
+            "value": 5,
+            "source": 1,
+            "target": 3
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 3
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 4
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 6
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 8
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 9
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 11
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 13
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 14
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 16
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 17
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 21
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 22
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 23
+        },
+        {
+            "value": 2,
+            "source": 1,
+            "target": 24
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 25
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 28
+        },
+        {
+            "value": 2,
+            "source": 1,
+            "target": 29
+        },
+        {
+            "value": 2,
+            "source": 1,
+            "target": 30
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 32
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 36
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 37
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 38
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 42
+        },
+        {
+            "value": 5,
+            "source": 1,
+            "target": 43
+        },
+        {
+            "value": 5,
+            "source": 1,
+            "target": 44
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 45
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 48
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 49
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 50
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 51
+        },
+        {
+            "value": 3,
+            "source": 1,
+            "target": 52
+        },
+        {
+            "value": 3,
+            "source": 1,
+            "target": 53
+        },
+        {
+            "value": 2,
+            "source": 1,
+            "target": 56
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 57
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 57
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 58
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 59
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 60
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 61
+        },
+        {
+            "value": 4,
+            "source": 1,
+            "target": 63
+        },
+        {
+            "value": 4,
+            "source": 1,
+            "target": 64
+        },
+        {
+            "value": 6,
+            "source": 1,
+            "target": 65
+        },
+        {
+            "value": 6,
+            "source": 1,
+            "target": 66
+        },
+        {
+            "value": 3,
+            "source": 1,
+            "target": 67
+        },
+        {
+            "value": 3,
+            "source": 1,
+            "target": 68
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 69
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 70
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 71
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 73
+        },
+        {
+            "value": 4,
+            "source": 1,
+            "target": 74
+        },
+        {
+            "value": 4,
+            "source": 1,
+            "target": 75
+        },
+        {
+            "value": 3,
+            "source": 1,
+            "target": 79
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 80
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 81
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 81
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 84
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 88
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 89
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 91
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 92
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 93
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 96
+        },
+        {
+            "value": 2,
+            "source": 1,
+            "target": 97
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 101
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 103
+        },
+        {
+            "value": 3,
+            "source": 1,
+            "target": 107
+        },
+        {
+            "value": 2,
+            "source": 1,
+            "target": 109
+        },
+        {
+            "value": 2,
+            "source": 1,
+            "target": 110
+        },
+        {
+            "value": 4,
+            "source": 1,
+            "target": 113
+        },
+        {
+            "value": 2,
+            "source": 1,
+            "target": 114
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 116
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 120
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 122
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 125
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 126
+        },
+        {
+            "value": 2,
+            "source": 1,
+            "target": 127
+        },
+        {
+            "value": 2,
+            "source": 1,
+            "target": 128
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 129
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 131
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 132
+        },
+        {
+            "value": 6,
+            "source": 1,
+            "target": 134
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 135
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 136
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 137
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 138
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 140
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 141
+        },
+        {
+            "value": 3,
+            "source": 1,
+            "target": 142
+        },
+        {
+            "value": 3,
+            "source": 1,
+            "target": 143
+        },
+        {
+            "value": 4,
+            "source": 1,
+            "target": 146
+        },
+        {
+            "value": 2,
+            "source": 1,
+            "target": 147
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 148
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 149
+        },
+        {
+            "value": 2,
+            "source": 1,
+            "target": 150
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 155
+        },
+        {
+            "value": 4,
+            "source": 1,
+            "target": 157
+        },
+        {
+            "value": 4,
+            "source": 1,
+            "target": 158
+        },
+        {
+            "value": 2,
+            "source": 1,
+            "target": 160
+        },
+        {
+            "value": 2,
+            "source": 1,
+            "target": 161
+        },
+        {
+            "value": 3,
+            "source": 1,
+            "target": 162
+        },
+        {
+            "value": 3,
+            "source": 1,
+            "target": 163
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 165
+        },
+        {
+            "value": 2,
+            "source": 1,
+            "target": 166
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 169
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 170
+        },
+        {
+            "value": 7,
+            "source": 1,
+            "target": 171
+        },
+        {
+            "value": 7,
+            "source": 1,
+            "target": 172
+        },
+        {
+            "value": 5,
+            "source": 1,
+            "target": 173
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 173
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 176
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 178
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 180
+        },
+        {
+            "value": 2,
+            "source": 1,
+            "target": 181
+        },
+        {
+            "value": 2,
+            "source": 1,
+            "target": 182
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 185
+        },
+        {
+            "value": 2,
+            "source": 1,
+            "target": 186
+        },
+        {
+            "value": 2,
+            "source": 1,
+            "target": 188
+        },
+        {
+            "value": 2,
+            "source": 1,
+            "target": 189
+        },
+        {
+            "value": 2,
+            "source": 1,
+            "target": 190
+        },
+        {
+            "value": 4,
+            "source": 1,
+            "target": 191
+        },
+        {
+            "value": 7,
+            "source": 1,
+            "target": 195
+        },
+        {
+            "value": 7,
+            "source": 1,
+            "target": 196
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 198
+        },
+        {
+            "value": 2,
+            "source": 1,
+            "target": 199
+        },
+        {
+            "value": 13,
+            "source": 1,
+            "target": 200
+        },
+        {
+            "value": 13,
+            "source": 1,
+            "target": 201
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 202
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 203
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 204
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 205
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 206
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 208
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 209
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 210
+        },
+        {
+            "value": 2,
+            "source": 1,
+            "target": 211
+        },
+        {
+            "value": 2,
+            "source": 1,
+            "target": 212
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 214
+        },
+        {
+            "value": 1,
+            "source": 1,
+            "target": 215
+        },
+        {
+            "value": 3,
+            "source": 1,
+            "target": 216
+        }
+    ]
+}

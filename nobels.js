@@ -46,7 +46,7 @@ function choose_sankey_color(name) {
 }
 
 //====================   dataset_extraction   ========================
-d3.json("data/bars.json").then(function(data) {
+d3.json("data/bars_new.json").then(function(data) {
     var bar_chart_dataset = data.slice(0,35);
 
     gen_bar_chart(bar_chart_dataset, "chemistry");
@@ -359,8 +359,8 @@ function gen_bar_chart(dataset, chart){
                       return yscale(i);
                   })
         .attr("x",w-padding)
-        .attr("degree", function(d) { return d.degree; })
-        .text(function(d) { return d.degree; }) //Not working
+      .attr("prizeShare", function(d) { return d.prizeShare; })
+        .text(function(d) { return d.prizeShare; }) //Not working
         .on("mouseover", function(d){
                                 //Opacity 0.5
                                 d3.selectAll("circle,rect,path")
@@ -372,7 +372,7 @@ function gen_bar_chart(dataset, chart){
                                   .style("fill", "green");
 
                                 //Cleveland Plot
-                                d3.select("#" + chart).selectAll("circle[degree=\'" + d.degree + "\']")
+                                d3.select("#" + chart).selectAll("circle[prizeShare=\'" + d.prizeShare + "\']")
                                   .transition()
                                   .duration("500")
                                   .style('r',r * 2)

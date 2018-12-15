@@ -1,0 +1,145 @@
+{
+    "nodes": [
+        {
+            "node": 0,
+            "name": "Physics"
+        }, 
+        {
+            "node": 1,
+            "name": "Chemistry"
+        },
+        {
+            "node": 2,
+            "name": "University of Cambridge",
+            "country": "United Kingdom"
+        },
+        {
+            "node": 3,
+            "name": "Caltech",
+            "country": "United States"
+        },
+        {
+            "node": 4,
+            "name": "Harvard University",
+            "country": "United States"
+        },
+        {
+            "node": 5,
+            "name": "Harvard University",
+            "country": "United States"
+        },
+        {
+            "node": 6,
+            "name": "MIT",
+            "country": "United States"
+        },
+        {
+            "node": 7,
+            "name": "Princeton University",
+            "country": "United States"
+        },
+        {
+            "node": 8,
+            "name": "Stanford University",
+            "country": "United States"
+        },
+        {
+            "node": 9,
+            "name": "Stanford University",
+            "country": "United States"
+        },
+        {
+            "node": 10,
+            "name": "University of California",
+            "country": "United States"
+        },
+        {
+            "node": 11,
+            "name": "University of California",
+            "country": "United States"
+        }
+    ],
+    "links": [
+        {
+            "value": 7,
+            "source": 0,
+            "target": 2
+        },
+        {
+            "value": 7,
+            "source": 0,
+            "target": 3
+        },
+
+        {
+            "value": 9,
+            "source": 0,
+            "target": 4
+        },
+        {
+            "value": 9,
+            "source": 0,
+            "target": 5
+        },
+        {
+            "value": 7,
+            "source": 0,
+            "target": 6
+        },
+        {
+            "value": 7,
+            "source": 0,
+            "target": 7
+        },
+        {
+            "value": 9,
+            "source": 0,
+            "target": 8
+        },
+        {
+            "value": 9,
+            "source": 0,
+            "target": 9
+        },
+        {
+            "value": 12,
+            "source": 0,
+            "target": 10
+        },
+        {
+            "value": 12,
+            "source": 0,
+            "target": 11
+        },
+        {
+            "value": 7,
+            "source": 1,
+            "target": 4
+        },
+        {
+            "value": 7,
+            "source": 1,
+            "target": 5
+        },
+        {
+            "value": 7,
+            "source": 1,
+            "target": 8
+        },
+        {
+            "value": 7,
+            "source": 1,
+            "target": 9
+        },
+        {
+            "value": 13,
+            "source": 1,
+            "target": 10
+        },
+        {
+            "value": 13,
+            "source": 1,
+            "target": 11
+        }
+    ]
+}

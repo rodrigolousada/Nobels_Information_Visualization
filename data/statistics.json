@@ -1,10 +1,8 @@
 [
-  {
-    "category": "Chemistry",
-    "averageAge": 60
-  },
-  {
-    "category": "Physics",
-    "averageAge": 55
-  }
+{"category":"Physics","maxAge":88.0,"stdDevAge":13.806709092340213,"averageAge":55.95475113122172,"medianAge":55.0,"minAge":25.0},
+{"category":"Chemistry","maxAge":85.0,"stdDevAge":11.6918992187,"averageAge":58.1347150259,"medianAge":57.0,"minAge":35.0},
+{"category":"Literature","maxAge":88.0,"stdDevAge":10.2473363071,"averageAge":64.6725663717,"medianAge":67.0,"minAge":42.0},
+{"category":"Medicine","maxAge":87.0,"stdDevAge":11.4424316701,"averageAge":57.9339207048,"medianAge":55.0,"minAge":25.0},
+{"category":"Economics","maxAge":90.0,"stdDevAge":7.9784826702,"averageAge":67.0481927711,"medianAge":67.0,"minAge":51.0},
+{"category":"Peace","maxAge":87.0,"stdDevAge":12.9820026798,"averageAge":61.39423076922,"medianAge":62.0,"minAge":17.0}
 ]

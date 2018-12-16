@@ -1,0 +1,45 @@
+[
+    {
+    "name":"Jobs.Freelance.Y",
+    "imports":
+    [
+      "Freelance.Montrose_High_School",
+      "Freelance.Technology_in_Education",
+      "Freelance.Fandango",
+      "Freelance.ICPA",
+      "Freelance.Showtime",
+      "Freelance._VVF",
+      "Freelance.Team_Tactical",
+      "Freelance.ADP",
+      "Freelance.Centene"
+    ]
+    },
+    {
+    "name":"Jobs.mit.V",
+    "imports":
+    [
+      "root.Bayard.ADP",
+      "root.Bayard.Centene",
+      "root.Bayard.University_of_Kentucky",
+      "root.Bayard.Hertz",
+      "root.Bayard.Six_Flags",
+      "root.Bayard.Kaiser_Permanente"
+    ]
+    },
+    {"name":"Freelance.Montrose_High_School","imports":["root.Bayard.ADP"]},
+    {"name":"Freelance.Technology_in_Education","imports":[]},
+    {"name":"Freelance.Fandango","imports":[]},
+    {"name":"Freelance.ICPA","imports":[]},
+    {"name":"Freelance.Showtime","imports":[]},
+    {"name":"Freelance._VVF","imports":[]},
+    {"name":"Freelance.Team_Tactical","imports":[]},
+    {"name":"Freelance.ADP","imports":[]},
+    {"name":"Freelance.Centene","imports":[]},
+    {"name":"root.Bayard.ADP","imports":[]},
+    {"name":"root.Bayard.Centene","imports":[]},
+    {"name":"root.Bayard.University_of_Kentucky", "imports":[]},
+    {"name":"root.Bayard.Hertz","imports":[]},
+    {"name":"root.Bayard.Six_Flags", "imports":[]},
+    {"name":"root.Bayard.Kaiser_Permanente", "imports":[]},
+    {"name":"root.Bayard.Ball_Aerospace", "imports":[]}
+]

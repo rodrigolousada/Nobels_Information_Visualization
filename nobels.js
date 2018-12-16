@@ -1,7 +1,7 @@
 // In case of not seeing the expected results, run: python -m http.server 8888
 //====================   global_variables   ========================
 // source
-src="http://d3js.org/d3.v4.min.js"
+// src="http://d3js.org/d3.v4.min.js"
 
 // srcsankey="sankey.js"
 
@@ -814,191 +814,220 @@ function gen_sankey(){
 
 //=================== Chord Chart   ======================
 function chord_chart(){
-  var diameter = 400,
-      radius = diameter / 2,
-      innerRadius = radius - 60;
+    // src="//code.jquery.com/jquery-1.12.3.min.js"
+    // src="js/d3.v3.js"
 
-  var cluster = d3.cluster()
-      .size([360, innerRadius]);
+    // d3=d3version3;
 
-  var line = d3.radialLine()
-      .curve(d3.curveBundle.beta(0.85))
-      .radius(function(d) { return d.y; })
-      .angle(function(d) { return d.x / 180 * Math.PI; });
+    console.log('v3.svg', d3v3.version)
 
-  var svg = d3.select("#chord").append("svg")
-      .attr("width", diameter + 100)
-      .attr("height", diameter)
-      .append("g")
-      .attr("transform", "translate(" + radius + "," + radius + ")");
+  var w = 680,
+    h = 650,
+    rx = w / 2,
+    ry = h / 2,
+    m0,
+    rotate = 0
+    pi = Math.PI;
 
-  var link = svg.append("g").selectAll(".link"),
-      node = svg.append("g").selectAll(".node");
+  var splines = [];
 
-  d3.json("data/chordchartPhysics.json", function(error, classes) {
-    if (error) throw error;
+  var cluster = d3v3.layout.cluster()
+    .size([360, ry - 180])
+    .sort(function(a, b) { return d3v3.ascending(a.key, b.key); });
 
-    var root = packageHierarchy(classes)
-        .sum(function(d) { return d.size; });
+  var bundle = d3v3.layout.bundle();
 
-    cluster(root);
+  var line = d3v3.svg.line.radial()
+    .interpolate("bundle")
+    .tension(.85)
+    .radius(function(d) { return d.y; })
+    .angle(function(d) { return d.x / 180 * Math.PI; });
 
-    link = link
-      .data(packageImports(root.leaves()))
-      .enter().append("path")
-        .each(function(d) { d.source = d[0], d.target = d[d.length - 1]; })
-        .attr("class", "link")
-        .attr("d", line);
+  // Chrome 15 bug: <http://code.google.com/p/chromium/issues/detail?id=98951>
+  var div = d3v3.select("#chord")
+    .style("width", 600 + "px")
+    .style("height", 400 + "px")
+    .style("margin-top", "-200px")
+    // .style("position", "absolute")
+    ;
 
+  var svg = div.append("svg:svg")
+    .attr("width", w)
+    .attr("height", w)
+    // .style("top", "0px")
+    .append("svg:g")
+    .attr("transform", "translate(" + rx + "," + ry + ")");
 
-     node.data(root.leaves())
-      .enter().append("text")
-        .attr("class", "node")
-        .attr("dy", "0.31em")
-        .attr("affiliation", function (d) { return (d.data.name).substr(0, (d.data.name).indexOf('.')); })
-        .attr("transform", function(d) { return "rotate(" + (d.x - 90) + ")translate(" + (d.y + 20) + ",0)" + (d.x < 180 ? "" : "rotate(180)"); })
-        .attr("text-anchor", function(d) { return d.x < 180 ? "start" : "end"; })
-        .attr("numberLinks", function(d) { for () })
-        // .text(function(d) { return d.data.key; })
+  svg.append("svg:path")
+    .attr("class", "arc")
+    .attr("d", d3v3.svg.arc().outerRadius(ry - 180).innerRadius(0).startAngle(0).endAngle(2 * Math.PI))
+    .on("mousedown", mousedown);
 
+  d3v3.json("data/flare3nodes.json", function(classes) { //flare-imports
+  var nodes = cluster.nodes(packages.root(classes)),
+      links = packages.imports(nodes),
+      splines = bundle(links);
 
-        // .attr("x", function(d) { return d.x < Math.PI ? 6 : -6; })
-        // .style("text-anchor", function(d) { return d.x < Math.PI ? "start" : "end"; })
-        // .attr("transform", function(d) { return "rotate(" + (d.x < Math.PI ? d.x - Math.PI / 2 : d.x + Math.PI / 2) * 180 / Math.PI + ")"; })
-        .text(function(d) { return d.data.key; })
-        // .style("fill", findColor)
+  var path = svg.selectAll("path.link")
+      .data(links)
+    .enter().append("svg:path")
+      .attr("class", function(d) { return "link source-" + d.source.key + " target-" + d.target.key; })
+      .attr("d", function(d, i) { return line(splines[i]); });
 
+  var groupData = svg.selectAll("g.group")
+    .data(nodes.filter(function(d) { return (d.key=='nyu' || d.key == 'harvard' || d.key == 'mit') && d.children; }))
+    .enter().append("group")
+    .attr("class", "group");
 
-        .on("mouseenter", mouseentered)
-        .on("mouseleave", mouseleaved);
+  var groupArc = d3v3.svg.arc()
+  .innerRadius(ry - 177)
+  .outerRadius(ry - 157)
+  .startAngle(function(d) { return (findStartAngle(d.__data__.children)-2) * pi / 180;})
+  .endAngle(function(d) { return (findEndAngle(d.__data__.children)+2) * pi / 180});
 
+  svg.selectAll("g.arc")
+  .data(groupData[0])
+  .enter().append("svg:path")
+  .attr("d", groupArc)
+  .attr("class", "groupArc")
+  .style("fill", "#1f77b4")
+  .style("fill-opacity", 0.5);
 
-        node.data(root.leaves())
-            .enter()
-            .append('circle')
-            .attr("name",function (d) { return d.data.key; })
-            .attr("affiliation", function (d) { return (d.data.name).substr(0, (d.data.name).indexOf('.')); })
-            .attr("dy", "0.31em")
-            .attr("transform", function(d) { return "rotate(" + (d.x - 90) + ")translate(" + (d.y + 8) + ",0)" + (d.x < 180 ? "" : "rotate(180)"); })
-            .attr('r', 4)
-            .style("fill", determinecolor)
+  svg.selectAll("g.node")
+      .data(nodes.filter(function(n) { return !n.children; }))
+    .enter().append("svg:g")
+      .attr("class", "node")
+      .attr("id", function(d) { return "node-" + d.key; })
+      .attr("transform", function(d) { return "rotate(" + (d.x - 90) + ")translate(" + d.y + ")"; })
+    .append("svg:text")
+      .attr("dx", function(d) { return d.x < 180 ? 25 : -25; })
+      .attr("dy", ".31em")
+      .attr("text-anchor", function(d) { return d.x < 180 ? "start" : "end"; })
+      .attr("transform", function(d) { return d.x < 180 ? null : "rotate(180)"; })
+      .text(function(d) { return d.key.replace(/_/g, ' '); })
+      .on("mouseover", mouseover)
+      .on("mouseout", mouseout);
 
-            // .append('title')
+    d3v3.select("input[type=range]").on("change", function() {
+      line.tension(this.value / 100);
+      path.attr("d", function(d, i) { return line(splines[i]); });
+    });
   });
 
-  // function findColor(d) {
-  // 	let c = "";
-  //   if (d.depth == 0 || d.depth == 1 || d.depth === 2) {
-  // 		c = color(d.data.name);
-  // 	}
-  // 	else {
-  // 		c = findColor(d.parent);
-  // 	}
-  // 	return c;
-  // }
-  function determinecolor(d) {
-      if ((d.data.name).substr(0, (d.data.name).indexOf('.')) == "mit" ) {
-        return "#51bfdb";
-      } else if ((d.data.name).substr(0, (d.data.name).indexOf('.')) == "nyu") {
-        return "orange";
-      }
-      return "00cc00";
-    }
+  d3v3.select(window)
+    .on("mousemove", mousemove)
+    .on("mouseup", mouseup);
 
-  function mouseentered(d) {
-    d3.selectAll("circle,rect,path, text")
+  function mouse(e) {
+  return [e.pageX - rx, e.pageY - ry];
+  }
+
+  function mousedown() {
+  m0 = mouse(d3v3.event);
+  d3v3.event.preventDefault();
+  }
+
+  function mousemove() {
+  if (m0) {
+    var m1 = mouse(d3v3.event),
+        dm = Math.atan2(cross(m0, m1), dot(m0, m1)) * 180 / Math.PI;
+    div.style("-webkit-transform", "translate3d(0," + (ry - rx) + "px,0)rotate3d(0,0,0," + dm + "deg)translate3d(0," + (rx - ry) + "px,0)");
+  }
+  }
+
+  function mouseup() {
+  if (m0) {
+    var m1 = mouse(d3v3.event),
+        dm = Math.atan2(cross(m0, m1), dot(m0, m1)) * 180 / Math.PI;
+
+    rotate += dm;
+    if (rotate > 360) rotate -= 360;
+    else if (rotate < 0) rotate += 360;
+    m0 = null;
+
+    div.style("-webkit-transform", "rotate3d(0,0,0,0deg)");
+
+    svg.attr("transform", "translate(" + rx + "," + ry + ")rotate(" + rotate + ")")
+      .selectAll("g.node text")
+        .attr("dx", function(d) { return (d.x + rotate) % 360 < 180 ? 25 : -25; })
+        .attr("text-anchor", function(d) { return (d.x + rotate) % 360 < 180 ? "start" : "end"; })
+        .attr("transform", function(d) { return (d.x + rotate) % 360 < 180 ? null : "rotate(180)"; });
+  }
+  }
+
+  function mouseover(d) {
+    d3.selectAll("#sankey_diagram")
       .style("opacity",0.5);
 
-    node
-        .each(function(n) { n.target = n.source = true; })
-        .style("font", "15px")
+    d3v3.select(this)
+        .style("opacity",1)
+        .style("fill","#111111")
         ;
 
-    link
-        .classed("link--target", function(l) { if (l.target === d) return l.source.source = true; })
-        .classed("link--source", function(l) { if (l.source === d) return l.target.target = true; })
-        .filter(function(l) { return l.target === d || l.source === d; })
-        .style("opacity", 1)
-        .raise();
+    d3v3.selectAll("path.link.target-" + d.key)
+        .classed("target", true)
+        .each(updateNodes("source", true));
 
-    node
-        .classed("node--target", function(n) { return n.target; })
-        .classed("node--source", function(n) { return n.source; })
-        .style("font", "15px")
-        .raise()
-        ;
-    d3.select(this)
-      .style("opacity", 1)
+    svg.selectAll("path.link.source-" + d.key)
+        .classed("source", true)
+        .each(updateNodes("target", true));
 
-      ;
-    d3.select("#chemistry").selectAll("circle[name=\'" + d.data.key + "\']")
+
+    console.log(d.key.replace(/_/g, ' '));
+
+    d3.selectAll("circle[name=\"" + d.key.replace(/_/g, ' ') + "\"]")
       .transition()
       .style('r',r * 2)
       .duration(250)
       .style("opacity", 1)
       .style("fill", "red");
-  }
 
-  function mouseleaved(d) {
-    link
-        .classed("link--target", false)
-        .classed("link--source", false);
-
-    node
-        .classed("node--target", false)
-        .classed("node--source", false);
-    d3.selectAll("circle,rect,path, text")
-        .style("opacity",1);
-
-    d3.select("#chemistry").selectAll("circle[name=\'" + d.data.key + "\']")
-        .transition()
-        .style('r',r )
-        .duration(250)
-        .style("fill",prize_color("chemistry"));
 
   }
+  function mouseout(d) {
 
-  // Lazily construct the package hierarchy from class names.
-  function packageHierarchy(classes) {
-    var map = {};
+    d3.selectAll("#sankey_diagram")
+       .style("opacity",1);
 
-    function find(name, data) {
-      var node = map[name], i;
-      if (!node) {
-        node = map[name] = data || {name: name, children: []};
-        if (name.length) {
-          node.parent = find(name.substring(0, i = name.lastIndexOf(".")));
-          node.parent.children.push(node);
-          node.key = name.substring(i + 1);
-        }
-      }
-      return node;
-    }
+    svg.selectAll("path.link.source-" + d.key)
+        .classed("source", false)
+        .each(updateNodes("target", false));
 
-    classes.forEach(function(d) {
-      find(d.name, d);
-    });
-
-    return d3.hierarchy(map[""]);
+    svg.selectAll("path.link.target-" + d.key)
+        .classed("target", false)
+        .each(updateNodes("source", false));
   }
 
-  // Return a list of imports for the given array of nodes.
-  function packageImports(nodes) {
-    var map = {},
-        imports = [];
+  function updateNodes(name, value) {
+    return function(d) {
+      if (value) this.parentNode.appendChild(this);
+      svg.select("#node-" + d[name].key).classed(name, value);
+    };
+  }
 
-    // Compute a map from name to node.
-    nodes.forEach(function(d) {
-      map[d.data.name] = d;
+  function cross(a, b) {
+  return a[0] * b[1] - a[1] * b[0];
+  }
+
+  function dot(a, b) {
+  return a[0] * b[0] + a[1] * b[1];
+  }
+
+  function findStartAngle(children) {
+    var min = children[0].x;
+    children.forEach(function(d) {
+       if (d.x < min)
+           min = d.x;
     });
+    return min;
+  }
 
-    // For each import, construct a link from the source to target node.
-    nodes.forEach(function(d) {
-      if (d.data.imports) d.data.imports.forEach(function(i) {
-        imports.push(map[d.data.name].path(map[i]));
-      });
+  function findEndAngle(children) {
+    var max = children[0].x;
+    children.forEach(function(d) {
+       if (d.x > max)
+           max = d.x;
     });
-
-    return imports;
+    return max;
   }
 }

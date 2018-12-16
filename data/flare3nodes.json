@@ -1,26 +1,28 @@
-[{
-  "name": "mit.Sofia Aparicio",
-  "imports": ["nyu.Pedro Pires","harvard.Joana Margarida"]
+[
+
+  {
+  "name": "usa.mit.Sofia_Aparicio",
+  "imports": ["pt.nyu.Aaron_Ciechanover","uk.harvard.Joana_Margarida"]
 },
 
 {
-  "name": "harvard.Rodrigo Lousada",
-  "imports": ["mit.Sofia Aparicio"]
+  "name": "uk.harvard.Rodrigo_Lousada",
+  "imports": ["usa.mit.Sofia_Aparicio"]
 },
 {
-  "name": "mit.Sofia Almeida",
-  "imports": ["mit.Sofia Aparicio"]
+  "name": "usa.mit.Sofia_Almeida",
+  "imports": ["usa.mit.Sofia_Aparicio"]
 },
 {
-  "name": "nyu.Pedro Pires",
-  "imports": ["harvard.Rodrigo Lousada"]
+  "name": "pt.nyu.Aaron_Ciechanover",
+  "imports": ["uk.harvard.Rodrigo_Lousada"]
 },
 {
-  "name": "harvard.Joana Margarida",
-  "imports": ["mit.Joao Aparicio"]
+  "name": "uk.harvard.Joana_Margarida",
+  "imports": ["usa.mit.Joao_Aparicio"]
 },
 {
-  "name": "mit.Joao Aparicio",
-  "imports": ["mit.Sofia Aparicio"]
+  "name": "usa.mit.Joao_Aparicio",
+  "imports": ["usa.mit.Sofia_Aparicio"]
 }
 ]

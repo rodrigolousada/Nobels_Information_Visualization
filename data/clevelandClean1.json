@@ -11,7 +11,7 @@
             "OrganizationCity": "",
             "countryAffiliation": "",
             "affiliation": "Howard Hughes Medical Institute",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2008"
         },
         {
@@ -26,7 +26,7 @@
             "OrganizationCity": "",
             "countryAffiliation": "",
             "affiliation": "Howard Hughes Medical Institute",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1988"
         },
         {
@@ -41,7 +41,7 @@
             "OrganizationCity": "",
             "countryAffiliation": "",
             "affiliation": "Howard Hughes Medical Institute",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2009"
         },
         {
@@ -56,7 +56,7 @@
             "OrganizationCity": "",
             "countryAffiliation": "",
             "affiliation": "Howard Hughes Medical Institute",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "2012"
         },
         {
@@ -71,7 +71,7 @@
             "OrganizationCity": "",
             "countryAffiliation": "",
             "affiliation": "Howard Hughes Medical Institute",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "2003"
         },
         {
@@ -86,7 +86,7 @@
             "OrganizationCity": "Buenos Aires",
             "countryAffiliation": "Argentina",
             "affiliation": "Institute for Biochemical Research",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1970"
         },
         {
@@ -101,7 +101,7 @@
             "OrganizationCity": "Graz",
             "countryAffiliation": "Austria",
             "affiliation": "Graz University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1923"
         },
         {
@@ -116,7 +116,7 @@
             "OrganizationCity": "Brussels",
             "countryAffiliation": "Belgium",
             "affiliation": "UniversitÃ© Libre de Bruxelles",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1977"
         },
         {
@@ -131,7 +131,7 @@
             "OrganizationCity": "Ottawa",
             "countryAffiliation": "Canada",
             "affiliation": "National Research Council of Canada",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1971"
         },
         {
@@ -146,7 +146,7 @@
             "OrganizationCity": "Vancouver",
             "countryAffiliation": "Canada",
             "affiliation": "University of British Columbia",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1993"
         },
         {
@@ -161,7 +161,7 @@
             "OrganizationCity": "Toronto",
             "countryAffiliation": "Canada",
             "affiliation": "University of Toronto",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1986"
         },
         {
@@ -176,7 +176,7 @@
             "OrganizationCity": "Prague",
             "countryAffiliation": "Czechoslovakia",
             "affiliation": "Polarographic Institute of the Czechoslovak Academy of Science",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1959"
         },
         {
@@ -191,7 +191,7 @@
             "OrganizationCity": "Aarhus",
             "countryAffiliation": "Denmark",
             "affiliation": "Aarhus University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1997"
         },
         {
@@ -206,7 +206,7 @@
             "OrganizationCity": "Cologne",
             "countryAffiliation": "Germany",
             "affiliation": "Cologne University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1950"
         },
         {
@@ -221,7 +221,7 @@
             "OrganizationCity": "Kiel",
             "countryAffiliation": "Germany",
             "affiliation": "Kiel University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1950"
         },
         {
@@ -236,7 +236,7 @@
             "OrganizationCity": "GÃ¶ttingen",
             "countryAffiliation": "Germany",
             "affiliation": "Max-Planck-Institut",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1967"
         },
         {
@@ -251,7 +251,7 @@
             "OrganizationCity": "MÃ¼lheim/Ruhr",
             "countryAffiliation": "Germany",
             "affiliation": "Max-Planck-Institut",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1963"
         },
         {
@@ -266,7 +266,7 @@
             "OrganizationCity": "Martinsried",
             "countryAffiliation": "Germany",
             "affiliation": "Max-Planck-Institut",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1988"
         },
         {
@@ -281,7 +281,7 @@
             "OrganizationCity": "Frankfurt-on-the-Main",
             "countryAffiliation": "Germany",
             "affiliation": "Max-Planck-Institut",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1988"
         },
         {
@@ -296,7 +296,7 @@
             "OrganizationCity": "Mainz",
             "countryAffiliation": "Germany",
             "affiliation": "Max-Planck-Institut",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1995"
         },
         {
@@ -311,7 +311,7 @@
             "OrganizationCity": "Breisgau",
             "countryAffiliation": "Germany",
             "affiliation": "State Research Institute for Macromolecular Chemistry",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1953"
         },
         {
@@ -326,7 +326,7 @@
             "OrganizationCity": "Munich",
             "countryAffiliation": "Germany",
             "affiliation": "Technical University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1973"
         },
         {
@@ -341,7 +341,7 @@
             "OrganizationCity": "Breisgau",
             "countryAffiliation": "Germany",
             "affiliation": "University of Freiburg",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1953"
         },
         {
@@ -356,7 +356,7 @@
             "OrganizationCity": "Heidelberg",
             "countryAffiliation": "Germany",
             "affiliation": "University of Heidelberg",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1979"
         },
         {
@@ -371,7 +371,7 @@
             "OrganizationCity": "Helsinki",
             "countryAffiliation": "Finland",
             "affiliation": "University of Helsinki",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1945"
         },
         {
@@ -386,7 +386,7 @@
             "OrganizationCity": "Paris",
             "countryAffiliation": "France",
             "affiliation": "CollÃ¨ge de France",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1987"
         },
         {
@@ -401,7 +401,7 @@
             "OrganizationCity": "Paris",
             "countryAffiliation": "France",
             "affiliation": "Institut du Radium",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1935"
         },
         {
@@ -416,7 +416,7 @@
             "OrganizationCity": "Paris",
             "countryAffiliation": "France",
             "affiliation": "Institut du Radium",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1935"
         },
         {
@@ -431,7 +431,7 @@
             "OrganizationCity": "Rueil-Malmaison",
             "countryAffiliation": "France",
             "affiliation": "Institut FranÃ§ais du PÃ©trole",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2005"
         },
         {
@@ -446,7 +446,7 @@
             "OrganizationCity": "Nancy",
             "countryAffiliation": "France",
             "affiliation": "Nancy University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1912"
         },
         {
@@ -461,7 +461,7 @@
             "OrganizationCity": "Paris",
             "countryAffiliation": "France",
             "affiliation": "Sorbonne University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1911"
         },
         {
@@ -476,7 +476,7 @@
             "OrganizationCity": "Paris",
             "countryAffiliation": "France",
             "affiliation": "Sorbonne University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1906"
         },
         {
@@ -491,7 +491,7 @@
             "OrganizationCity": "Toulouse",
             "countryAffiliation": "France",
             "affiliation": "Toulouse University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1912"
         },
         {
@@ -506,7 +506,7 @@
             "OrganizationCity": "Strasbourg",
             "countryAffiliation": "France",
             "affiliation": "University of Strasbourg",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2016"
         },
         {
@@ -521,7 +521,7 @@
             "OrganizationCity": "Strasbourg",
             "countryAffiliation": "France",
             "affiliation": "UniversitÃ© de Strasbourg",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2013"
         },
         {
@@ -536,7 +536,7 @@
             "OrganizationCity": "Strasbourg",
             "countryAffiliation": "France",
             "affiliation": "UniversitÃ© Louis Pasteur",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1987"
         },
         {
@@ -551,7 +551,7 @@
             "OrganizationCity": "Berlin",
             "countryAffiliation": "Germany",
             "affiliation": "Berlin University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1939"
         },
         {
@@ -566,7 +566,7 @@
             "OrganizationCity": "Berlin",
             "countryAffiliation": "Germany",
             "affiliation": "Berlin University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1936"
         },
         {
@@ -581,7 +581,7 @@
             "OrganizationCity": "Berlin",
             "countryAffiliation": "Germany",
             "affiliation": "Berlin University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1901"
         },
         {
@@ -596,7 +596,7 @@
             "OrganizationCity": "Berlin",
             "countryAffiliation": "Germany",
             "affiliation": "Berlin University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1920"
         },
         {
@@ -611,7 +611,7 @@
             "OrganizationCity": "Berlin",
             "countryAffiliation": "Germany",
             "affiliation": "Berlin University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1902"
         },
         {
@@ -626,7 +626,7 @@
             "OrganizationCity": "Berlin",
             "countryAffiliation": "Germany",
             "affiliation": "Fritz-Haber-Institut der Max-Planck-Gesellschaft",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "2007"
         },
         {
@@ -641,7 +641,7 @@
             "OrganizationCity": "Heidelberg",
             "countryAffiliation": "Germany",
             "affiliation": "German Cancer Research Center",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2014"
         },
         {
@@ -656,7 +656,7 @@
             "OrganizationCity": "GÃ¶ttingen",
             "countryAffiliation": "Germany",
             "affiliation": "Goettingen University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1910"
         },
         {
@@ -671,7 +671,7 @@
             "OrganizationCity": "GÃ¶ttingen",
             "countryAffiliation": "Germany",
             "affiliation": "Goettingen University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1928"
         },
         {
@@ -686,7 +686,7 @@
             "OrganizationCity": "GÃ¶ttingen",
             "countryAffiliation": "Germany",
             "affiliation": "Goettingen University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1925"
         },
         {
@@ -701,7 +701,7 @@
             "OrganizationCity": "Mannheim-Rheinau",
             "countryAffiliation": "Germany",
             "affiliation": "I.G. Farbenindustrie A.G.",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1931"
         },
         {
@@ -716,7 +716,7 @@
             "OrganizationCity": "Heidelberg",
             "countryAffiliation": "Germany",
             "affiliation": "I.G. Farbenindustrie A.G.",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1931"
         },
         {
@@ -731,7 +731,7 @@
             "OrganizationCity": "Berlin-Dahlem",
             "countryAffiliation": "Germany",
             "affiliation": "Fritz-Haber-Institut",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1918"
         },
         {
@@ -746,7 +746,7 @@
             "OrganizationCity": "Berlin-Dahlem",
             "countryAffiliation": "Germany",
             "affiliation": "Max-Planck Institut",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1939"
         },
         {
@@ -761,7 +761,7 @@
             "OrganizationCity": "Berlin",
             "countryAffiliation": "Germany",
             "affiliation": "Max-Planck Institut",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1936"
         },
         {
@@ -776,7 +776,7 @@
             "OrganizationCity": "Berlin-Dahlem",
             "countryAffiliation": "Germany",
             "affiliation": "Max-Planck Institut",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1944"
         },
         {
@@ -791,7 +791,7 @@
             "OrganizationCity": "Heidelberg",
             "countryAffiliation": "Germany",
             "affiliation": "Max-Planck Institut",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1938"
         },
         {
@@ -806,7 +806,7 @@
             "OrganizationCity": "Berlin",
             "countryAffiliation": "Germany",
             "affiliation": "Agricultural College",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1907"
         },
         {
@@ -821,7 +821,7 @@
             "OrganizationCity": "Leipzig",
             "countryAffiliation": "Germany",
             "affiliation": "Leipzig University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1909"
         },
         {
@@ -836,7 +836,7 @@
             "OrganizationCity": "GÃ¶ttingen",
             "countryAffiliation": "Germany",
             "affiliation": "Max-Planck-Institut",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2014"
         },
         {
@@ -851,7 +851,7 @@
             "OrganizationCity": "Munich",
             "countryAffiliation": "Germany",
             "affiliation": "Munich University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1915"
         },
         {
@@ -866,7 +866,7 @@
             "OrganizationCity": "Munich",
             "countryAffiliation": "Germany",
             "affiliation": "Munich University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1905"
         },
         {
@@ -881,7 +881,7 @@
             "OrganizationCity": "Munich",
             "countryAffiliation": "Germany",
             "affiliation": "Munich University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1927"
         },
         {
@@ -896,7 +896,7 @@
             "OrganizationCity": "Munich",
             "countryAffiliation": "Germany",
             "affiliation": "Institute of Technology",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1930"
         },
         {
@@ -911,7 +911,7 @@
             "OrganizationCity": "Heidelberg",
             "countryAffiliation": "Germany",
             "affiliation": "University of Heidelberg",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1931"
         },
         {
@@ -926,7 +926,7 @@
             "OrganizationCity": "Heidelberg",
             "countryAffiliation": "Germany",
             "affiliation": "University of Heidelberg",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1931"
         },
         {
@@ -941,7 +941,7 @@
             "OrganizationCity": "Heidelberg",
             "countryAffiliation": "Germany",
             "affiliation": "University of Heidelberg",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1938"
         },
         {
@@ -956,7 +956,7 @@
             "OrganizationCity": "Haifa",
             "countryAffiliation": "Israel",
             "affiliation": "Technion - Israel Institute of Technology",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2004"
         },
         {
@@ -971,7 +971,7 @@
             "OrganizationCity": "Haifa",
             "countryAffiliation": "Israel",
             "affiliation": "Technion - Israel Institute of Technology",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2004"
         },
         {
@@ -986,7 +986,7 @@
             "OrganizationCity": "Haifa",
             "countryAffiliation": "Israel",
             "affiliation": "Technion - Israel Institute of Technology",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "2011"
         },
         {
@@ -1001,7 +1001,7 @@
             "OrganizationCity": "Rehovot",
             "countryAffiliation": "Israel",
             "affiliation": "Weizmann Institute of Science",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2009"
         },
         {
@@ -1016,7 +1016,7 @@
             "OrganizationCity": "Milan",
             "countryAffiliation": "Italy",
             "affiliation": "Institute of Technology",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1963"
         },
         {
@@ -1031,7 +1031,7 @@
             "OrganizationCity": "Sapporo",
             "countryAffiliation": "Japan",
             "affiliation": "Hokkaido University",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2010"
         },
         {
@@ -1046,7 +1046,7 @@
             "OrganizationCity": "Kyoto",
             "countryAffiliation": "Japan",
             "affiliation": "Kyoto University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1981"
         },
         {
@@ -1061,7 +1061,7 @@
             "OrganizationCity": "Nagoya",
             "countryAffiliation": "Japan",
             "affiliation": "Nagoya University",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "2001"
         },
         {
@@ -1076,7 +1076,7 @@
             "OrganizationCity": "Kyoto",
             "countryAffiliation": "Japan",
             "affiliation": "Shimadzu Corp.",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "2002"
         },
         {
@@ -1091,7 +1091,7 @@
             "OrganizationCity": "Tokyo",
             "countryAffiliation": "Japan",
             "affiliation": "University of Tsukuba",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2000"
         },
         {
@@ -1106,7 +1106,7 @@
             "OrganizationCity": "Groningen",
             "countryAffiliation": "Netherlands",
             "affiliation": "University of Groningen",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2016"
         },
         {
@@ -1121,7 +1121,7 @@
             "OrganizationCity": "Oslo",
             "countryAffiliation": "Norway",
             "affiliation": "University of Oslo",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1969"
         },
         {
@@ -1136,7 +1136,7 @@
             "OrganizationCity": "Stockholm",
             "countryAffiliation": "Sweden",
             "affiliation": "Stockholm University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1929"
         },
         {
@@ -1151,7 +1151,7 @@
             "OrganizationCity": "Stockholm",
             "countryAffiliation": "Sweden",
             "affiliation": "Stockholm University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1943"
         },
         {
@@ -1166,7 +1166,7 @@
             "OrganizationCity": "Stockholm",
             "countryAffiliation": "Sweden",
             "affiliation": "Stockholm University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1903"
         },
         {
@@ -1181,7 +1181,7 @@
             "OrganizationCity": "Uppsala",
             "countryAffiliation": "Sweden",
             "affiliation": "Uppsala University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1926"
         },
         {
@@ -1196,7 +1196,7 @@
             "OrganizationCity": "Uppsala",
             "countryAffiliation": "Sweden",
             "affiliation": "Uppsala University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1948"
         },
         {
@@ -1211,7 +1211,7 @@
             "OrganizationCity": "Zurich",
             "countryAffiliation": "Switzerland",
             "affiliation": "Swiss Federal Institute of Technology",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "2002"
         },
         {
@@ -1226,7 +1226,7 @@
             "OrganizationCity": "Zurich",
             "countryAffiliation": "Switzerland",
             "affiliation": "Swiss Federal Institute of Technology",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1939"
         },
         {
@@ -1241,7 +1241,7 @@
             "OrganizationCity": "Zurich",
             "countryAffiliation": "Switzerland",
             "affiliation": "Swiss Federal Institute of Technology",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1975"
         },
         {
@@ -1256,7 +1256,7 @@
             "OrganizationCity": "Zurich",
             "countryAffiliation": "Switzerland",
             "affiliation": "Swiss Federal Institute of Technology",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1991"
         },
         {
@@ -1271,7 +1271,7 @@
             "OrganizationCity": "Zurich",
             "countryAffiliation": "Switzerland",
             "affiliation": "University of Zurich",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1913"
         },
         {
@@ -1286,7 +1286,7 @@
             "OrganizationCity": "Zurich",
             "countryAffiliation": "Switzerland",
             "affiliation": "University of Zurich",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1937"
         },
         {
@@ -1301,7 +1301,7 @@
             "OrganizationCity": "Moscow",
             "countryAffiliation": "Union of Soviet Socialist Republics",
             "affiliation": "Institute for Chemical Physics of the Academy of Sciences of the USSR",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1956"
         },
         {
@@ -1316,7 +1316,7 @@
             "OrganizationCity": "Birmingham",
             "countryAffiliation": "United Kingdom",
             "affiliation": "Birmingham University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1937"
         },
         {
@@ -1331,7 +1331,7 @@
             "OrganizationCity": "Hertfordshire",
             "countryAffiliation": "United Kingdom",
             "affiliation": "Clare Hall Laboratory",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2015"
         },
         {
@@ -1346,7 +1346,7 @@
             "OrganizationCity": "Hertfordshire",
             "countryAffiliation": "United Kingdom",
             "affiliation": "Francis Crick Institute",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2015"
         },
         {
@@ -1361,7 +1361,7 @@
             "OrganizationCity": "Bodmin",
             "countryAffiliation": "United Kingdom",
             "affiliation": "Glynn Research Laboratories",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1978"
         },
         {
@@ -1376,7 +1376,7 @@
             "OrganizationCity": "London",
             "countryAffiliation": "United Kingdom",
             "affiliation": "Imperial College",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1973"
         },
         {
@@ -1391,7 +1391,7 @@
             "OrganizationCity": "London",
             "countryAffiliation": "United Kingdom",
             "affiliation": "Imperial College",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1969"
         },
         {
@@ -1406,7 +1406,7 @@
             "OrganizationCity": "Cambridge",
             "countryAffiliation": "United Kingdom",
             "affiliation": "Institute of Physical Chemistry",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "1967"
         },
         {
@@ -1421,7 +1421,7 @@
             "OrganizationCity": "London",
             "countryAffiliation": "United Kingdom",
             "affiliation": "London University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1929"
         },
         {
@@ -1436,7 +1436,7 @@
             "OrganizationCity": "Cambridge",
             "countryAffiliation": "United Kingdom",
             "affiliation": "MRC Laboratory of Molecular Biology",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "1980"
         },
         {
@@ -1451,7 +1451,7 @@
             "OrganizationCity": "Cambridge",
             "countryAffiliation": "United Kingdom",
             "affiliation": "MRC Laboratory of Molecular Biology",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1982"
         },
         {
@@ -1466,7 +1466,7 @@
             "OrganizationCity": "Cambridge",
             "countryAffiliation": "United Kingdom",
             "affiliation": "MRC Laboratory of Molecular Biology",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "1997"
         },
         {
@@ -1481,7 +1481,7 @@
             "OrganizationCity": "Cambridge",
             "countryAffiliation": "United Kingdom",
             "affiliation": "MRC Laboratory of Molecular Biology",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1962"
         },
         {
@@ -1496,7 +1496,7 @@
             "OrganizationCity": "Cambridge",
             "countryAffiliation": "United Kingdom",
             "affiliation": "MRC Laboratory of Molecular Biology",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1962"
         },
         {
@@ -1511,7 +1511,7 @@
             "OrganizationCity": "Cambridge",
             "countryAffiliation": "United Kingdom",
             "affiliation": "MRC Laboratory of Molecular Biology",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2009"
         },
         {
@@ -1526,7 +1526,7 @@
             "OrganizationCity": "London",
             "countryAffiliation": "United Kingdom",
             "affiliation": "National Institute for Medical Research",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1952"
         },
         {
@@ -1541,7 +1541,7 @@
             "OrganizationCity": "Scotland",
             "countryAffiliation": "United Kingdom",
             "affiliation": "Rowett Research Institute",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1952"
         },
         {
@@ -1556,7 +1556,7 @@
             "OrganizationCity": "London",
             "countryAffiliation": "United Kingdom",
             "affiliation": "Royal Institution of Great Britain",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "1967"
         },
         {
@@ -1571,7 +1571,7 @@
             "OrganizationCity": "London",
             "countryAffiliation": "United Kingdom",
             "affiliation": "University College",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1904"
         },
         {
@@ -1586,7 +1586,7 @@
             "OrganizationCity": "Cambridge",
             "countryAffiliation": "United Kingdom",
             "affiliation": "University of Cambridge",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1958"
         },
         {
@@ -1601,7 +1601,7 @@
             "OrganizationCity": "Cambridge",
             "countryAffiliation": "United Kingdom",
             "affiliation": "University of Cambridge",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1922"
         },
         {
@@ -1616,7 +1616,7 @@
             "OrganizationCity": "Cambridge",
             "countryAffiliation": "United Kingdom",
             "affiliation": "University of Cambridge",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1957"
         },
         {
@@ -1631,7 +1631,7 @@
             "OrganizationCity": "Oxford",
             "countryAffiliation": "United Kingdom",
             "affiliation": "University of Oxford",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1956"
         },
         {
@@ -1646,7 +1646,7 @@
             "OrganizationCity": "Oxford",
             "countryAffiliation": "United Kingdom",
             "affiliation": "University of Oxford",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1964"
         },
         {
@@ -1661,7 +1661,7 @@
             "OrganizationCity": "Oxford",
             "countryAffiliation": "United Kingdom",
             "affiliation": "University of Oxford",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1921"
         },
         {
@@ -1676,7 +1676,7 @@
             "OrganizationCity": "Oxford",
             "countryAffiliation": "United Kingdom",
             "affiliation": "University of Oxford",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1947"
         },
         {
@@ -1691,7 +1691,7 @@
             "OrganizationCity": "Brighton",
             "countryAffiliation": "United Kingdom",
             "affiliation": "University of Sussex",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1975"
         },
         {
@@ -1706,7 +1706,7 @@
             "OrganizationCity": "Brighton",
             "countryAffiliation": "United Kingdom",
             "affiliation": "University of Sussex",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1996"
         },
         {
@@ -1721,7 +1721,7 @@
             "OrganizationCity": "Manchester",
             "countryAffiliation": "United Kingdom",
             "affiliation": "Victoria University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1908"
         },
         {
@@ -1736,7 +1736,7 @@
             "OrganizationCity": "La Jolla, CA",
             "countryAffiliation": "United States",
             "affiliation": "",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1993"
         },
         {
@@ -1751,7 +1751,7 @@
             "OrganizationCity": "St. Louis, MO",
             "countryAffiliation": "United States",
             "affiliation": "",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "2001"
         },
         {
@@ -1766,7 +1766,7 @@
             "OrganizationCity": "Massachusetts, MA",
             "countryAffiliation": "United States",
             "affiliation": "Boston University Medical School",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2008"
         },
         {
@@ -1781,7 +1781,7 @@
             "OrganizationCity": "Pasadena, CA",
             "countryAffiliation": "United States",
             "affiliation": "Caltech",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1992"
         },
         {
@@ -1796,7 +1796,7 @@
             "OrganizationCity": "Pasadena, CA",
             "countryAffiliation": "United States",
             "affiliation": "Caltech",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2005"
         },
         {
@@ -1811,7 +1811,7 @@
             "OrganizationCity": "Pasadena, CA",
             "countryAffiliation": "United States",
             "affiliation": "Caltech",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1954"
         },
         {
@@ -1826,7 +1826,7 @@
             "OrganizationCity": "Pasadena, CA",
             "countryAffiliation": "United States",
             "affiliation": "Caltech",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1999"
         },
         {
@@ -1841,7 +1841,7 @@
             "OrganizationCity": "New York, NY",
             "countryAffiliation": "United States",
             "affiliation": "Columbia University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1934"
         },
         {
@@ -1856,7 +1856,7 @@
             "OrganizationCity": "New York, NY",
             "countryAffiliation": "United States",
             "affiliation": "Columbia University",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2008"
         },
         {
@@ -1871,7 +1871,7 @@
             "OrganizationCity": "Ithaca, NY",
             "countryAffiliation": "United States",
             "affiliation": "Cornell University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1955"
         },
         {
@@ -1886,7 +1886,7 @@
             "OrganizationCity": "Ithaca, NY",
             "countryAffiliation": "United States",
             "affiliation": "Cornell University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1946"
         },
         {
@@ -1901,7 +1901,7 @@
             "OrganizationCity": "Ithaca, NY",
             "countryAffiliation": "United States",
             "affiliation": "Cornell University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1981"
         },
         {
@@ -1916,7 +1916,7 @@
             "OrganizationCity": "Wilmington, DE",
             "countryAffiliation": "United States",
             "affiliation": "Du Pont",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1987"
         },
         {
@@ -1931,7 +1931,7 @@
             "OrganizationCity": "Durham, NC",
             "countryAffiliation": "United States",
             "affiliation": "Duke University",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2015"
         },
         {
@@ -1946,7 +1946,7 @@
             "OrganizationCity": "Durham, NC",
             "countryAffiliation": "United States",
             "affiliation": "Duke University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "2012"
         },
         {
@@ -1961,7 +1961,7 @@
             "OrganizationCity": "Schenectady, NY",
             "countryAffiliation": "United States",
             "affiliation": "General Electric Company",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1932"
         },
         {
@@ -1976,7 +1976,7 @@
             "OrganizationCity": "Cambridge, MA",
             "countryAffiliation": "United States",
             "affiliation": "Harvard University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1976"
         },
         {
@@ -1991,7 +1991,7 @@
             "OrganizationCity": "Cambridge, MA",
             "countryAffiliation": "United States",
             "affiliation": "Harvard University",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "1980"
         },
         {
@@ -2006,7 +2006,7 @@
             "OrganizationCity": "Cambridge, MA",
             "countryAffiliation": "United States",
             "affiliation": "Harvard University",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1986"
         },
         {
@@ -2021,7 +2021,7 @@
             "OrganizationCity": "Cambridge, MA",
             "countryAffiliation": "United States",
             "affiliation": "Harvard University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1965"
         },
         {
@@ -2036,7 +2036,7 @@
             "OrganizationCity": "Cambridge, MA",
             "countryAffiliation": "United States",
             "affiliation": "Harvard University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1990"
         },
         {
@@ -2051,7 +2051,7 @@
             "OrganizationCity": "Cambridge, MA",
             "countryAffiliation": "United States",
             "affiliation": "Harvard University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1914"
         },
         {
@@ -2066,7 +2066,7 @@
             "OrganizationCity": "Cambridge, MA",
             "countryAffiliation": "United States",
             "affiliation": "Harvard University",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2013"
         },
         {
@@ -2081,7 +2081,7 @@
             "OrganizationCity": "Durham, NC",
             "countryAffiliation": "United States",
             "affiliation": "Howard Hughes Medical Institute",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2015"
         },
         {
@@ -2096,7 +2096,7 @@
             "OrganizationCity": "Ashburn, VA",
             "countryAffiliation": "United States",
             "affiliation": "Janelia Research Campus, Howard Hughes Medical Institute",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2014"
         },
         {
@@ -2111,7 +2111,7 @@
             "OrganizationCity": "Baltimore, MD",
             "countryAffiliation": "United States",
             "affiliation": "Johns Hopkins University School of Medicine",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "2003"
         },
         {
@@ -2126,7 +2126,7 @@
             "OrganizationCity": "Woods Hole, MA",
             "countryAffiliation": "United States",
             "affiliation": "MBL",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2008"
         },
         {
@@ -2141,7 +2141,7 @@
             "OrganizationCity": "Cambridge, MA",
             "countryAffiliation": "United States",
             "affiliation": "MIT",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2005"
         },
         {
@@ -2156,7 +2156,7 @@
             "OrganizationCity": "Cambridge, MA",
             "countryAffiliation": "United States",
             "affiliation": "MIT",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1995"
         },
         {
@@ -2171,7 +2171,7 @@
             "OrganizationCity": "Bethesda, MD",
             "countryAffiliation": "United States",
             "affiliation": "National Institutes of Health",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1972"
         },
         {
@@ -2186,7 +2186,7 @@
             "OrganizationCity": "Evanston, IL",
             "countryAffiliation": "United States",
             "affiliation": "Northwestern University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1998"
         },
         {
@@ -2201,7 +2201,7 @@
             "OrganizationCity": "Evanston, IL",
             "countryAffiliation": "United States",
             "affiliation": "Northwestern University",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2016"
         },
         {
@@ -2216,7 +2216,7 @@
             "OrganizationCity": "West Lafayette, IN",
             "countryAffiliation": "United States",
             "affiliation": "Purdue University",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2010"
         },
         {
@@ -2231,7 +2231,7 @@
             "OrganizationCity": "West Lafayette, IN",
             "countryAffiliation": "United States",
             "affiliation": "Purdue University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1979"
         },
         {
@@ -2246,7 +2246,7 @@
             "OrganizationCity": "Houston, TX",
             "countryAffiliation": "United States",
             "affiliation": "Rice University",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1996"
         },
         {
@@ -2261,7 +2261,7 @@
             "OrganizationCity": "Houston, TX",
             "countryAffiliation": "United States",
             "affiliation": "Rice University",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1996"
         },
         {
@@ -2276,7 +2276,7 @@
             "OrganizationCity": "Princeton, NJ",
             "countryAffiliation": "United States",
             "affiliation": "Rockefeller Institute for Medical Research",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "1946"
         },
         {
@@ -2291,7 +2291,7 @@
             "OrganizationCity": "Princeton, NJ",
             "countryAffiliation": "United States",
             "affiliation": "Rockefeller Institute for Medical Research",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "1946"
         },
         {
@@ -2306,7 +2306,7 @@
             "OrganizationCity": "New York, NY",
             "countryAffiliation": "United States",
             "affiliation": "Rockefeller University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1984"
         },
         {
@@ -2321,7 +2321,7 @@
             "OrganizationCity": "New York, NY",
             "countryAffiliation": "United States",
             "affiliation": "Rockefeller University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "2003"
         },
         {
@@ -2336,7 +2336,7 @@
             "OrganizationCity": "New York, NY",
             "countryAffiliation": "United States",
             "affiliation": "Rockefeller University",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "1972"
         },
         {
@@ -2351,7 +2351,7 @@
             "OrganizationCity": "New York, NY",
             "countryAffiliation": "United States",
             "affiliation": "Rockefeller University",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "1972"
         },
         {
@@ -2366,7 +2366,7 @@
             "OrganizationCity": "Stanford, CA",
             "countryAffiliation": "United States",
             "affiliation": "Stanford University",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2014"
         },
         {
@@ -2381,7 +2381,7 @@
             "OrganizationCity": "Stanford, CA",
             "countryAffiliation": "United States",
             "affiliation": "Stanford University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "2006"
         },
         {
@@ -2396,7 +2396,7 @@
             "OrganizationCity": "Stanford, CA",
             "countryAffiliation": "United States",
             "affiliation": "Stanford University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1974"
         },
         {
@@ -2411,7 +2411,7 @@
             "OrganizationCity": "Stanford, CA",
             "countryAffiliation": "United States",
             "affiliation": "Stanford University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1983"
         },
         {
@@ -2426,7 +2426,7 @@
             "OrganizationCity": "Stanford, CA",
             "countryAffiliation": "United States",
             "affiliation": "Stanford University",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2013"
         },
         {
@@ -2441,7 +2441,7 @@
             "OrganizationCity": "Stanford, CA",
             "countryAffiliation": "United States",
             "affiliation": "Stanford University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "2012"
         },
         {
@@ -2456,7 +2456,7 @@
             "OrganizationCity": "Stanford, CA",
             "countryAffiliation": "United States",
             "affiliation": "Stanford University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1980"
         },
         {
@@ -2471,7 +2471,7 @@
             "OrganizationCity": "Buffalo, NY",
             "countryAffiliation": "United States",
             "affiliation": "The Medical Foundation of Buffalo",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1985"
         },
         {
@@ -2486,7 +2486,7 @@
             "OrganizationCity": "La Jolla, CA",
             "countryAffiliation": "United States",
             "affiliation": "The Scripps Research Institute",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "2002"
         },
         {
@@ -2501,7 +2501,7 @@
             "OrganizationCity": "La Jolla, CA",
             "countryAffiliation": "United States",
             "affiliation": "The Scripps Research Institute",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "2001"
         },
         {
@@ -2516,7 +2516,7 @@
             "OrganizationCity": "Santa Barbara, CA",
             "countryAffiliation": "United States",
             "affiliation": "University of California",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2000"
         },
         {
@@ -2531,7 +2531,7 @@
             "OrganizationCity": "Berkeley, CA",
             "countryAffiliation": "United States",
             "affiliation": "University of California",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1986"
         },
         {
@@ -2546,7 +2546,7 @@
             "OrganizationCity": "Berkeley, CA",
             "countryAffiliation": "United States",
             "affiliation": "University of California",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1951"
         },
         {
@@ -2561,7 +2561,7 @@
             "OrganizationCity": "Santa Barbara, CA",
             "countryAffiliation": "United States",
             "affiliation": "University of California",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1998"
         },
         {
@@ -2576,7 +2576,7 @@
             "OrganizationCity": "Los Angeles, CA",
             "countryAffiliation": "United States",
             "affiliation": "University of California",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1987"
         },
         {
@@ -2591,7 +2591,7 @@
             "OrganizationCity": "Berkeley, CA",
             "countryAffiliation": "United States",
             "affiliation": "University of California",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1961"
         },
         {
@@ -2606,7 +2606,7 @@
             "OrganizationCity": "San Diego, CA",
             "countryAffiliation": "United States",
             "affiliation": "University of California",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2008"
         },
         {
@@ -2621,7 +2621,7 @@
             "OrganizationCity": "Los Angeles, CA",
             "countryAffiliation": "United States",
             "affiliation": "University of California",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1960"
         },
         {
@@ -2636,7 +2636,7 @@
             "OrganizationCity": "Irvine, CA",
             "countryAffiliation": "United States",
             "affiliation": "University of California",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1995"
         },
         {
@@ -2651,7 +2651,7 @@
             "OrganizationCity": "Berkeley, CA",
             "countryAffiliation": "United States",
             "affiliation": "University of California",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1951"
         },
         {
@@ -2666,7 +2666,7 @@
             "OrganizationCity": "Irvine, CA",
             "countryAffiliation": "United States",
             "affiliation": "University of California",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2004"
         },
         {
@@ -2681,7 +2681,7 @@
             "OrganizationCity": "Los Angeles, CA",
             "countryAffiliation": "United States",
             "affiliation": "University of California",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "1997"
         },
         {
@@ -2696,7 +2696,7 @@
             "OrganizationCity": "Berkeley, CA",
             "countryAffiliation": "United States",
             "affiliation": "University of California",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1949"
         },
         {
@@ -2711,7 +2711,7 @@
             "OrganizationCity": "Chicago, IL",
             "countryAffiliation": "United States",
             "affiliation": "University of Chicago",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1966"
         },
         {
@@ -2726,7 +2726,7 @@
             "OrganizationCity": "Boulder, CO",
             "countryAffiliation": "United States",
             "affiliation": "University of Colorado",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1989"
         },
         {
@@ -2741,7 +2741,7 @@
             "OrganizationCity": "",
             "countryAffiliation": "United States",
             "affiliation": "University of Delaware",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2010"
         },
         {
@@ -2756,7 +2756,7 @@
             "OrganizationCity": "Chapel Hill, NC",
             "countryAffiliation": "United States",
             "affiliation": "University of North Carolina",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2015"
         },
         {
@@ -2771,7 +2771,7 @@
             "OrganizationCity": "Philadelphia, PA",
             "countryAffiliation": "United States",
             "affiliation": "University of Pennsylvania",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2000"
         },
         {
@@ -2786,7 +2786,7 @@
             "OrganizationCity": "Los Angeles, CA",
             "countryAffiliation": "United States",
             "affiliation": "University of Southern California",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2013"
         },
         {
@@ -2801,7 +2801,7 @@
             "OrganizationCity": "Los Angeles, CA",
             "countryAffiliation": "United States",
             "affiliation": "University of Southern California",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1994"
         },
         {
@@ -2816,7 +2816,7 @@
             "OrganizationCity": "Dallas, TX",
             "countryAffiliation": "United States",
             "affiliation": "University of Texas",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1988"
         },
         {
@@ -2831,7 +2831,7 @@
             "OrganizationCity": "Austin, TX",
             "countryAffiliation": "United States",
             "affiliation": "University of Texas",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1977"
         },
         {
@@ -2846,7 +2846,7 @@
             "OrganizationCity": "Washington, DC",
             "countryAffiliation": "United States",
             "affiliation": "US Naval Research Laboratory",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1985"
         },
         {
@@ -2861,7 +2861,7 @@
             "OrganizationCity": "Richmond, VA",
             "countryAffiliation": "United States",
             "affiliation": "Virginia Commonwealth University",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "2002"
         },
         {
@@ -2876,7 +2876,7 @@
             "OrganizationCity": "New Haven, CT",
             "countryAffiliation": "United States",
             "affiliation": "Yale University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1989"
         },
         {
@@ -2891,7 +2891,7 @@
             "OrganizationCity": "New Haven, CT",
             "countryAffiliation": "United States",
             "affiliation": "Yale University",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2009"
         },
         {
@@ -2906,7 +2906,7 @@
             "OrganizationCity": "New Haven, CT",
             "countryAffiliation": "United States",
             "affiliation": "Yale University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1968"
         },
         {
@@ -2921,7 +2921,7 @@
             "OrganizationCity": "",
             "countryAffiliation": "",
             "affiliation": "",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "1903"
         },
         {
@@ -2936,7 +2936,7 @@
             "OrganizationCity": "Strasbourg",
             "countryAffiliation": "France",
             "affiliation": "Strasbourg University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1909"
         },
         {
@@ -2951,7 +2951,7 @@
             "OrganizationCity": "Weston Creek",
             "countryAffiliation": "Australia",
             "affiliation": "Australian National University",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "2011"
         },
         {
@@ -2966,7 +2966,7 @@
             "OrganizationCity": "Innsbruck",
             "countryAffiliation": "Austria",
             "affiliation": "Innsbruck University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1936"
         },
         {
@@ -2981,7 +2981,7 @@
             "OrganizationCity": "Brussels",
             "countryAffiliation": "Belgium",
             "affiliation": "UniversitÃ© Libre de Bruxelles",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "2013"
         },
         {
@@ -2996,7 +2996,7 @@
             "OrganizationCity": "Hamilton, Ontario",
             "countryAffiliation": "Canada",
             "affiliation": "McMaster University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1994"
         },
         {
@@ -3011,7 +3011,7 @@
             "OrganizationCity": "Kingston",
             "countryAffiliation": "Canada",
             "affiliation": "Queen's University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "2015"
         },
         {
@@ -3026,7 +3026,7 @@
             "OrganizationCity": "Hong Kong",
             "countryAffiliation": "China",
             "affiliation": "Chinese University of Hong Kong",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "2009"
         },
         {
@@ -3041,7 +3041,7 @@
             "OrganizationCity": "Copenhagen",
             "countryAffiliation": "Denmark",
             "affiliation": "Copenhagen University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1922"
         },
         {
@@ -3056,7 +3056,7 @@
             "OrganizationCity": "Copenhagen",
             "countryAffiliation": "Denmark",
             "affiliation": "Niels Bohr Institute",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1975"
         },
         {
@@ -3071,7 +3071,7 @@
             "OrganizationCity": "Copenhagen",
             "countryAffiliation": "Denmark",
             "affiliation": "Nordita",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1975"
         },
         {
@@ -3086,7 +3086,7 @@
             "OrganizationCity": "Berlin",
             "countryAffiliation": "Germany",
             "affiliation": "Fritz-Haber-Institut der Max-Planck-Gesellschaft",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1986"
         },
         {
@@ -3101,7 +3101,7 @@
             "OrganizationCity": "Heidelberg",
             "countryAffiliation": "Germany",
             "affiliation": "Max-Planck-Institut",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1954"
         },
         {
@@ -3116,7 +3116,7 @@
             "OrganizationCity": "Stuttgart",
             "countryAffiliation": "Germany",
             "affiliation": "Max-Planck-Institut",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1985"
         },
         {
@@ -3131,7 +3131,7 @@
             "OrganizationCity": "Munich",
             "countryAffiliation": "Germany",
             "affiliation": "Technical University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1961"
         },
         {
@@ -3146,7 +3146,7 @@
             "OrganizationCity": "Bonn",
             "countryAffiliation": "Germany",
             "affiliation": "University of Bonn",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "1989"
         },
         {
@@ -3161,7 +3161,7 @@
             "OrganizationCity": "Heidelberg",
             "countryAffiliation": "Germany",
             "affiliation": "University of Heidelberg",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1954"
         },
         {
@@ -3176,7 +3176,7 @@
             "OrganizationCity": "Heidelberg",
             "countryAffiliation": "Germany",
             "affiliation": "University of Heidelberg",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "1963"
         },
         {
@@ -3191,7 +3191,7 @@
             "OrganizationCity": "SÃ¨vres",
             "countryAffiliation": "France",
             "affiliation": "International Bureau of Weights and Measures",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1920"
         },
         {
@@ -3206,7 +3206,7 @@
             "OrganizationCity": "Paris",
             "countryAffiliation": "France",
             "affiliation": "CollÃ¨ge de France",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1997"
         },
         {
@@ -3221,7 +3221,7 @@
             "OrganizationCity": "Paris",
             "countryAffiliation": "France",
             "affiliation": "CollÃ¨ge de France",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "2012"
         },
         {
@@ -3236,7 +3236,7 @@
             "OrganizationCity": "Paris",
             "countryAffiliation": "France",
             "affiliation": "CollÃ¨ge de France",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1991"
         },
         {
@@ -3251,7 +3251,7 @@
             "OrganizationCity": "Paris",
             "countryAffiliation": "France",
             "affiliation": "Sorbonne University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1908"
         },
         {
@@ -3266,7 +3266,7 @@
             "OrganizationCity": "Paris",
             "countryAffiliation": "France",
             "affiliation": "Sorbonne University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1929"
         },
         {
@@ -3281,7 +3281,7 @@
             "OrganizationCity": "Paris",
             "countryAffiliation": "France",
             "affiliation": "Sorbonne University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1926"
         },
         {
@@ -3296,7 +3296,7 @@
             "OrganizationCity": "Orsay",
             "countryAffiliation": "France",
             "affiliation": "Unit&eacute; Mixte de Physique CNRS/THALES",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "2007"
         },
         {
@@ -3311,7 +3311,7 @@
             "OrganizationCity": "Orsay",
             "countryAffiliation": "France",
             "affiliation": "Universit&eacute; Paris-Sud",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "2007"
         },
         {
@@ -3326,7 +3326,7 @@
             "OrganizationCity": "Grenoble",
             "countryAffiliation": "France",
             "affiliation": "University of Grenoble",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1970"
         },
         {
@@ -3341,7 +3341,7 @@
             "OrganizationCity": "Paris",
             "countryAffiliation": "France",
             "affiliation": "Municipal School of Industrial Physics and Chemistry",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "1903"
         },
         {
@@ -3356,7 +3356,7 @@
             "OrganizationCity": "Paris",
             "countryAffiliation": "France",
             "affiliation": "Ã‰cole Normale SupÃ©rieure",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1997"
         },
         {
@@ -3371,7 +3371,7 @@
             "OrganizationCity": "Paris",
             "countryAffiliation": "France",
             "affiliation": "Ã‰cole Normale SupÃ©rieure",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "2012"
         },
         {
@@ -3386,7 +3386,7 @@
             "OrganizationCity": "Paris",
             "countryAffiliation": "France",
             "affiliation": "Ã‰cole Normale SupÃ©rieure",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1966"
         },
         {
@@ -3401,7 +3401,7 @@
             "OrganizationCity": "Paris",
             "countryAffiliation": "France",
             "affiliation": "Ã‰cole Polytechnique",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1903"
         },
         {
@@ -3416,7 +3416,7 @@
             "OrganizationCity": "Paris",
             "countryAffiliation": "France",
             "affiliation": "Ã‰cole SupÃ©rieure de Physique et Chimie",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1992"
         },
         {
@@ -3431,7 +3431,7 @@
             "OrganizationCity": "Berlin",
             "countryAffiliation": "Germany",
             "affiliation": "Berlin University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1933"
         },
         {
@@ -3446,7 +3446,7 @@
             "OrganizationCity": "Berlin",
             "countryAffiliation": "Germany",
             "affiliation": "Berlin University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1918"
         },
         {
@@ -3461,7 +3461,7 @@
             "OrganizationCity": "J&uuml;lich",
             "countryAffiliation": "Germany",
             "affiliation": "Forschungszentrum J&uuml;lich",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "2007"
         },
         {
@@ -3476,7 +3476,7 @@
             "OrganizationCity": "Frankfurt-on-the-Main",
             "countryAffiliation": "Germany",
             "affiliation": "Frankfurt-on-the-Main University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1914"
         },
         {
@@ -3491,7 +3491,7 @@
             "OrganizationCity": "GÃ¶ttingen",
             "countryAffiliation": "Germany",
             "affiliation": "Goettingen University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1925"
         },
         {
@@ -3506,7 +3506,7 @@
             "OrganizationCity": "Greifswald",
             "countryAffiliation": "Germany",
             "affiliation": "Greifswald University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1919"
         },
         {
@@ -3521,7 +3521,7 @@
             "OrganizationCity": "Halle",
             "countryAffiliation": "Germany",
             "affiliation": "Halle University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1925"
         },
         {
@@ -3536,7 +3536,7 @@
             "OrganizationCity": "Berlin",
             "countryAffiliation": "Germany",
             "affiliation": "Max-Planck Institut",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1921"
         },
         {
@@ -3551,7 +3551,7 @@
             "OrganizationCity": "Kiel",
             "countryAffiliation": "Germany",
             "affiliation": "Kiel University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1905"
         },
         {
@@ -3566,7 +3566,7 @@
             "OrganizationCity": "Leipzig",
             "countryAffiliation": "Germany",
             "affiliation": "Leipzig University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1932"
         },
         {
@@ -3581,7 +3581,7 @@
             "OrganizationCity": "Munich",
             "countryAffiliation": "Germany",
             "affiliation": "Ludwig-Maximilians- UniversitÃ¤t",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "2005"
         },
         {
@@ -3596,7 +3596,7 @@
             "OrganizationCity": "Garching",
             "countryAffiliation": "Germany",
             "affiliation": "Max-Planck-Institut",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "2005"
         },
         {
@@ -3611,7 +3611,7 @@
             "OrganizationCity": "Munich",
             "countryAffiliation": "Germany",
             "affiliation": "Munich University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1901"
         },
         {
@@ -3626,7 +3626,7 @@
             "OrganizationCity": "WÃ¼rzburg",
             "countryAffiliation": "Germany",
             "affiliation": "WÃ¼rzburg University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1911"
         },
         {
@@ -3641,7 +3641,7 @@
             "OrganizationCity": "Calcutta",
             "countryAffiliation": "India",
             "affiliation": "Calcutta University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1930"
         },
         {
@@ -3656,7 +3656,7 @@
             "OrganizationCity": "Dublin",
             "countryAffiliation": "Ireland",
             "affiliation": "Trinity College",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1951"
         },
         {
@@ -3671,7 +3671,7 @@
             "OrganizationCity": "Trieste",
             "countryAffiliation": "Italy",
             "affiliation": "International Centre for Theoretical Physics",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1979"
         },
         {
@@ -3686,7 +3686,7 @@
             "OrganizationCity": "Rome",
             "countryAffiliation": "Italy",
             "affiliation": "Rome University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1938"
         },
         {
@@ -3701,7 +3701,7 @@
             "OrganizationCity": "Tsukuba",
             "countryAffiliation": "Japan",
             "affiliation": "KEK",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "2008"
         },
         {
@@ -3716,7 +3716,7 @@
             "OrganizationCity": "Kyoto",
             "countryAffiliation": "Japan",
             "affiliation": "Kyoto Imperial University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1949"
         },
         {
@@ -3731,7 +3731,7 @@
             "OrganizationCity": "Kyoto",
             "countryAffiliation": "Japan",
             "affiliation": "Kyoto Sangyo University",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "2008"
         },
         {
@@ -3746,7 +3746,7 @@
             "OrganizationCity": "Kyoto",
             "countryAffiliation": "Japan",
             "affiliation": "Kyoto University",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "2008"
         },
         {
@@ -3761,7 +3761,7 @@
             "OrganizationCity": "Nagoya",
             "countryAffiliation": "Japan",
             "affiliation": "Meijo University",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2014"
         },
         {
@@ -3776,7 +3776,7 @@
             "OrganizationCity": "Nagoya",
             "countryAffiliation": "Japan",
             "affiliation": "Nagoya University",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2014"
         },
         {
@@ -3791,7 +3791,7 @@
             "OrganizationCity": "Nagoya",
             "countryAffiliation": "Japan",
             "affiliation": "Nagoya University",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2014"
         },
         {
@@ -3806,7 +3806,7 @@
             "OrganizationCity": "Tokyo",
             "countryAffiliation": "Japan",
             "affiliation": "Tokyo University of Education",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1965"
         },
         {
@@ -3821,7 +3821,7 @@
             "OrganizationCity": "Kashiwa",
             "countryAffiliation": "Japan",
             "affiliation": "University of Tokyo",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "2015"
         },
         {
@@ -3836,7 +3836,7 @@
             "OrganizationCity": "Tokyo",
             "countryAffiliation": "Japan",
             "affiliation": "University of Tokyo",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "2002"
         },
         {
@@ -3851,7 +3851,7 @@
             "OrganizationCity": "Bilthoven",
             "countryAffiliation": "Netherlands",
             "affiliation": "",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1999"
         },
         {
@@ -3866,7 +3866,7 @@
             "OrganizationCity": "Amsterdam",
             "countryAffiliation": "Netherlands",
             "affiliation": "Amsterdam University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1902"
         },
         {
@@ -3881,7 +3881,7 @@
             "OrganizationCity": "Amsterdam",
             "countryAffiliation": "Netherlands",
             "affiliation": "Amsterdam University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1910"
         },
         {
@@ -3896,7 +3896,7 @@
             "OrganizationCity": "Groningen",
             "countryAffiliation": "Netherlands",
             "affiliation": "Groningen University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1953"
         },
         {
@@ -3911,7 +3911,7 @@
             "OrganizationCity": "Leiden",
             "countryAffiliation": "Netherlands",
             "affiliation": "Leiden University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1902"
         },
         {
@@ -3926,7 +3926,7 @@
             "OrganizationCity": "Leiden",
             "countryAffiliation": "Netherlands",
             "affiliation": "Leiden University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1913"
         },
         {
@@ -3941,7 +3941,7 @@
             "OrganizationCity": "Utrecht",
             "countryAffiliation": "Netherlands",
             "affiliation": "Utrecht University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1999"
         },
         {
@@ -3956,7 +3956,7 @@
             "OrganizationCity": "St. Petersburg",
             "countryAffiliation": "Russia",
             "affiliation": "A.F. Ioffe Physico-Technical Institute",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "2000"
         },
         {
@@ -3971,7 +3971,7 @@
             "OrganizationCity": "Moscow",
             "countryAffiliation": "Russia",
             "affiliation": "P.N. Lebedev Physical Institute",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2003"
         },
         {
@@ -3986,7 +3986,7 @@
             "OrganizationCity": "Stockholm",
             "countryAffiliation": "Sweden",
             "affiliation": "Royal Institute of Technology",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1970"
         },
         {
@@ -4001,7 +4001,7 @@
             "OrganizationCity": "LidingÃ¶-Stockholm",
             "countryAffiliation": "Sweden",
             "affiliation": "Swedish Gas-Accumulator Co.",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1912"
         },
         {
@@ -4016,7 +4016,7 @@
             "OrganizationCity": "Uppsala",
             "countryAffiliation": "Sweden",
             "affiliation": "Uppsala University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1981"
         },
         {
@@ -4031,7 +4031,7 @@
             "OrganizationCity": "Uppsala",
             "countryAffiliation": "Sweden",
             "affiliation": "Uppsala University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1924"
         },
         {
@@ -4046,7 +4046,7 @@
             "OrganizationCity": "Geneva",
             "countryAffiliation": "Switzerland",
             "affiliation": "CERN",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1988"
         },
         {
@@ -4061,7 +4061,7 @@
             "OrganizationCity": "Geneva",
             "countryAffiliation": "Switzerland",
             "affiliation": "CERN",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1984"
         },
         {
@@ -4076,7 +4076,7 @@
             "OrganizationCity": "Geneva",
             "countryAffiliation": "Switzerland",
             "affiliation": "CERN",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1992"
         },
         {
@@ -4091,7 +4091,7 @@
             "OrganizationCity": "Geneva",
             "countryAffiliation": "Switzerland",
             "affiliation": "CERN",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1984"
         },
         {
@@ -4106,7 +4106,7 @@
             "OrganizationCity": "RÃ¼schlikon",
             "countryAffiliation": "Switzerland",
             "affiliation": "IBM Zurich Research Laboratory",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1987"
         },
         {
@@ -4121,7 +4121,7 @@
             "OrganizationCity": "RÃ¼schlikon",
             "countryAffiliation": "Switzerland",
             "affiliation": "IBM Zurich Research Laboratory",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1987"
         },
         {
@@ -4136,7 +4136,7 @@
             "OrganizationCity": "RÃ¼schlikon",
             "countryAffiliation": "Switzerland",
             "affiliation": "IBM Zurich Research Laboratory",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "1986"
         },
         {
@@ -4151,7 +4151,7 @@
             "OrganizationCity": "RÃ¼schlikon",
             "countryAffiliation": "Switzerland",
             "affiliation": "IBM Zurich Research Laboratory",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "1986"
         },
         {
@@ -4166,7 +4166,7 @@
             "OrganizationCity": "Moscow",
             "countryAffiliation": "Union of Soviet Socialist Republics",
             "affiliation": "Academy of Sciences",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1962"
         },
         {
@@ -4181,7 +4181,7 @@
             "OrganizationCity": "Moscow",
             "countryAffiliation": "Union of Soviet Socialist Republics",
             "affiliation": "Academy of Sciences",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1978"
         },
         {
@@ -4196,7 +4196,7 @@
             "OrganizationCity": "Moscow",
             "countryAffiliation": "Union of Soviet Socialist Republics",
             "affiliation": "P.N. Lebedev Physical Institute",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1958"
         },
         {
@@ -4211,7 +4211,7 @@
             "OrganizationCity": "Moscow",
             "countryAffiliation": "Union of Soviet Socialist Republics",
             "affiliation": "P.N. Lebedev Physical Institute",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "1964"
         },
         {
@@ -4226,7 +4226,7 @@
             "OrganizationCity": "Moscow",
             "countryAffiliation": "Union of Soviet Socialist Republics",
             "affiliation": "P.N. Lebedev Physical Institute",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1958"
         },
         {
@@ -4241,7 +4241,7 @@
             "OrganizationCity": "Moscow",
             "countryAffiliation": "Union of Soviet Socialist Republics",
             "affiliation": "P.N. Lebedev Physical Institute",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1958"
         },
         {
@@ -4256,7 +4256,7 @@
             "OrganizationCity": "Moscow",
             "countryAffiliation": "Union of Soviet Socialist Republics",
             "affiliation": "P.N. Lebedev Physical Institute",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "1964"
         },
         {
@@ -4271,7 +4271,7 @@
             "OrganizationCity": "Moscow",
             "countryAffiliation": "Union of Soviet Socialist Republics",
             "affiliation": "University of Moscow",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1958"
         },
         {
@@ -4286,7 +4286,7 @@
             "OrganizationCity": "Moscow",
             "countryAffiliation": "Union of Soviet Socialist Republics",
             "affiliation": "University of Moscow",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1958"
         },
         {
@@ -4301,7 +4301,7 @@
             "OrganizationCity": "Harwell, Berkshire",
             "countryAffiliation": "United Kingdom",
             "affiliation": "Atomic Energy Research Establishment",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1951"
         },
         {
@@ -4316,7 +4316,7 @@
             "OrganizationCity": "Bristol",
             "countryAffiliation": "United Kingdom",
             "affiliation": "Bristol University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1950"
         },
         {
@@ -4331,7 +4331,7 @@
             "OrganizationCity": "London",
             "countryAffiliation": "United Kingdom",
             "affiliation": "Department of Scientific and Industrial Research",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1947"
         },
         {
@@ -4346,7 +4346,7 @@
             "OrganizationCity": "Edinburgh",
             "countryAffiliation": "United Kingdom",
             "affiliation": "Edinburgh University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1954"
         },
         {
@@ -4361,7 +4361,7 @@
             "OrganizationCity": "Edinburgh",
             "countryAffiliation": "United Kingdom",
             "affiliation": "Edinburgh University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1917"
         },
         {
@@ -4376,7 +4376,7 @@
             "OrganizationCity": "London",
             "countryAffiliation": "United Kingdom",
             "affiliation": "Imperial College",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1979"
         },
         {
@@ -4391,7 +4391,7 @@
             "OrganizationCity": "London",
             "countryAffiliation": "United Kingdom",
             "affiliation": "Imperial College",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1971"
         },
         {
@@ -4406,7 +4406,7 @@
             "OrganizationCity": "Liverpool",
             "countryAffiliation": "United Kingdom",
             "affiliation": "Liverpool University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1935"
         },
         {
@@ -4421,7 +4421,7 @@
             "OrganizationCity": "London",
             "countryAffiliation": "United Kingdom",
             "affiliation": "London University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1937"
         },
         {
@@ -4436,7 +4436,7 @@
             "OrganizationCity": "London",
             "countryAffiliation": "United Kingdom",
             "affiliation": "London University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1928"
         },
         {
@@ -4451,7 +4451,7 @@
             "OrganizationCity": "London",
             "countryAffiliation": "United Kingdom",
             "affiliation": "Marconi Wireless Telegraph Co. Ltd.",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1909"
         },
         {
@@ -4466,7 +4466,7 @@
             "OrganizationCity": "London",
             "countryAffiliation": "United Kingdom",
             "affiliation": "Royal Institution of Great Britain",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1904"
         },
         {
@@ -4481,7 +4481,7 @@
             "OrganizationCity": "Harlow",
             "countryAffiliation": "United Kingdom",
             "affiliation": "Standard Telecommunication Laboratories",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "2009"
         },
         {
@@ -4496,7 +4496,7 @@
             "OrganizationCity": "London",
             "countryAffiliation": "United Kingdom",
             "affiliation": "University College",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1915"
         },
         {
@@ -4511,7 +4511,7 @@
             "OrganizationCity": "Cambridge",
             "countryAffiliation": "United Kingdom",
             "affiliation": "University of Cambridge",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1973"
         },
         {
@@ -4526,7 +4526,7 @@
             "OrganizationCity": "Cambridge",
             "countryAffiliation": "United Kingdom",
             "affiliation": "University of Cambridge",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1974"
         },
         {
@@ -4541,7 +4541,7 @@
             "OrganizationCity": "Cambridge",
             "countryAffiliation": "United Kingdom",
             "affiliation": "University of Cambridge",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1906"
         },
         {
@@ -4556,7 +4556,7 @@
             "OrganizationCity": "Cambridge",
             "countryAffiliation": "United Kingdom",
             "affiliation": "University of Cambridge",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1927"
         },
         {
@@ -4571,7 +4571,7 @@
             "OrganizationCity": "Cambridge",
             "countryAffiliation": "United Kingdom",
             "affiliation": "University of Cambridge",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1933"
         },
         {
@@ -4586,7 +4586,7 @@
             "OrganizationCity": "Cambridge",
             "countryAffiliation": "United Kingdom",
             "affiliation": "University of Cambridge",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1977"
         },
         {
@@ -4601,7 +4601,7 @@
             "OrganizationCity": "Cambridge",
             "countryAffiliation": "United Kingdom",
             "affiliation": "University of Cambridge",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1974"
         },
         {
@@ -4616,7 +4616,7 @@
             "OrganizationCity": "Edinburgh",
             "countryAffiliation": "United Kingdom",
             "affiliation": "University of Edinburgh",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "2013"
         },
         {
@@ -4631,7 +4631,7 @@
             "OrganizationCity": "Manchester",
             "countryAffiliation": "United Kingdom",
             "affiliation": "University of Manchester",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "2010"
         },
         {
@@ -4646,7 +4646,7 @@
             "OrganizationCity": "Manchester",
             "countryAffiliation": "United Kingdom",
             "affiliation": "University of Manchester",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "2010"
         },
         {
@@ -4661,7 +4661,7 @@
             "OrganizationCity": "Manchester",
             "countryAffiliation": "United Kingdom",
             "affiliation": "Victoria University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1948"
         },
         {
@@ -4676,7 +4676,7 @@
             "OrganizationCity": "Manchester",
             "countryAffiliation": "United Kingdom",
             "affiliation": "Victoria University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1915"
         },
         {
@@ -4691,7 +4691,7 @@
             "OrganizationCity": "Argonne, IL",
             "countryAffiliation": "United States",
             "affiliation": "Argonne National Laboratory",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2003"
         },
         {
@@ -4706,7 +4706,7 @@
             "OrganizationCity": "Washington, DC",
             "countryAffiliation": "United States",
             "affiliation": "Associated Universities Inc.",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "2002"
         },
         {
@@ -4721,7 +4721,7 @@
             "OrganizationCity": "Murray Hill, NJ",
             "countryAffiliation": "United States",
             "affiliation": "Bell Laboratories",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "2009"
         },
         {
@@ -4736,7 +4736,7 @@
             "OrganizationCity": "Holmdel, NJ",
             "countryAffiliation": "United States",
             "affiliation": "Bell Laboratories",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "1978"
         },
         {
@@ -4751,7 +4751,7 @@
             "OrganizationCity": "Murray Hill, NJ",
             "countryAffiliation": "United States",
             "affiliation": "Bell Laboratories",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "2009"
         },
         {
@@ -4766,7 +4766,7 @@
             "OrganizationCity": "Holmdel, NJ",
             "countryAffiliation": "United States",
             "affiliation": "Bell Laboratories",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "1978"
         },
         {
@@ -4781,7 +4781,7 @@
             "OrganizationCity": "Murray Hill, NJ",
             "countryAffiliation": "United States",
             "affiliation": "Bell Laboratories",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "2009"
         },
         {
@@ -4796,7 +4796,7 @@
             "OrganizationCity": "Murray Hill, NJ",
             "countryAffiliation": "United States",
             "affiliation": "Bell Telephone Laboratories",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1977"
         },
         {
@@ -4811,7 +4811,7 @@
             "OrganizationCity": "Murray Hill, NJ",
             "countryAffiliation": "United States",
             "affiliation": "Bell Telephone Laboratories",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1956"
         },
         {
@@ -4826,7 +4826,7 @@
             "OrganizationCity": "New York, NY",
             "countryAffiliation": "United States",
             "affiliation": "Bell Telephone Laboratories",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1937"
         },
         {
@@ -4841,7 +4841,7 @@
             "OrganizationCity": "Providence, RI",
             "countryAffiliation": "United States",
             "affiliation": "Brown University",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "2016"
         },
         {
@@ -4856,7 +4856,7 @@
             "OrganizationCity": "Providence, RI",
             "countryAffiliation": "United States",
             "affiliation": "Brown University",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1972"
         },
         {
@@ -4871,7 +4871,7 @@
             "OrganizationCity": "Pasadena, CA",
             "countryAffiliation": "United States",
             "affiliation": "Caltech",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1961"
         },
         {
@@ -4886,7 +4886,7 @@
             "OrganizationCity": "Pasadena, CA",
             "countryAffiliation": "United States",
             "affiliation": "Caltech",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1983"
         },
         {
@@ -4901,7 +4901,7 @@
             "OrganizationCity": "Pasadena, CA",
             "countryAffiliation": "United States",
             "affiliation": "Caltech",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1965"
         },
         {
@@ -4916,7 +4916,7 @@
             "OrganizationCity": "Pasadena, CA",
             "countryAffiliation": "United States",
             "affiliation": "Caltech",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1936"
         },
         {
@@ -4931,7 +4931,7 @@
             "OrganizationCity": "Pasadena, CA",
             "countryAffiliation": "United States",
             "affiliation": "Caltech",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2004"
         },
         {
@@ -4946,7 +4946,7 @@
             "OrganizationCity": "Pasadena, CA",
             "countryAffiliation": "United States",
             "affiliation": "Caltech",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1969"
         },
         {
@@ -4961,7 +4961,7 @@
             "OrganizationCity": "Pasadena, CA",
             "countryAffiliation": "United States",
             "affiliation": "Caltech",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1923"
         },
         {
@@ -4976,7 +4976,7 @@
             "OrganizationCity": "Pittsburgh, PA",
             "countryAffiliation": "United States",
             "affiliation": "Carnegie Institute of Technology",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1943"
         },
         {
@@ -4991,7 +4991,7 @@
             "OrganizationCity": "New York, NY",
             "countryAffiliation": "United States",
             "affiliation": "Columbia University",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1998"
         },
         {
@@ -5006,7 +5006,7 @@
             "OrganizationCity": "New York, NY",
             "countryAffiliation": "United States",
             "affiliation": "Columbia University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1944"
         },
         {
@@ -5021,7 +5021,7 @@
             "OrganizationCity": "New York, NY",
             "countryAffiliation": "United States",
             "affiliation": "Columbia University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1957"
         },
         {
@@ -5036,7 +5036,7 @@
             "OrganizationCity": "New York, NY",
             "countryAffiliation": "United States",
             "affiliation": "Columbia University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1955"
         },
         {
@@ -5051,7 +5051,7 @@
             "OrganizationCity": "New York, NY",
             "countryAffiliation": "United States",
             "affiliation": "Columbia University",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1975"
         },
         {
@@ -5066,7 +5066,7 @@
             "OrganizationCity": "New York, NY",
             "countryAffiliation": "United States",
             "affiliation": "Columbia University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1949"
         },
         {
@@ -5081,7 +5081,7 @@
             "OrganizationCity": "Ithaca, NY",
             "countryAffiliation": "United States",
             "affiliation": "Cornell University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1967"
         },
         {
@@ -5096,7 +5096,7 @@
             "OrganizationCity": "Ithaca, NY",
             "countryAffiliation": "United States",
             "affiliation": "Cornell University",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1996"
         },
         {
@@ -5111,7 +5111,7 @@
             "OrganizationCity": "Ithaca, NY",
             "countryAffiliation": "United States",
             "affiliation": "Cornell University",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1996"
         },
         {
@@ -5126,7 +5126,7 @@
             "OrganizationCity": "Ithaca, NY",
             "countryAffiliation": "United States",
             "affiliation": "Cornell University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1982"
         },
         {
@@ -5141,7 +5141,7 @@
             "OrganizationCity": "Mountain View, CA",
             "countryAffiliation": "United States",
             "affiliation": "Digital Pathways, Inc.",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1988"
         },
         {
@@ -5156,7 +5156,7 @@
             "OrganizationCity": "Chicago, IL",
             "countryAffiliation": "United States",
             "affiliation": "Enrico Fermi Institute, University of Chicago",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "2008"
         },
         {
@@ -5171,7 +5171,7 @@
             "OrganizationCity": "Batavia, IL",
             "countryAffiliation": "United States",
             "affiliation": "Fermi National Accelerator Laboratory",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1988"
         },
         {
@@ -5186,7 +5186,7 @@
             "OrganizationCity": "Schenectady, NY",
             "countryAffiliation": "United States",
             "affiliation": "General Electric Company",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "1973"
         },
         {
@@ -5201,7 +5201,7 @@
             "OrganizationCity": "Cambridge, MA",
             "countryAffiliation": "United States",
             "affiliation": "Harvard University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1989"
         },
         {
@@ -5216,7 +5216,7 @@
             "OrganizationCity": "Cambridge, MA",
             "countryAffiliation": "United States",
             "affiliation": "Harvard University",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "1981"
         },
         {
@@ -5231,7 +5231,7 @@
             "OrganizationCity": "Cambridge, MA",
             "countryAffiliation": "United States",
             "affiliation": "Harvard University",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1977"
         },
         {
@@ -5246,7 +5246,7 @@
             "OrganizationCity": "Cambridge, MA",
             "countryAffiliation": "United States",
             "affiliation": "Harvard University",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1965"
         },
         {
@@ -5261,7 +5261,7 @@
             "OrganizationCity": "Cambridge, MA",
             "countryAffiliation": "United States",
             "affiliation": "Harvard University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "2005"
         },
         {
@@ -5276,7 +5276,7 @@
             "OrganizationCity": "Cambridge, MA",
             "countryAffiliation": "United States",
             "affiliation": "Harvard University",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1979"
         },
         {
@@ -5291,7 +5291,7 @@
             "OrganizationCity": "Cambridge, MA",
             "countryAffiliation": "United States",
             "affiliation": "Harvard University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1952"
         },
         {
@@ -5306,7 +5306,7 @@
             "OrganizationCity": "Cambridge, MA",
             "countryAffiliation": "United States",
             "affiliation": "Harvard University",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1979"
         },
         {
@@ -5321,7 +5321,7 @@
             "OrganizationCity": "Cambridge, MA",
             "countryAffiliation": "United States",
             "affiliation": "Harvard University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1946"
         },
         {
@@ -5336,7 +5336,7 @@
             "OrganizationCity": "Yorktown Heights, NY",
             "countryAffiliation": "United States",
             "affiliation": "IBM Thomas J. Watson Research Center",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "1973"
         },
         {
@@ -5351,7 +5351,7 @@
             "OrganizationCity": "Princeton, NJ",
             "countryAffiliation": "United States",
             "affiliation": "Institute for Advanced Study",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1957"
         },
         {
@@ -5366,7 +5366,7 @@
             "OrganizationCity": "Baltimore, MD",
             "countryAffiliation": "United States",
             "affiliation": "Johns Hopkins University",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "2011"
         },
         {
@@ -5381,7 +5381,7 @@
             "OrganizationCity": "Berkeley, CA",
             "countryAffiliation": "United States",
             "affiliation": "Lawrence Berkeley National Laboratory",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "2011"
         },
         {
@@ -5396,7 +5396,7 @@
             "OrganizationCity": "Cambridge, MA",
             "countryAffiliation": "United States",
             "affiliation": "MIT",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2004"
         },
         {
@@ -5411,7 +5411,7 @@
             "OrganizationCity": "Cambridge, MA",
             "countryAffiliation": "United States",
             "affiliation": "MIT",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1990"
         },
         {
@@ -5426,7 +5426,7 @@
             "OrganizationCity": "Cambridge, MA",
             "countryAffiliation": "United States",
             "affiliation": "MIT",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2001"
         },
         {
@@ -5441,7 +5441,7 @@
             "OrganizationCity": "Cambridge, MA",
             "countryAffiliation": "United States",
             "affiliation": "MIT",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1976"
         },
         {
@@ -5456,7 +5456,7 @@
             "OrganizationCity": "Cambridge, MA",
             "countryAffiliation": "United States",
             "affiliation": "MIT",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1990"
         },
         {
@@ -5471,7 +5471,7 @@
             "OrganizationCity": "Cambridge, MA",
             "countryAffiliation": "United States",
             "affiliation": "MIT",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1964"
         },
         {
@@ -5486,7 +5486,7 @@
             "OrganizationCity": "Cambridge, MA",
             "countryAffiliation": "United States",
             "affiliation": "MIT",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1994"
         },
         {
@@ -5501,7 +5501,7 @@
             "OrganizationCity": "Greenbelt, MD",
             "countryAffiliation": "United States",
             "affiliation": "NASA Goddard Space Flight Center",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "2006"
         },
         {
@@ -5516,7 +5516,7 @@
             "OrganizationCity": "Gaithersburg, MD",
             "countryAffiliation": "United States",
             "affiliation": "National Institute of Standards and Technology",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1997"
         },
         {
@@ -5531,7 +5531,7 @@
             "OrganizationCity": "Boulder, CO",
             "countryAffiliation": "United States",
             "affiliation": "National Institute of Standards and Technology",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "2012"
         },
         {
@@ -5546,7 +5546,7 @@
             "OrganizationCity": "Boulder, CO",
             "countryAffiliation": "United States",
             "affiliation": "National Institute of Standards and Technology",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "2005"
         },
         {
@@ -5561,7 +5561,7 @@
             "OrganizationCity": "Princeton, NJ",
             "countryAffiliation": "United States",
             "affiliation": "Princeton University",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1945"
         },
         {
@@ -5576,7 +5576,7 @@
             "OrganizationCity": "Princeton, NJ",
             "countryAffiliation": "United States",
             "affiliation": "Princeton University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1980"
         },
         {
@@ -5591,7 +5591,7 @@
             "OrganizationCity": "Princeton, NJ",
             "countryAffiliation": "United States",
             "affiliation": "Princeton University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1993"
         },
         {
@@ -5606,7 +5606,7 @@
             "OrganizationCity": "Princeton, NJ",
             "countryAffiliation": "United States",
             "affiliation": "Princeton University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1963"
         },
         {
@@ -5621,7 +5621,7 @@
             "OrganizationCity": "Princeton, NJ",
             "countryAffiliation": "United States",
             "affiliation": "Princeton University",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "2016"
         },
         {
@@ -5636,7 +5636,7 @@
             "OrganizationCity": "Princeton, NJ",
             "countryAffiliation": "United States",
             "affiliation": "Princeton University",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1998"
         },
         {
@@ -5651,7 +5651,7 @@
             "OrganizationCity": "Princeton, NJ",
             "countryAffiliation": "United States",
             "affiliation": "Princeton University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1993"
         },
         {
@@ -5666,7 +5666,7 @@
             "OrganizationCity": "Mountain View, CA",
             "countryAffiliation": "United States",
             "affiliation": "Semiconductor Laboratory of Beckman Instruments, Inc.",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1956"
         },
         {
@@ -5681,7 +5681,7 @@
             "OrganizationCity": "Baltimore, MD",
             "countryAffiliation": "United States",
             "affiliation": "Space Telescope Science Institute",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "2011"
         },
         {
@@ -5696,7 +5696,7 @@
             "OrganizationCity": "Stanford, CA",
             "countryAffiliation": "United States",
             "affiliation": "Stanford Linear Accelerator Center",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1976"
         },
         {
@@ -5711,7 +5711,7 @@
             "OrganizationCity": "Stanford, CA",
             "countryAffiliation": "United States",
             "affiliation": "Stanford University",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1996"
         },
         {
@@ -5726,7 +5726,7 @@
             "OrganizationCity": "Stanford, CA",
             "countryAffiliation": "United States",
             "affiliation": "Stanford University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1995"
         },
         {
@@ -5741,7 +5741,7 @@
             "OrganizationCity": "Stanford, CA",
             "countryAffiliation": "United States",
             "affiliation": "Stanford University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1955"
         },
         {
@@ -5756,7 +5756,7 @@
             "OrganizationCity": "Stanford, CA",
             "countryAffiliation": "United States",
             "affiliation": "Stanford University",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1998"
         },
         {
@@ -5771,7 +5771,7 @@
             "OrganizationCity": "Stanford, CA",
             "countryAffiliation": "United States",
             "affiliation": "Stanford University",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "1981"
         },
         {
@@ -5786,7 +5786,7 @@
             "OrganizationCity": "Stanford, CA",
             "countryAffiliation": "United States",
             "affiliation": "Stanford University",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1990"
         },
         {
@@ -5801,7 +5801,7 @@
             "OrganizationCity": "Stanford, CA",
             "countryAffiliation": "United States",
             "affiliation": "Stanford University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1952"
         },
         {
@@ -5816,7 +5816,7 @@
             "OrganizationCity": "Stanford, CA",
             "countryAffiliation": "United States",
             "affiliation": "Stanford University",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1961"
         },
         {
@@ -5831,7 +5831,7 @@
             "OrganizationCity": "Stanford, CA",
             "countryAffiliation": "United States",
             "affiliation": "Stanford University",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1997"
         },
         {
@@ -5846,7 +5846,7 @@
             "OrganizationCity": "Dallas, TX",
             "countryAffiliation": "United States",
             "affiliation": "Texas Instruments",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "2000"
         },
         {
@@ -5861,7 +5861,7 @@
             "OrganizationCity": "Berkeley, CA",
             "countryAffiliation": "United States",
             "affiliation": "University of California",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1959"
         },
         {
@@ -5876,7 +5876,7 @@
             "OrganizationCity": "Berkeley, CA",
             "countryAffiliation": "United States",
             "affiliation": "University of California",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1968"
         },
         {
@@ -5891,7 +5891,7 @@
             "OrganizationCity": "Berkeley, CA",
             "countryAffiliation": "United States",
             "affiliation": "University of California",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1960"
         },
         {
@@ -5906,7 +5906,7 @@
             "OrganizationCity": "Berkeley, CA",
             "countryAffiliation": "United States",
             "affiliation": "University of California",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "2006"
         },
         {
@@ -5921,7 +5921,7 @@
             "OrganizationCity": "Berkeley, CA",
             "countryAffiliation": "United States",
             "affiliation": "University of California",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1959"
         },
         {
@@ -5936,7 +5936,7 @@
             "OrganizationCity": "Santa Barbara, CA",
             "countryAffiliation": "United States",
             "affiliation": "University of California",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "2000"
         },
         {
@@ -5951,7 +5951,7 @@
             "OrganizationCity": "Santa Barbara, CA",
             "countryAffiliation": "United States",
             "affiliation": "University of California",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2004"
         },
         {
@@ -5966,7 +5966,7 @@
             "OrganizationCity": "San Diego, CA",
             "countryAffiliation": "United States",
             "affiliation": "University of California",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "1963"
         },
         {
@@ -5981,7 +5981,7 @@
             "OrganizationCity": "Berkeley, CA",
             "countryAffiliation": "United States",
             "affiliation": "University of California",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "2011"
         },
         {
@@ -5996,7 +5996,7 @@
             "OrganizationCity": "Irvine, CA",
             "countryAffiliation": "United States",
             "affiliation": "University of California",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1995"
         },
         {
@@ -6011,7 +6011,7 @@
             "OrganizationCity": "Berkeley, CA",
             "countryAffiliation": "United States",
             "affiliation": "University of California",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1939"
         },
         {
@@ -6026,7 +6026,7 @@
             "OrganizationCity": "Santa Barbara, CA",
             "countryAffiliation": "United States",
             "affiliation": "University of California",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2014"
         },
         {
@@ -6041,7 +6041,7 @@
             "OrganizationCity": "Chicago, IL",
             "countryAffiliation": "United States",
             "affiliation": "University of Chicago",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1983"
         },
         {
@@ -6056,7 +6056,7 @@
             "OrganizationCity": "Chicago, IL",
             "countryAffiliation": "United States",
             "affiliation": "University of Chicago",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1927"
         },
         {
@@ -6071,7 +6071,7 @@
             "OrganizationCity": "Chicago, IL",
             "countryAffiliation": "United States",
             "affiliation": "University of Chicago",
-            "PrizeShare": "1/1",
+            "prizeShare": "1/1",
             "year": "1907"
         },
         {
@@ -6086,7 +6086,7 @@
             "OrganizationCity": "Chicago, IL",
             "countryAffiliation": "United States",
             "affiliation": "University of Chicago",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "1980"
         },
         {
@@ -6101,7 +6101,7 @@
             "OrganizationCity": "Boulder, CO",
             "countryAffiliation": "United States",
             "affiliation": "University of Colorado",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "2012"
         },
         {
@@ -6116,7 +6116,7 @@
             "OrganizationCity": "Boulder, CO",
             "countryAffiliation": "United States",
             "affiliation": "University of Colorado",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2001"
         },
         {
@@ -6131,7 +6131,7 @@
             "OrganizationCity": "Boulder, CO",
             "countryAffiliation": "United States",
             "affiliation": "University of Colorado",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "2005"
         },
         {
@@ -6146,7 +6146,7 @@
             "OrganizationCity": "Boulder, CO",
             "countryAffiliation": "United States",
             "affiliation": "University of Colorado",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2001"
         },
         {
@@ -6161,7 +6161,7 @@
             "OrganizationCity": "Urbana, IL",
             "countryAffiliation": "United States",
             "affiliation": "University of Illinois",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "2003"
         },
         {
@@ -6176,7 +6176,7 @@
             "OrganizationCity": "Urbana, IL",
             "countryAffiliation": "United States",
             "affiliation": "University of Illinois",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1956"
         },
         {
@@ -6191,7 +6191,7 @@
             "OrganizationCity": "Urbana, IL",
             "countryAffiliation": "United States",
             "affiliation": "University of Illinois",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1972"
         },
         {
@@ -6206,7 +6206,7 @@
             "OrganizationCity": "Philadelphia, PA",
             "countryAffiliation": "United States",
             "affiliation": "University of Pennsylvania",
-            "PrizeShare": "1/3",
+            "prizeShare": "1/3",
             "year": "1972"
         },
         {
@@ -6221,7 +6221,7 @@
             "OrganizationCity": "Philadelphia, PA",
             "countryAffiliation": "United States",
             "affiliation": "University of Pennsylvania",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "2002"
         },
         {
@@ -6236,7 +6236,7 @@
             "OrganizationCity": "Seattle, WA",
             "countryAffiliation": "United States",
             "affiliation": "University of Washington",
-            "PrizeShare": "1/2",
+            "prizeShare": "1/2",
             "year": "2016"
         },
         {
@@ -6251,7 +6251,7 @@
             "OrganizationCity": "Seattle, WA",
             "countryAffiliation": "United States",
             "affiliation": "University of Washington",
-            "PrizeShare": "1/4",
+            "prizeShare": "1/4",
             "year": "1989"
         }
     ]

@@ -7,6 +7,9 @@ src="http://d3js.org/d3.v4.min.js"
 
 // dataset_extraction
 var selectedBar, selectedCircle;
+var general_transition = d3.transition()
+                            .duration(500)
+                            .ease(d3.easeLinear);
 
 //scaterplot Variables
 var r = 2;
@@ -44,6 +47,64 @@ function choose_sankey_color(name) {
           color = d3.rgb(sankey_colors(name.replace(/ .*/, "")));
     return color;
 }
+
+var tip, tooltip;
+function cleanMouseEvent(){
+    d3.selectAll("*").interrupt();
+    //Cleveland Plot
+    d3.select("#bar_and_cleveland").selectAll("circle")
+      // .interrupt()
+      // .transition()
+      .style("opacity", 1)
+      .style('r', r)
+      .style("fill", function (d1) {
+        tip.hide(d1);
+        return prize_color(d1.category);
+      });
+
+    //Bar Chart
+    d3.select("#bar_and_cleveland").selectAll("bar_chart").selectAll("rect")
+      // .interrupt()
+      // .transition()
+      .style("opacity", 1)
+      .style("fill", function (d1) {
+        return prize_color(d1.category);
+      });
+
+     //WorldMap
+     tooltip.style("display", "none");
+     d3.select("#worldmap").selectAll("path")
+      //  .interrupt()
+      //  .transition()
+       .style("stroke", "white")
+       .style("stroke-width", 0.3)
+       .style("fill", function (d1) {
+         return world_colors(populationById[d1.id]);
+       })
+       .style("opacity", 0.8);
+
+    //Sankey
+    d3.select("#sankey_diagram").selectAll("rect")
+      // .interrupt()
+      // .transition()
+      .style("fill", function(d1) {
+        if(d1.node>1) {
+          return choose_sankey_color(d1.name);
+        }
+        else{
+          return prize_color(d1.name);
+        }
+      })
+      .style("opacity", 1);
+
+    d3.select("#sankey_diagram").selectAll("path")
+      // .interrupt()
+      // .transition()
+      .style("opacity", 0.8);
+}
+
+// var dispatch = d3.dispatch("mouseout");
+// dispatch.on("mouseout", cleanMouseEvent);
 
 //====================   dataset_extraction   ========================
 d3.json("data/bars_new.json").then(function(data) {
@@ -185,23 +246,24 @@ function gen_scatterplot(dataset, chart) {
                   })
         .attr("cy",function(d) { return hscale(d.year - d.birthYear); })
         .attr("name", function(d) { return d.name; })
-      .attr("prizeShare", function (d) { return d.prizeShare })
+        .attr("prizeShare", function (d) { return d.prizeShare })
         .attr("countryAffiliation", function(d){ return d.countryAffiliation })
         .attr("countryBorn", function(d){ return d.countryBorn })
         .attr("affiliation", function(d){ return d.affiliation })
         .attr("category", function(d){ return d.category })
         .on("mouseenter", function(d){
+                              cleanMouseEvent();
                               //Opacity 0.5
                               d3.selectAll("circle,rect,path")
                                 .transition()
-                                .duration(250)
+                                .duration(700)
                                 .style("opacity",0.5);
 
                               //Change this
                               tooltip.style("display",'block');
                               d3.select(this)
                                 .transition()
-                                .duration(250)
+                                .duration(700)
                                 .style('r',r * 2)
                                 .style("opacity",1)
                                 .style("fill", "green");
@@ -210,75 +272,30 @@ function gen_scatterplot(dataset, chart) {
                               d3.select("#" + chart)
                                 .selectAll("rect[prizeShare=\'" + d.prizeShare + "\']")
                                 .transition()
-                                .duration(250)
+                                .duration(700)
                                 .style("opacity",1)
                                 .style("fill","green");
 
                               //Map
                               d3.selectAll("path[country = \'" + d.countryBorn + "\']")
                                 .transition()
-                                .duration(250)
+                                .duration(700)
                                 .style("opacity", 1)
                                 .style("fill","blue");
                               d3.selectAll("path[country = \'" + d.countryAffiliation + "\']")
                                 .transition()
-                                .duration(250)
+                                .duration(700)
                                 .style("opacity", 1)
                                 .style("fill","red");
 
                               //Sankey
                               d3.select("rect[affiliationName=\'" + d.affiliation + "\']")
                                 .transition()
-                                .duration(250)
+                                .duration(700)
                                 .style("fill","green")
                                 .style("opacity", 1);
-                              // d3.select('line')
-                              //   .style("opacity", 1);
                         })
-        .on('mouseleave', function(d){
-                            //Opacity back to normal
-                            d3.selectAll("circle,rect")
-                              .transition()
-                              .duration(100)
-                              .style("opacity",1);
-                            d3.selectAll("path")
-                              .transition()
-                              .duration(100)
-                              .style("opacity",0.8);
-
-                            //Change this
-                            tooltip.style("display", "none");
-                            d3.select(this)
-                              .transition()
-                              .duration(100)
-                              .style('r',r)
-                              .style("fill", prize_color(chart));
-
-                            //Bar Chart
-                            d3.select("#" + chart).selectAll("rect[prizeShare=\'" + d.prizeShare + "\']")
-                              .transition()
-                              .duration(100)
-                              .style("fill", prize_color(chart));
-
-                            //Map
-                            d3.selectAll("path[country = \'" + d.countryBorn + "\']")
-                              .transition()
-                              .duration(100)
-                              .style("fill", function(d1) { return world_colors(populationById[d1.id]); })
-                              .style("opacity", 0.8);
-                            d3.selectAll("path[country = \'" + d.countryAffiliation + "\']")
-                              .transition()
-                              .duration(100)
-                              .style("fill", function(d1) { return world_colors(populationById[d1.id]); })
-                              .style("opacity", 0.8);
-
-                            //Sankey
-                            d3.select("rect[affiliationName=\'" + d.affiliation + "\']")
-                              .transition()
-                              .duration(100)
-                              .style("fill",choose_sankey_color(d.affiliation))
-                              .style("opacity", 1);
-                        })
+        .on('mouseout', cleanMouseEvent)
         .on('mousemove', function(d){
                             var xPos = d3.mouse(this)[0] - 60;
                             var yPos = d3.mouse(this)[1] - 35;
@@ -298,7 +315,7 @@ function gen_scatterplot(dataset, chart) {
 
 
         //Tooltip
-        var tooltip = svg.append("g")
+        tooltip = svg.append("g")
                           .attr("class", tooltip)
                           .style('display','none');
         tooltip.append("rect")
@@ -327,6 +344,7 @@ function gen_bar_chart(dataset, chart){
     var w = 200;
 
     var svg = d3.select("#" + chart)
+                .append("bar_chart")
                 .append("svg")
                 .attr("width",w)
                 .attr("height",h);
@@ -361,44 +379,34 @@ function gen_bar_chart(dataset, chart){
         .attr("y",function(d, i) {
                       return yscale(i);
                   })
-        .attr("x",w-padding)
-      .attr("prizeShare", function(d) { return d.prizeShare; })
+        .attr("x", w - padding)
+        .attr("category", function(d) { return d.category; })
+        .attr("prizeShare", function(d) { return d.prizeShare; })
         .text(function(d) { return d.prizeShare; }) //Not working
-        .on("mouseenter", function(d){
+        .on("mouseenter", function (d) {
+                                cleanMouseEvent();
                                 //Opacity 0.5
                                 d3.selectAll("circle,rect,path")
+                                  .transition()
+                                  .duration(700)
                                   .style("opacity",0.5);
 
                                 //Change this
                                 d3.select(this)
+                                  .transition()
+                                  .duration(700)
                                   .style("opacity", 1)
                                   .style("fill", "green");
 
                                 //Cleveland Plot
                                 d3.select("#" + chart).selectAll("circle[prizeShare=\'" + d.prizeShare + "\']")
                                   .transition()
-                                  .duration(250)
+                                  .duration(700)
                                   .style('r',r * 2)
                                   .style("opacity", 1)
                                   .style("fill","green");
                           })
-        .on('mouseleave', function(d){
-                                //Opacity back to normal
-                                d3.selectAll("circle,rect")
-                                  .style("opacity",1);
-                                d3.selectAll("path")
-                                  .style("opacity",0.8);
-
-                                //Change this
-                                d3.select(this)
-                                  .style("fill",prize_color(chart));
-                                d3.select("#" + chart)
-                                  .selectAll("circle[prizeShare=\'" + d.prizeShare + "\']")
-                                  .transition()
-                                  .duration(100)
-                                  .style('r',r )
-                                  .style("fill",prize_color(chart));
-                          })
+        .on('mouseout', cleanMouseEvent)
         .transition()
         .duration(3000)
         .attr("x",function(d) {
@@ -434,7 +442,7 @@ function world_map(){
     var format = d3.format(",");
 
     // Set tooltips
-    var tip = d3.tip()
+    tip = d3.tip()
                 .attr('class', 'd3-tip')
                 .offset([-10, 0])
                 .html(function(d) {
@@ -516,7 +524,8 @@ function world_map(){
                 // tooltips
                 .style("stroke","white")
                 .style('stroke-width', 0.3)
-                .on('mouseenter',function(d){
+                .on('mouseenter', function (d) {
+                                    cleanMouseEvent();
                                     //Opacity 0.5
                                     d3.selectAll("circle,rect,path")
                                       .style("opacity",0.5);
@@ -532,56 +541,24 @@ function world_map(){
                                     d3.selectAll("circle[countryAffiliation=\"" + nameById[d.id] + "\"]")
                                       .transition()
                                       .style('r',r * 2)
-                                      .duration(250)
+                                      .duration(700)
                                       .style("opacity", 1)
                                       .style("fill", "red");
                                     d3.selectAll("circle[countryBorn=\"" + nameById[d.id] + "\"]")
                                       .transition()
                                       .style('r',r * 2)
-                                      .duration(250)
+                                      .duration(700)
                                       .style("opacity", 1)
                                       .style("fill", "blue");
 
                                     //Sankey
                                     d3.selectAll("rect[affiliationCountry=\"" + nameById[d.id] + "\"]")
                                       .transition()
-                                      .duration(250)
+                                      .duration(700)
                                       .style("opacity", 1)
                                       .style("fill", "green");
                                 })
-                .on('mouseleave', function(d){
-                                    //Opacity back to normal
-                                    d3.selectAll("circle,rect")
-                                      .style("opacity",1);
-                                    d3.selectAll("path")
-                                      .style("opacity",0.8);
-
-                                    //Change this
-                                    tip.hide(d);
-                                    d3.select(this)
-                                      .style("opacity", 0.8)
-                                      .style("stroke","white")
-                                      .style("stroke-width",0.3);
-
-                                    //Cleveland Plot
-                                    d3.selectAll("circle[countryAffiliation=\"" + nameById[d.id] + "\"]")
-                                      .transition()
-                                      .duration(100)
-                                      .style('r',r)
-                                      .style("fill", function(d1) { return prize_color(d1.category);});
-                                    d3.selectAll("circle[countryBorn=\"" + nameById[d.id] + "\"]")
-                                      .transition()
-                                      .duration(100)
-                                      .style('r',r)
-                                      .style("fill", function(d1) { return prize_color(d1.category);});
-
-                                    //Sankey
-                                    d3.selectAll("rect[affiliationCountry=\"" + nameById[d.id] + "\"]")
-                                      .transition()
-                                      .duration(250)
-                                      .style("fill", function(d1) { return choose_sankey_color(d1.name);})
-                                      .style("opacity", 1);
-                                });
+                .on('mouseout', cleanMouseEvent);
 
         svg.append("path")
             .datum(topojson.mesh(data.features, function(a, b) { return a.id !== b.id; }))
@@ -645,11 +622,12 @@ function gen_sankey(){
                       .style("stroke", function(d) {return choose_sankey_color(d.target.name); })
                       .style("stroke-width", function(d) { return Math.max(1, d.dy); })
                       .sort(function(a, b) { return b.dy - a.dy; })
-                      .on("mouseenter", function(d){
+                      .on("mouseenter", function (d) {
+                                          cleanMouseEvent();
                                           //Opacity 0.5
                                           d3.selectAll("circle,rect,path")
                                             .transition()
-                                            .duration(250)
+                                            .duration(700)
                                             .style("opacity",0.5);
 
                                           //Change this
@@ -659,45 +637,18 @@ function gen_sankey(){
                                           //Cleveland Plot
                                           d3.selectAll("circle[affiliation=\'" + d.target.name + "\']")
                                             .transition()
-                                            .duration(100)
+                                            .duration(500)
                                             .style('r',r*4 )
                                             .style("fill","green");
 
                                           //Map
                                           d3.selectAll("path[country=\'" + d.target.country + "\']")
                                             .transition()
-                                            .duration(100)
+                                            .duration(500)
                                             .style("opacity",1)
                                             .style("fill","green");
                                        })
-                      .on("mouseleave", function(d){
-                                           //Opacity back to normal
-                                           d3.selectAll("circle,rect")
-                                             .transition()
-                                             .duration(100)
-                                             .style("opacity",1);
-                                           d3.selectAll("path")
-                                             .transition()
-                                             .duration(100)
-                                             .style("opacity",0.8);
-
-                                           //Change this
-
-                                           //Cleveland Plot
-                                           d3.selectAll("circle[affiliation=\'" + d.target.name + "\']")
-                                             .transition()
-                                             .duration(100)
-                                             .style('r',r )
-                                             .style("opacity",1)
-                                             .style("fill", function(d1) { return prize_color(d1.category);});
-
-                                          //Map
-                                           d3.selectAll("path[country = \'" + d.target.country + "\']")
-                                             .transition()
-                                             .duration(100)
-                                             .style("opacity", 0.8)
-                                             .style("fill", function(d1) { return world_colors(populationById[d1.id]); });
-                                      });
+                      .on("mouseout", cleanMouseEvent);
 
         // add the link titles
         link.append("title")
@@ -719,11 +670,12 @@ function gen_sankey(){
                                   this.parentNode.appendChild(this);
                               })
                               .on("drag", dragmove))
-                      .on("mouseenter", function(d){
+                      .on("mouseenter", function (d) {
+                                          cleanMouseEvent();
                                           //Opacity 0.5
                                           d3.selectAll("circle,rect,path")
                                             .transition()
-                                            .duration(100)
+                                            .duration(500)
                                             .style("opacity",0.5);
 
                                           //Change this
@@ -733,44 +685,18 @@ function gen_sankey(){
                                           //Cleveland Plot
                                           d3.selectAll("circle[affiliation=\'" + d.name + "\']")
                                             .transition()
-                                            .duration(100)
+                                            .duration(500)
                                             .style('r',r*4)
                                             .style("fill","green");
 
                                           //Map
                                           d3.selectAll("path[country=\'" + d.country + "\']")
                                             .transition()
-                                            .duration(100)
+                                            .duration(500)
                                             .style("opacity",1)
                                             .style("fill","green");
                                        })
-                      .on("mouseleave", function(d){
-                                         //Opacity back to normal
-                                         d3.selectAll("circle,rect")
-                                           .transition()
-                                           .duration(100)
-                                           .style("opacity",1);
-                                         d3.selectAll("path")
-                                           .transition()
-                                           .duration(100)
-                                           .style("opacity",0.8);
-
-                                         //Change this
-
-                                         //Cleveland Plot
-                                         d3.selectAll("circle[affiliation=\'" + d.name + "\']")
-                                           .transition()
-                                           .duration(100)
-                                           .style('r',r )
-                                           .style("fill",function(d1) { return prize_color(d1.category);});
-
-                                         //Map
-                                         d3.selectAll("path[country = \'" + d.country + "\']")
-                                           .transition()
-                                           .duration(100)
-                                           .style("opacity", 0.8)
-                                           .style("fill", function(d1) { return world_colors(populationById[d1.id]); });
-                                      });
+                      .on("mouseout", cleanMouseEvent);
 
         // add the rectangles for the nodes
         rect = node.append("rect")
@@ -869,7 +795,7 @@ function chord_chart(){
 
 
         .on("mouseenter", mouseentered)
-        .on("mouseleave", mouseleaved);
+        .on("mouseout", mouseouted);
 
 
         node.data(root.leaves())
@@ -920,17 +846,17 @@ function chord_chart(){
         .classed("node--source", function(n) { return n.source; });
     d3.selectAll("circle,rect,path")
       .transition()
-      .duration(250)
+      .duration(700)
       .style("opacity",0.5);
     d3.select("#chemistry").selectAll("circle[name=\'" + d.data.key + "\']")
       .transition()
       .style('r',r * 2)
-      .duration(250)
+      .duration(700)
       .style("opacity", 1)
       .style("fill", "red");
   }
 
-  function mouseleaved(d) {
+  function mouseouted(d) {
     link
         .classed("link--target", false)
         .classed("link--source", false);
@@ -944,7 +870,7 @@ function chord_chart(){
     d3.select("#chemistry").selectAll("circle[name=\'" + d.data.key + "\']")
         .transition()
         .style('r',r )
-        .duration(250)
+        .duration(700)
         .style("fill",prize_color("chemistry"));
 
   }

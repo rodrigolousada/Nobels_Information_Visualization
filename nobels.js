@@ -48,7 +48,7 @@ function choose_sankey_color(name) {
     return color;
 }
 
-var tip, tooltip;
+var worldmap_tip, scatter_tip;
 function cleanMouseEvent(){
     d3.selectAll("*").interrupt();
     //Cleveland Plot
@@ -58,7 +58,8 @@ function cleanMouseEvent(){
       .style("opacity", 1)
       .style('r', r)
       .style("fill", function (d1) {
-        tip.hide(d1);
+        worldmap_tip.hide(d1);
+        scatter_tip.hide(d1);
         return prize_color(d1.category);
       });
 
@@ -72,7 +73,6 @@ function cleanMouseEvent(){
       });
 
      //WorldMap
-     tooltip.style("display", "none");
      d3.select("#worldmap").selectAll("path")
       //  .interrupt()
       //  .transition()
@@ -136,13 +136,21 @@ d3.json("data/clevelandClean1.json").then(function(data) {
 
 //====================   gen_scatterplot   ========================
 function gen_scatterplot(dataset, chart) {
-    var div = d3.select("body").append("div")
-                  .attr("class", "tooltip")
-                  .style("opacity", 0);
-    // var formatTime = d3.time.format("%e %B");
-
     dataset = dataset.filter(function(d){ return d.category.toLowerCase() == chart; });
 
+    // Set tooltips
+    scatter_tip = d3.tip()
+      .attr('class', 'd3-tip')
+      .offset([-10, 0])
+      .html(function (d) {
+        return "<strong>Name: </strong><span class='details'>" + d.name + "<br></span>"
+              + "<strong>Gender: </strong><span class='details'>" + d.Gender + "<br></span>"
+              + "<strong>Age: </strong><span class='details'>" + d.Age + "<br></span>"
+              + "<strong>Born in: </strong><span class='details'>" + d.BirthCity + ", " + d.countryBorn + "<br></span>"
+              + "<strong>Worked for: </strong><span class='details'>" + d.affiliation + ", " + d.countryAffiliation + "<br></span>"
+              + "<strong>Year: </strong><span class='details'>" + d.year + "</span>";
+    })
+    
     var w = 600;
     var h = 150;
 
@@ -215,8 +223,9 @@ function gen_scatterplot(dataset, chart) {
         .duration(4000)
         .call(yaxis);
 
-
-        // Average Line creation
+    svg.call(scatter_tip);
+    
+    // Average Line creation
     d3.json("data/statistics.json", function(data) {
         data = data.filter(function(d) { return d.category.toLowerCase() == chart; })[0];
         line = svg.append('line')
@@ -260,7 +269,7 @@ function gen_scatterplot(dataset, chart) {
                                 .style("opacity",0.5);
 
                               //Change this
-                              tooltip.style("display",'block');
+                             scatter_tip.show(d);
                               d3.select(this)
                                 .transition()
                                 .duration(700)
@@ -295,15 +304,7 @@ function gen_scatterplot(dataset, chart) {
                                 .style("fill","green")
                                 .style("opacity", 1);
                         })
-        .on('mouseout', cleanMouseEvent)
-        .on('mousemove', function(d){
-                            var xPos = d3.mouse(this)[0] - 60;
-                            var yPos = d3.mouse(this)[1] - 35;
-
-                            tooltip.attr('transform','translate('+ xPos+","+ yPos+")");
-                            tooltip.select("text").text(d.name);
-                            // tooltip.select('.ma').html(d.data.label);
-                        });
+        .on('mouseout', cleanMouseEvent);
 
         //Circles Animation
         svg.selectAll("circle")
@@ -311,26 +312,6 @@ function gen_scatterplot(dataset, chart) {
             .delay(3000)
             .duration(3000)
             .attr("r",r);
-
-
-
-        //Tooltip
-        tooltip = svg.append("g")
-                          .attr("class", tooltip)
-                          .style('display','none');
-        tooltip.append("rect")
-                .attr("width",150)
-                .attr("height",30)
-                .style("fill","black")
-                .style("fill-opacity",.80);
-        tooltip.append("text")
-                .attr("x",15)
-                .attr('dy','1.2em')
-                .style("fill", "white")
-                .style('front-size','1.25em')
-                .style('font-family','Arial')
-                // .style('color','')
-                .attr('font-weight','bold');
 }
 
 //====================   gen_bar_chart   ========================
@@ -442,7 +423,7 @@ function world_map(){
     var format = d3.format(",");
 
     // Set tooltips
-    tip = d3.tip()
+    worldmap_tip = d3.tip()
                 .attr('class', 'd3-tip')
                 .offset([-10, 0])
                 .html(function(d) {
@@ -478,7 +459,7 @@ function world_map(){
     var g = svg.append('g')
                 .attr('class', 'map');
 
-    svg.call(tip);
+    svg.call(worldmap_tip);
 
     svg.call(zoom);
 
@@ -531,7 +512,7 @@ function world_map(){
                                       .style("opacity",0.5);
 
                                     //Change this
-                                    tip.show(d);
+                                    worldmap_tip.show(d);
                                     d3.select(this)
                                       .style("opacity", 1)
                                       .style("stroke","white")

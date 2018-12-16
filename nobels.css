@@ -259,10 +259,6 @@ div.tooltip {
   fill: #2b2727;
 }
 
-#limit .node:hover {
-  font: 300 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
-  fill: #000;
-}
 
 #limit .link {
   stroke: steelblue;
@@ -274,28 +270,47 @@ div.tooltip {
 #limit .node:hover,
 #limit .node--source,
 #limit .node--target {
+  font: 300 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  fill: #000;
+  opacity: 1;
+
   font-weight: 700;
 }
+#limit .node--target--new {
+  font: 300 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  fill: #000;
+  opacity: 1;
 
+  font-weight: 700;
+}
 #limit .node--source {
+  font: 300 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
+
   fill: #2ca02c;
 }
 
 #limit .node--target {
+  font: 300 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
+
   fill: #d62728;
 }
 
 #limit .link--source,
 #limit .link--target {
+
   stroke-opacity: 1;
   stroke-width: 2px;
 }
 
 #limit .link--source {
+  stroke-opacity: 1;
+
   stroke: #d62728;
 }
 
 #limit .link--target {
+  stroke-opacity: 1;
+
   stroke: #2ca02c;
 }
 .node circle {

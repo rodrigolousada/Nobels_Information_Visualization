@@ -17,6 +17,8 @@ var r = 2;
 // World Map Variables
 var populationById = {};
 var nameById = {};
+
+
 var world_colors = d3.scaleThreshold()
                       .domain([0,0.5,1,2,5,10,25,70,100,400])
                       .range(["rgb(247,251,255)", "rgb(222,235,247)", "rgb(198,219,239)", "rgb(158,202,225)", "rgb(107,174,214)", "rgb(66,146,198)","rgb(33,113,181)","rgb(8,81,156)","rgb(8,48,107)","rgb(3,19,43)"]);
@@ -150,7 +152,7 @@ function gen_scatterplot(dataset, chart) {
               + "<strong>Worked for: </strong><span class='details'>" + d.affiliation + ", " + d.countryAffiliation + "<br></span>"
               + "<strong>Year: </strong><span class='details'>" + d.year + "</span>";
     })
-    
+
     var w = 600;
     var h = 150;
 
@@ -224,7 +226,7 @@ function gen_scatterplot(dataset, chart) {
         .call(yaxis);
 
     svg.call(scatter_tip);
-    
+
     // Average Line creation
     d3.json("data/statistics.json", function(data) {
         data = data.filter(function(d) { return d.category.toLowerCase() == chart; })[0];
@@ -770,7 +772,7 @@ function chord_chart(){
     .attr("d", d3v3.svg.arc().outerRadius(ry - 180).innerRadius(0).startAngle(0).endAngle(2 * Math.PI))
     .on("mousedown", mousedown);
 
-  d3v3.json("data/flare3nodes.json", function(classes) { //flare-imports
+  d3v3.json("data/chordchartPhysicsWithouAntiSocials_pt2.json", function(classes) { //flare-imports
   var nodes = cluster.nodes(packages.root(classes)),
       links = packages.imports(nodes),
       splines = bundle(links);
@@ -782,7 +784,11 @@ function chord_chart(){
       .attr("d", function(d, i) { return line(splines[i]); });
 
   var groupData = svg.selectAll("g.group")
-    .data(nodes.filter(function(d) { return (d.key=='nyu' || d.key == 'harvard' || d.key == 'mit') && d.children; }))
+    .data(nodes.filter(function(d) { return (
+                    d.key=='Harvard_University' || d.key == 'University_of_California' || d.key == 'MIT' ||
+                    d.key== "Academy_of_Sciences"|| d.key== "Amsterdam_University"|| d.key== "Atomic_Energy_Research_Establishment"|| d.key== "Australian_National_University"|| d.key== "Bell_Laboratories"|| d.key== "Bell_Telephone_Laboratories"|| d.key== "Berlin_University"|| d.key== "Bristol_University"|| d.key== "Brown_University"|| d.key== "Caltech"|| d.key== "CERN"|| d.key== "Chinese_University_of_Hong_Kong"|| d.key== "CollÃ¨ge_de_France"|| d.key== "Columbia_Univeristy"|| d.key== "Columbia_University"|| d.key== "Copenhagen_University"|| d.key== "Cornell_University"|| d.key== "Department_of_Scientific_and_Industrial_Research"|| d.key== "Digital_Pathways_Inc"|| d.key== "Edinburgh_University"|| d.key== "ETH_Zurich"|| d.key== "Forschungszentrum_J&uuml;lich"|| d.key== "Frankfurt-on-the-Main_University"|| d.key== "Fritz-Haber-Institut_der_Max-Planck-Gesellschaft"|| d.key== "Goettingen_University"|| d.key== "Greifswald_University"|| d.key== "Groningen_University"|| d.key== "Halle_University"|| d.key== "Harvard_University"|| d.key== "Humboldt_University_of_Berlin"|| d.key== "I_Campbell"|| d.key== "IBM_Zurich_Research_Laboratory"|| d.key== "Imperial_College_of_London"|| d.key== "Institute_for_Advanced_Study"|| d.key== "International_Bureau_of_Weights_and_Measures"|| d.key== "International_Centre_for_Theoretical_Physics"|| d.key== "IPHT"|| d.key== "Johns_Hopkins_University"|| d.key== "Kajuro_Tamaki"|| d.key== "KEK"|| d.key== "Kiel_University"|| d.key== "Kyoto_Imperial_University"|| d.key== "Kyoto_Sangyo_University"|| d.key== "Lawrence_Berkeley_National_Laboratory"|| d.key== "Leiden_University"|| d.key== "Leipzig_University"|| d.key== "Liverpool_University"|| d.key== "London_University"|| d.key== "Ludwig-Maximilians-_UniversitÃ¤t"|| d.key== "Marconi_Wireless_Telegraph_Co_Ltd"|| d.key== "Max-Planck-Institut"|| d.key== "Max-Planck_Institut"|| d.key== "Meijo_University"|| d.key== "MIT"|| d.key== "Moscow_State_University"|| d.key== "Munich_University"|| d.key== "Municipal_School_of_Industrial_Physics_and_Chemistry"|| d.key== "Nagoya_Imperial_Univeristy"|| d.key== "Nagoya_University"|| d.key== "NASA_Goddard_Space_Flight_Center"|| d.key== "National_Institute_of_Standards_and_Technology"|| d.key== "Nordita"|| d.key== "PN_Lebedev_Physical_Institute"|| d.key== "Princeton_University"|| d.key== "Queen's_University"|| d.key== "Rome_University"|| d.key== "Royal_Institution_of_Great_Britain"|| d.key== "Semiconductor_Laboratory_of_Beckman_Instruments_Inc"|| d.key== "Sorbonne_University"|| d.key== "Stanford_Linear_Accelerator_Center"|| d.key== "Stanford_University"|| d.key== "Strasbourg_University"|| d.key== "Technical_University_of_Berlin"|| d.key== "Trinity_College"|| d.key== "Unit&eacute;_Mixte_de_Physique_CNRS\/THALES"|| d.key== "Univer_of_Konigsberg"|| d.key== "Univeristy_of_Cambridge"|| d.key== "Univeristy_of_Goettingen"|| d.key== "Univeristy_of_Konigsberg"|| d.key== "Univeristy_of_Oxford"|| d.key== "Univeristy_of_Zurich"|| d.key== "University_College"|| d.key== "University_College_of_London"|| d.key== "University_of_Bologna"|| d.key== "University_of_Bonn"|| d.key== "University_of_Budapest"|| d.key== "University_of_California"|| d.key== "University_of_Cambridge"|| d.key== "University_of_Chicago"|| d.key== "University_of_Colorado"|| d.key== "University_of_Columbia"|| d.key== "University_of_Edinburgh"|| d.key== "University_of_Geneva"|| d.key== "University_of_Giesen"|| d.key== "University_of_Goettingen"|| d.key== "UNiversity_of_Goettingen"|| d.key== "University_of_Grenoble"|| d.key== "University_of_Heidelberg"|| d.key== "University_of_Illinois"|| d.key== "University_of_Innsbruck"|| d.key== "University_of_Konigsberg"|| d.key== "University_of_London"|| d.key== "University_of_Manchester"|| d.key== "University_of_Oxford"|| d.key== "University_of_Pennsylvania"|| d.key== "University_of_Rochester"|| d.key== "University_of_Tokyo"|| d.key== "University_of_Toronto"|| d.key== "University_of_Utrecht"|| d.key== "University_of_Washington"|| d.key== "Victoria_University"|| d.key== "WÃ¼rzburg_University"|| d.key== "École_Normale_Supérieure"|| d.key== "École_Polytechnique"|| d.key== "École_Supérieure_de_Physique_et_Chimie"
+
+                  ) && d.children; }))
     .enter().append("group")
     .attr("class", "group");
 
@@ -791,14 +797,15 @@ function chord_chart(){
   .outerRadius(ry - 157)
   .startAngle(function(d) { return (findStartAngle(d.__data__.children)-2) * pi / 180;})
   .endAngle(function(d) { return (findEndAngle(d.__data__.children)+2) * pi / 180});
+var color = d3v3.scale.category20();
 
   svg.selectAll("g.arc")
   .data(groupData[0])
   .enter().append("svg:path")
   .attr("d", groupArc)
   .attr("class", "groupArc")
-  .style("fill", "#1f77b4")
-  .style("fill-opacity", 0.5);
+  .attr("fill",function(d,i){return color(i);})
+  .style("fill-opacity", 0.65);
 
   svg.selectAll("g.node")
       .data(nodes.filter(function(n) { return !n.children; }))
@@ -863,7 +870,7 @@ function chord_chart(){
   }
 
   function mouseover(d) {
-    d3.selectAll("circle,rect,text")
+    d3.selectAll("#bar_and_cleveland, #worldmap, #sankey_diagram").selectAll("circle,rect,path,text")
       .style("opacity",0.5);
 
     d3v3.select(this)
@@ -883,13 +890,8 @@ function chord_chart(){
     console.log(d.key.replace(/_/g, ' '));
 
     d3.selectAll("circle[name=\"" + d.key.replace(/_/g, ' ') + "\"]")
-      .transition()
-      .style('r',r * 2)
-      .duration(700)
-      .style("opacity", 1)
-      .style("fill", "red");
-
-
+      .dispatch("mouseenter");
+      
   }
   function mouseout(d) {
     cleanMouseEvent();

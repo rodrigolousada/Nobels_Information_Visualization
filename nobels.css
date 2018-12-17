@@ -237,8 +237,10 @@ div.tooltip {
 }
 
 #sankey_diagram .node text {
-  pointer-events: none;
-  text-shadow: 0 1px 0 #fff;
+  font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  /* pointer-events: none; */
+  /* text-shadow: 0 1px 0 #fff; */
 }
 
 #sankey_diagram .link {
@@ -251,73 +253,7 @@ div.tooltip {
   stroke-opacity: .5;
 }
 
-/*====================== Chord Chart ==========================*/
 
-/*
-#limit .node {
-  font: 300 6px "Helvetica Neue", Helvetica, Arial, sans-serif;
-  fill: #2b2727;
-}
-
-
-#limit .link {
-  stroke: steelblue;
-  stroke-opacity: 0.4;
-  fill: none;
-  pointer-events: none;
-}
-
-#limit .node:hover,
-#limit .node--source,
-#limit .node--target {
-  font: 300 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
-  fill: #000;
-  opacity: 1;
-
-  font-weight: 700;
-}
-#limit .node--target--new {
-  font: 300 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
-  fill: #000;
-  opacity: 1;
-
-  font-weight: 700;
-}
-#limit .node--source {
-  font: 300 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
-
-  fill: #2ca02c;
-}
-
-#limit .node--target {
-  font: 300 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
-
-  fill: #d62728;
-}
-
-#limit .link--source,
-#limit .link--target {
-
-  stroke-opacity: 1;
-  stroke-width: 2px;
-}
-
-#limit .link--source {
-  stroke-opacity: 1;
-
-  stroke: #d62728;
-}
-
-#limit .link--target {
-  stroke-opacity: 1;
-
-  stroke: #2ca02c;
-}
-.node circle {
-  fill: #d62333;
-  stroke: #fff;
-  stroke-width: 1px;
-} */
 /*======================== New Chord Chart=======================*/
 #chord tbody {
   font: 300 36px "Helvetica Neue";
@@ -394,7 +330,8 @@ div.tooltip {
 }
 
 #chord .node {
-  font-size: 10px;
+  font: 4px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* font-size: 10px; */
 }
 
 #chord .node:hover {
@@ -419,21 +356,23 @@ div.tooltip {
 #chord .node.target {
   font-size: 15px;
 
-  fill: #d62728 ; /* !important */
+  /* fill: #d62728 ; /* !important */ */
 }
 
 #chord .link.source {
-
+  stroke-opacity: 1;
   stroke: #d62728;
 }
 
 #chord .node.source {
+  background-color: #000;
+
   font-size: 15px;
-  text-opacity: 1;
-  fill: #2ca02c;
+  /* fill: #2ca02c; */
 }
 
 #chord .link.target {
-  text-opacity: 1;
+  stroke-opacity: 1;
+
   stroke: #2ca02c;
 }

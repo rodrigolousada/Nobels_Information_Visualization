@@ -305,6 +305,10 @@ function gen_scatterplot(dataset, chart) {
                                 .duration(700)
                                 .style("fill","green")
                                 .style("opacity", 1);
+                            console.log(d3v3);
+                            console.log(d3v3.selectAll("g#node-"+ d.name.replace(' ',"_") +".node"));
+                            d3v3.selectAll("g#node-"+ d.name.replace(' ',"_") +".node")
+                                .on("mouseover", function(d){console.log("ola");});
                         })
         .on('mouseout', cleanMouseEvent);
 
@@ -800,12 +804,12 @@ function chord_chart(){
 var color = d3v3.scale.category20();
 
   svg.selectAll("g.arc")
-  .data(groupData[0])
-  .enter().append("svg:path")
-  .attr("d", groupArc)
-  .attr("class", "groupArc")
-  .attr("fill",function(d,i){return color(i);})
-  .style("fill-opacity", 0.65);
+      .data(groupData[0])
+      .enter().append("svg:path")
+      .attr("d", groupArc)
+      .attr("class", "groupArc")
+      .attr("fill",function(d,i){return color(i);})
+      .style("fill-opacity", 0.65);
 
   svg.selectAll("g.node")
       .data(nodes.filter(function(n) { return !n.children; }))
@@ -872,7 +876,7 @@ var color = d3v3.scale.category20();
   function mouseover(d) {
     d3.selectAll("#bar_and_cleveland, #worldmap, #sankey_diagram").selectAll("circle,rect,path,text")
       .style("opacity",0.5);
-
+    console.log(this);
     d3v3.select(this)
         .style("opacity",1)
         .style("fill","#111111")
@@ -887,11 +891,10 @@ var color = d3v3.scale.category20();
         .each(updateNodes("target", true));
 
 
-    console.log(d.key.replace(/_/g, ' '));
 
     d3.selectAll("circle[name=\"" + d.key.replace(/_/g, ' ') + "\"]")
       .dispatch("mouseenter");
-      
+
   }
   function mouseout(d) {
     cleanMouseEvent();

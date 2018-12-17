@@ -108,7 +108,11 @@ line#average_age {
   border: none;
   font-size: 17px;
 }
+/*========================= Bar Chart==========================*/
 
+bar_chart text {
+  pointer-events: none;
+}
 
 /*======================== World Map ===========================*/
 

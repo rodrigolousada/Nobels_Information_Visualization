@@ -25,6 +25,7 @@
     <script src="lib/topojson.js"></script>
 
     <script src="js/d3.v5.js" charset="utf-8"></script>
+
     <script src="js/d3-tip.js"></script>
     <script src="http://d3js.org/topojson.v1.min.js"></script>
     <script src="http://d3js.org/queue.v1.min.js"></script>
@@ -32,9 +33,23 @@
     <script src="nobels.js"></script>
     <script src="js/cartogram.js"></script>
 
-    <script src="http://d3js.org/d3.v4.min.js"></script>
+    <script src="js/d3.v4.min.js"></script>
+    <script src="js/d3.v3.js" charset="utf-8"></script>
+    <!-- <script src="js/d3.min.js" charset="utf-8"></script> -->
+    <script src="//code.jquery.com/jquery-1.12.3.min.js" charset="utf-8"></script>
+
+    <script src="Tests/packages.js"></script>
+
+
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+  
+
   </head>
 
   <body>
@@ -71,16 +86,18 @@
           <td id="categories" style="width:630px">
             <div id="worldmap"></div>
           </td>
-          <td style="width:100px">
-            <div></div>
-          </td>
-          <td id="categories" style=" white-space: nowrap">
+
+          <td id="categories" >
             <!-- <img src="img/chord.png" width="350" height="350" style="margin-left:200"> -->
-            <div id="chord" align="center" ></div>
+            <div id="chord"  >
+                <!--   style="position: relative" -->
+            </div>
+
           </td>
         </tr>
       </table>
     </div>
+    <div style="bottom:0;font-size:18px;">tension: <input style="position:relative;top:3px;" type="range" min="0" max="100" value="85"></div>
 
     <div id="categories" style="padding-left:20px; width:1300px" style="width:90%" style="border:300px; border-color:#f2f2f2;">
       <small style="font-family:verdana;" ><b>Nobel Prizes for each Category:</b></small>

@@ -1,0 +1,1236 @@
+[
+    {
+        "name": "United_States.Columbia_University.Albert_Wills",
+        "imports": [
+            "United_States.Columbia_University.Isidor_Rabi"
+        ]
+    },
+    {
+        "name": "Germany.University_of_Giesen.Alexander_Brill",
+        "imports": [
+            "Germany.Berlin_University.Max_Planck"
+        ]
+    },
+    {
+        "name": "Switzerland.Univeristy_of_Zurich.Alfred_Kleiner",
+        "imports": [
+            "Germany.Max-Planck_Institut.Albert_Einstein"
+        ]
+    },
+    {
+        "name": "Germany.University_of_Konigsberg.Arnold_Sommerfeld",
+        "imports": [
+            "Germany.Frankfurt-on-the-Main_University.Max_Laue",
+            "Germany.Leipzig_University.Werner_Heisenberg",
+            "United_States.Cornell_University.Hans_Bethe",
+            "United_States.Princeton_University.Wolfgang_Pauli"
+        ]
+    },
+    {
+        "name": "Germany.Berlin_University.August_Kundt",
+        "imports": [
+            "France.Strasbourg_University.Karl_Braun"
+        ]
+    },
+    {
+        "name": "Italy.University_of_Bologna.Augusto_Righi",
+        "imports": [
+            "United_Kingdom.Marconi_Wireless_Telegraph_Co_Ltd.Guglielmo_Marconi"
+        ]
+    },
+    {
+        "name": "United_States.Columbia_University.Bernard_Feld",
+        "imports": [
+            "United_States.Stanford_Linear_Accelerator_Center.Burton_Richter"
+        ]
+    },
+    {
+        "name": "United_Kingdom.Univeristy_of_Cambridge.Brian_Pippard",
+        "imports": [
+            "United_Kingdom.University_of_Cambridge.Brian_Josephson"
+        ]
+    },
+    {
+        "name": "Germany.Berlin_University.Carl_Runge",
+        "imports": [
+            "United_Kingdom.Edinburgh_University.Max_Born"
+        ]
+    },
+    {
+        "name": "Canada.University_of_Toronto.Charles_Barnes",
+        "imports": [
+            "Canada.Queen's_University.Arthur_McDonald"
+        ]
+    },
+    {
+        "name": "United_Kingdom.Univeristy_of_Cambridge.Charles_Coulson",
+        "imports": [
+            "United_Kingdom.University_of_Edinburgh.Peter_Higgs"
+        ]
+    },
+    {
+        "name": "United_States.Caltech.Charles_Lauritsen",
+        "imports": [
+            "United_States.Caltech.William_Fowler"
+        ]
+    },
+    {
+        "name": "Denmark.Copenhagen_University.Christian_Christiansen",
+        "imports": [
+            "Denmark.Copenhagen_University.Niels_Bohr"
+        ]
+    },
+    {
+        "name": "United_Kingdom.Univeristy_of_Oxford.Christopher_Longuet-Higgins",
+        "imports": [
+            "United_Kingdom.University_of_Edinburgh.Peter_Higgs"
+        ]
+    },
+    {
+        "name": "Netherlands.Leiden_University.Cornelis_Gorter",
+        "imports": [
+            "United_States.Harvard_University.Nicolaas_Bloembergen"
+        ]
+    },
+    {
+        "name": "United_States.Harvard_University.Daniel_Kleppner",
+        "imports": [
+            "United_States.National_Institute_of_Standards_and_Technology.William_Phillips"
+        ]
+    },
+    {
+        "name": "United_States.MIT.David_Frisch",
+        "imports": [
+            "United_States.University_of_California.George_Smoot"
+        ]
+    },
+    {
+        "name": "United_Kingdom.University_of_Oxford.Dirk_Haar",
+        "imports": [
+            "United_States.University_of_Illinois.Anthony_Leggett"
+        ]
+    },
+    {
+        "name": "Germany.IPHT.Eckhardt_Hoenig",
+        "imports": [
+            "Switzerland.IBM_Zurich_Research_Laboratory.Gerd_Binnig"
+        ]
+    },
+    {
+        "name": "United_States.Columbia_Univeristy.Edgar_Haber",
+        "imports": [
+            "United_States.Bell_Laboratories.George_Smith"
+        ]
+    },
+    {
+        "name": "United_Kingdom.University_of_Cambridge.Edward_Routh",
+        "imports": [
+            "United_Kingdom.Royal_Institution_of_Great_Britain.Lord_Strutt",
+            "United_Kingdom.University_of_Cambridge.Joseph_Thomson"
+        ]
+    },
+    {
+        "name": "Germany.Leipzig_University.Edward_Teller",
+        "imports": [
+            "Switzerland.CERN.Jack_Steinberger",
+            "United_States.Institute_for_Advanced_Study.Chen_Yang"
+        ]
+    },
+    {
+        "name": "United_States.Harvard_University.Edwin_Kemble",
+        "imports": [
+            "United_States.Harvard_University.John_Vleck"
+        ]
+    },
+    {
+        "name": "Germany.Berlin_University.Emil_Warburg",
+        "imports": [
+            "Germany.Goettingen_University.James_Franck"
+        ]
+    },
+    {
+        "name": "United_Kingdom.Univeristy_of_Cambridge.Ernest_Rutherford",
+        "imports": [
+            "Ireland.Trinity_College.Ernest_Walton",
+            "United_Kingdom.Atomic_Energy_Research_Establishment.Sir_Cockcroft",
+            "United_Kingdom.Bristol_University.Cecil_Powell",
+            "United_Kingdom.Department_of_Scientific_and_Industrial_Research.Sir_Appleton",
+            "United_Kingdom.Liverpool_University.James_Chadwick",
+            "United_Kingdom.Victoria_University.Patrick_Blackett"
+        ]
+    },
+    {
+        "name": "Germany.Munich_University.Eugen_Lommel",
+        "imports": [
+            "Germany.Greifswald_University.Johannes_Stark"
+        ]
+    },
+    {
+        "name": "United_States.Harvard_University.Francis_Loomis",
+        "imports": [
+            "United_States.Columbia_University.Polykarp_Kusch"
+        ]
+    },
+    {
+        "name": "Austria.University_of_Innsbruck.Fritz_Sauter",
+        "imports": [
+            "United_States.University_of_California.Herbert_Kroemer"
+        ]
+    },
+    {
+        "name": "Germany.Univer_of_Konigsberg.G_Quincke",
+        "imports": [
+            "France.Strasbourg_University.Karl_Braun",
+            "Germany.Kiel_University.Philipp_Lenard"
+        ]
+    },
+    {
+        "name": "United_States.University_of_Chicago.Geoffrey_Chew",
+        "imports": [
+            "United_States.University_of_California.David_Gross"
+        ]
+    },
+    {
+        "name": "Germany.Univeristy_of_Konigsberg.Gustav_Kirchhoff",
+        "imports": [
+            "France.Sorbonne_University.Gabriel_Lippmann",
+            "Germany.Berlin_University.Max_Planck"
+        ]
+    },
+    {
+        "name": "Germany.Humboldt_University_of_Berlin.Hans_Kopfermann",
+        "imports": [
+            "Germany.University_of_Bonn.Wolfgang_Paul"
+        ]
+    },
+    {
+        "name": "United_Kingdom.University_College_of_London.Harold_Barlow",
+        "imports": [
+            "China.Chinese_University_of_Hong_Kong.Charles_Kao"
+        ]
+    },
+    {
+        "name": "Germany.Max-Planck-Institut.Hartmut_Figger",
+        "imports": [
+            "United_States.MIT.Wolfgang_Ketterle"
+        ]
+    },
+    {
+        "name": "Switzerland.ETH_Zurich.Heini_Gränicher",
+        "imports": [
+            "Switzerland.IBM_Zurich_Research_Laboratory.J_Bednorz"
+        ]
+    },
+    {
+        "name": "Germany.Berlin_University.Heinrich_Rubens",
+        "imports": [
+            "Germany.Halle_University.Gustav_Hertz"
+        ]
+    },
+    {
+        "name": "United_States.University_of_Washington.Henry_Fairbank",
+        "imports": [
+            "United_States.Cornell_University.David_Lee"
+        ]
+    },
+    {
+        "name": "Germany.Max-Planck-Institut.Herbert_Walther",
+        "imports": [
+            "United_States.MIT.Wolfgang_Ketterle"
+        ]
+    },
+    {
+        "name": "United_Kingdom.University_of_Oxford.Hereward_Cooke",
+        "imports": [
+            "United_States.University_of_Chicago.Arthur_Compton"
+        ]
+    },
+    {
+        "name": "Germany.Humboldt_University_of_Berlin.Hermann_Helmholtz",
+        "imports": [
+            "Germany.Berlin_University.Max_Planck",
+            "Germany.WÃ¼rzburg_University.Wilhelm_Wien",
+            "United_States.University_of_Chicago.Albert_Michelson"
+        ]
+    },
+    {
+        "name": "Switzerland.University_of_Geneva.Horst_Meyer",
+        "imports": [
+            "United_States.Cornell_University.Robert_Richardson"
+        ]
+    },
+    {
+        "name": ".I_Campbell",
+        "imports": [
+            "France.Unit&eacute;_Mixte_de_Physique_CNRS\/THALES.Albert_Fert"
+        ]
+    },
+    {
+        "name": "United_States.Columbia_University.I_Rabi",
+        "imports": [
+            "United_States.Stanford_University.Martin_Perl"
+        ]
+    },
+    {
+        "name": "United_States.Harvard_University.J_Oppenheimer",
+        "imports": [
+            "United_States.Stanford_University.Willis_Lamb"
+        ]
+    },
+    {
+        "name": "United_KIngdom.University_of_Cambridge.J_Ratcliffe",
+        "imports": [
+            "United_Kingdom.University_of_Cambridge.Sir_Ryle"
+        ]
+    },
+    {
+        "name": "United_States.Columbia_University.James_Rainwater",
+        "imports": [
+            "United_States.Princeton_University.Val_Fitch"
+        ]
+    },
+    {
+        "name": "United_States.Columbia_University.John_Dunning",
+        "imports": [
+            "United_States.Columbia_University.Leo_Rainwater"
+        ]
+    },
+    {
+        "name": "United_States.University_of_California.John_Joannopoulos",
+        "imports": [
+            "United_States.Stanford_University.Robert_Laughlin"
+        ]
+    },
+    {
+        "name": "United_States.University_of_Oxford.John_Slater",
+        "imports": [
+            "United_States.Semiconductor_Laboratory_of_Beckman_Instruments_Inc.William_Shockley"
+        ]
+    },
+    {
+        "name": "United_States.Berlin_University.John_Sr",
+        "imports": [
+            "United_States.Bell_Telephone_Laboratories.Walter_Brattain"
+        ]
+    },
+    {
+        "name": "United_KIngdom.University_of_Cambridge.John_Strutt",
+        "imports": [
+            "United_Kingdom.University_of_Cambridge.Joseph_Thomson"
+        ]
+    },
+    {
+        "name": "United_States.Johns_Hopkins_University.John_Wheeler",
+        "imports": [
+            "United_States.Caltech.Richard_Feynman"
+        ]
+    },
+    {
+        "name": "Switzerland.ETH_Zurich.K_Müller",
+        "imports": [
+            "Switzerland.IBM_Zurich_Research_Laboratory.J_Bednorz"
+        ]
+    },
+    {
+        "name": ".Kajuro_Tamaki",
+        "imports": [
+            "Japan.Kyoto_Imperial_University.Hideki_Yukawa"
+        ]
+    },
+    {
+        "name": "United_States.Princeton_University.Kenneth_Bainbridge",
+        "imports": [
+            "United_States.Harvard_University.Edward_Purcell"
+        ]
+    },
+    {
+        "name": "United_States.University_of_California.LW_Jones",
+        "imports": [
+            "United_States.MIT.Samuel_Ting"
+        ]
+    },
+    {
+        "name": "Canada.University_of_Toronto.Malcolm_Crawford",
+        "imports": [
+            "United_States.Stanford_University.Arthur_Schawlow"
+        ]
+    },
+    {
+        "name": "United_States.MIT.Martin_Deutsch",
+        "imports": [
+            "United_States.MIT.Henry_Kendall"
+        ]
+    },
+    {
+        "name": "Germany.Technical_University_of_Berlin.Max_Knoll",
+        "imports": [
+            "Germany.Fritz-Haber-Institut_der_Max-Planck-Gesellschaft.Ernst_Ruska"
+        ]
+    },
+    {
+        "name": "Hungary.University_of_Budapest.Michael_Polanyi",
+        "imports": [
+            "United_States.Princeton_University.Eugene_Wigner"
+        ]
+    },
+    {
+        "name": "United_States.University_of_Rochester.Morton_Kaplon",
+        "imports": [
+            "Japan.University_of_Tokyo.Masatoshi_Koshiba"
+        ]
+    },
+    {
+        "name": "United_Kingdom.Imperial_College_of_London.Nicholas_Kemmer",
+        "imports": [
+            "Italy.International_Centre_for_Theoretical_Physics.Abdus_Salam"
+        ]
+    },
+    {
+        "name": "United_States.University_of_Columbia.Norman_Jr",
+        "imports": [
+            "United_States.National_Institute_of_Standards_and_Technology.David_Wineland"
+        ]
+    },
+    {
+        "name": "United_KIngdom.University_of_London.Oliver_Lodge",
+        "imports": [
+            "United_Kingdom.Edinburgh_University.Charles_Barkla"
+        ]
+    },
+    {
+        "name": "France.Sorbonne_University.Paul_Langevin",
+        "imports": [
+            "France.Sorbonne_University.Prince_Broglie"
+        ]
+    },
+    {
+        "name": "United_States.University_of_California.Paul_Richards",
+        "imports": [
+            "United_States.NASA_Goddard_Space_Flight_Center.John_Mather"
+        ]
+    },
+    {
+        "name": "France.École_Normale_Supérieure.Pierre_Daure",
+        "imports": [
+            "France.École_Normale_Supérieure.Alfred_Kastler"
+        ]
+    },
+    {
+        "name": "Netherlands.Leiden_University.Pieter_Rijke",
+        "imports": [
+            "Netherlands.Amsterdam_University.Johannes_Waals",
+            "Netherlands.Leiden_University.Hendrik_Lorentz"
+        ]
+    },
+    {
+        "name": "Germany.University_of_Goettingen.R_Bunsen",
+        "imports": [
+            "Germany.Kiel_University.Philipp_Lenard"
+        ]
+    },
+    {
+        "name": "United_Kingdom.Trinity_College.Ralph_Fowler",
+        "imports": [
+            "United_Kingdom.University_of_Cambridge.Paul_Dirac",
+            "United_Kingdom.University_of_Cambridge.Sir_Mott"
+        ]
+    },
+    {
+        "name": "United_States.Columbia_University.Richard_Muller",
+        "imports": [
+            "United_States.Lawrence_Berkeley_National_Laboratory.Saul_Perlmutter"
+        ]
+    },
+    {
+        "name": "nan.nan.Richard_Present",
+        "imports": [
+            "United_States.University_of_California.Frederick_Reines"
+        ]
+    },
+    {
+        "name": "United_States.Caltech.Robert_Kirshner",
+        "imports": [
+            "Australia.Australian_National_University.Brian_Schmidt",
+            "United_States.Johns_Hopkins_University.Adam_Riess"
+        ]
+    },
+    {
+        "name": "nan.nan.Robert_Mozley",
+        "imports": [
+            "United_States.Stanford_University.Richard_Taylor"
+        ]
+    },
+    {
+        "name": "United_States.University_of_California.Robert_Serber",
+        "imports": [
+            "United_States.Brown_University.Leon_Cooper"
+        ]
+    },
+    {
+        "name": "Netherlands.University_of_Utrecht.Rudolf_Mees",
+        "imports": [
+            "Netherlands.Leiden_University.Heike_Onnes"
+        ]
+    },
+    {
+        "name": "United_States.University_of_Chicago.Sam_Treiman",
+        "imports": [
+            "United_States.Harvard_University.Steven_Weinberg"
+        ]
+    },
+    {
+        "name": "Russia.Moscow_State_University.Sergey_Vavilov",
+        "imports": [
+            "Union_of_Soviet_Socialist_Republics.PN_Lebedev_Physical_Institute.Pavel_Cherenkov"
+        ]
+    },
+    {
+        "name": "Japan.Nagoya_Imperial_Univeristy.Shoichi_Sakata",
+        "imports": [
+            "Japan.KEK.Makoto_Kobayashi",
+            "Japan.Kyoto_Sangyo_University.Toshihide_Maskawa"
+        ]
+    },
+    {
+        "name": "United_States.Caltech.Sidney_Coleman",
+        "imports": [
+            "United_States.Caltech.H_Politzer"
+        ]
+    },
+    {
+        "name": "United_Kingdom.University_of_Cambridge.Sir_Stokes",
+        "imports": [
+            "United_Kingdom.Royal_Institution_of_Great_Britain.Lord_Strutt"
+        ]
+    },
+    {
+        "name": "Germany.University_of_Heidelberg.Theodor_Hänsch",
+        "imports": [
+            "United_States.University_of_Colorado.Carl_Wieman"
+        ]
+    },
+    {
+        "name": "United_Kingdom.University_of_London.Victor_Petrashov",
+        "imports": [
+            "United_Kingdom.University_of_Manchester.Andre_Geim"
+        ]
+    },
+    {
+        "name": "Austria.University_of_Goettingen.Victor_Weisskopf",
+        "imports": [
+            "United_States.Caltech.Murray_Gell-Mann"
+        ]
+    },
+    {
+        "name": "United_States.Harvard_University.Wallace_Sabine",
+        "imports": [
+            "United_States.Harvard_University.Percy_Bridgman"
+        ]
+    },
+    {
+        "name": "Germany.Univeristy_of_Goettingen.Werner_Martienssen",
+        "imports": [
+            "Switzerland.IBM_Zurich_Research_Laboratory.Gerd_Binnig"
+        ]
+    },
+    {
+        "name": "Germany.UNiversity_of_Goettingen.Wilhelm_Lenz",
+        "imports": [
+            "Germany.University_of_Heidelberg.J_Jensen"
+        ]
+    },
+    {
+        "name": "United_States.Harvard_University.William_Press",
+        "imports": [
+            "United_States.Johns_Hopkins_University.Adam_Riess"
+        ]
+    },
+    {
+        "name": "United_States.Caltech.William_Smythe",
+        "imports": [
+            "United_States.MIT.Charles_Townes"
+        ]
+    },
+    {
+        "name": "United_Kingdom.University_of_Edinburgh.William_Swann",
+        "imports": [
+            "United_States.University_of_California.Ernest_Lawrence"
+        ]
+    },
+    {
+        "name": "Australia.Australian_National_University.Brian_Schmidt",
+        "imports": []
+    },
+    {
+        "name": "Canada.Queen's_University.Arthur_McDonald",
+        "imports": []
+    },
+    {
+        "name": "China.Chinese_University_of_Hong_Kong.Charles_Kao",
+        "imports": []
+    },
+    {
+        "name": "Denmark.Copenhagen_University.Niels_Bohr",
+        "imports": [
+            "Union_of_Soviet_Socialist_Republics.Academy_of_Sciences.Lev_Landau"
+        ]
+    },
+    {
+        "name": "Denmark.Nordita.Ben_Mottelson",
+        "imports": []
+    },
+    {
+        "name": "Germany.Fritz-Haber-Institut_der_Max-Planck-Gesellschaft.Ernst_Ruska",
+        "imports": []
+    },
+    {
+        "name": "Germany.Max-Planck-Institut.Walther_Bothe",
+        "imports": []
+    },
+    {
+        "name": "Germany.University_of_Bonn.Wolfgang_Paul",
+        "imports": []
+    },
+    {
+        "name": "Germany.University_of_Heidelberg.J_Jensen",
+        "imports": []
+    },
+    {
+        "name": "France.CollÃ¨ge_de_France.Claude_Cohen-Tannoudji",
+        "imports": [
+            "France.CollÃ¨ge_de_France.Serge_Haroche"
+        ]
+    },
+    {
+        "name": "France.CollÃ¨ge_de_France.Pierre-Gilles_Gennes",
+        "imports": []
+    },
+    {
+        "name": "France.CollÃ¨ge_de_France.Serge_Haroche",
+        "imports": []
+    },
+    {
+        "name": "France.International_Bureau_of_Weights_and_Measures.Charles_Guillaume",
+        "imports": []
+    },
+    {
+        "name": "France.Municipal_School_of_Industrial_Physics_and_Chemistry.Pierre_Curie",
+        "imports": []
+    },
+    {
+        "name": "France.Sorbonne_University.Gabriel_Lippmann",
+        "imports": [
+            "France.Municipal_School_of_Industrial_Physics_and_Chemistry.Pierre_Curie"
+        ]
+    },
+    {
+        "name": "France.Sorbonne_University.Jean_Perrin",
+        "imports": []
+    },
+    {
+        "name": "France.Sorbonne_University.Prince_Broglie",
+        "imports": []
+    },
+    {
+        "name": "France.Strasbourg_University.Karl_Braun",
+        "imports": []
+    },
+    {
+        "name": "France.Unit&eacute;_Mixte_de_Physique_CNRS\/THALES.Albert_Fert",
+        "imports": []
+    },
+    {
+        "name": "France.University_of_Grenoble.Louis_NÃ©el",
+        "imports": []
+    },
+    {
+        "name": "France.École_Normale_Supérieure.Alfred_Kastler",
+        "imports": [
+            "France.CollÃ¨ge_de_France.Claude_Cohen-Tannoudji"
+        ]
+    },
+    {
+        "name": "France.École_Polytechnique.Antoine_Becquerel",
+        "imports": []
+    },
+    {
+        "name": "France.École_Supérieure_de_Physique_et_Chimie.Georges_Charpak",
+        "imports": []
+    },
+    {
+        "name": "Germany.Berlin_University.Erwin_SchrÃ¶dinger",
+        "imports": []
+    },
+    {
+        "name": "Germany.Berlin_University.Max_Planck",
+        "imports": [
+            "Germany.Max-Planck-Institut.Walther_Bothe",
+            "Germany.Frankfurt-on-the-Main_University.Max_Laue",
+            "Germany.Halle_University.Gustav_Hertz"
+        ]
+    },
+    {
+        "name": "Germany.Forschungszentrum_J&uuml;lich.Peter_GrÃ¼nberg",
+        "imports": []
+    },
+    {
+        "name": "Germany.Frankfurt-on-the-Main_University.Max_Laue",
+        "imports": []
+    },
+    {
+        "name": "Germany.Goettingen_University.James_Franck",
+        "imports": []
+    },
+    {
+        "name": "Germany.Greifswald_University.Johannes_Stark",
+        "imports": []
+    },
+    {
+        "name": "Germany.Halle_University.Gustav_Hertz",
+        "imports": []
+    },
+    {
+        "name": "Germany.Kiel_University.Philipp_Lenard",
+        "imports": []
+    },
+    {
+        "name": "Germany.Leipzig_University.Werner_Heisenberg",
+        "imports": [
+            "United_States.Stanford_University.Felix_Bloch"
+        ]
+    },
+    {
+        "name": "Germany.Ludwig-Maximilians-_UniversitÃ¤t.Theodor_HÃ¤nsch",
+        "imports": []
+    },
+    {
+        "name": "Germany.Max-Planck_Institut.Albert_Einstein",
+        "imports": []
+    },
+    {
+        "name": "Germany.Munich_University.Wilhelm_RÃ¶ntgen",
+        "imports": []
+    },
+    {
+        "name": "Germany.WÃ¼rzburg_University.Wilhelm_Wien",
+        "imports": []
+    },
+    {
+        "name": "Ireland.Trinity_College.Ernest_Walton",
+        "imports": []
+    },
+    {
+        "name": "Italy.International_Centre_for_Theoretical_Physics.Abdus_Salam",
+        "imports": []
+    },
+    {
+        "name": "Italy.Rome_University.Enrico_Fermi",
+        "imports": [
+            "Switzerland.CERN.Jack_Steinberger",
+            "United_States.Columbia_University.Tsung-Dao_Lee",
+            "United_States.MIT.Jerome_Friedman",
+            "United_States.University_of_California.Owen_Chamberlain"
+        ]
+    },
+    {
+        "name": "Japan.KEK.Makoto_Kobayashi",
+        "imports": []
+    },
+    {
+        "name": "Japan.Kyoto_Imperial_University.Hideki_Yukawa",
+        "imports": []
+    },
+    {
+        "name": "Japan.Kyoto_Sangyo_University.Toshihide_Maskawa",
+        "imports": []
+    },
+    {
+        "name": "Japan.Meijo_University.Isamu_Akasaki",
+        "imports": [
+            "Japan.Nagoya_University.Hiroshi_Amano"
+        ]
+    },
+    {
+        "name": "Japan.Nagoya_University.Hiroshi_Amano",
+        "imports": []
+    },
+    {
+        "name": "Japan.University_of_Tokyo.Masatoshi_Koshiba",
+        "imports": [
+            "Japan.University_of_Tokyo.Takaaki_Kajita"
+        ]
+    },
+    {
+        "name": "Japan.University_of_Tokyo.Takaaki_Kajita",
+        "imports": []
+    },
+    {
+        "name": "Netherlands.Amsterdam_University.Johannes_Waals",
+        "imports": []
+    },
+    {
+        "name": "Netherlands.Amsterdam_University.Pieter_Zeeman",
+        "imports": []
+    },
+    {
+        "name": "Netherlands.Groningen_University.Frits_Zernike",
+        "imports": []
+    },
+    {
+        "name": "Netherlands.Leiden_University.Heike_Onnes",
+        "imports": [
+            "Netherlands.Amsterdam_University.Pieter_Zeeman"
+        ]
+    },
+    {
+        "name": "Netherlands.Leiden_University.Hendrik_Lorentz",
+        "imports": []
+    },
+    {
+        "name": "Russia.PN_Lebedev_Physical_Institute.Vitaly_Ginzburg",
+        "imports": []
+    },
+    {
+        "name": "Switzerland.CERN.Jack_Steinberger",
+        "imports": [
+            "United_States.Digital_Pathways_Inc.Melvin_Schwartz"
+        ]
+    },
+    {
+        "name": "Switzerland.IBM_Zurich_Research_Laboratory.Gerd_Binnig",
+        "imports": []
+    },
+    {
+        "name": "Switzerland.IBM_Zurich_Research_Laboratory.J_Bednorz",
+        "imports": []
+    },
+    {
+        "name": "Union_of_Soviet_Socialist_Republics.Academy_of_Sciences.Lev_Landau",
+        "imports": []
+    },
+    {
+        "name": "Union_of_Soviet_Socialist_Republics.PN_Lebedev_Physical_Institute.Igor_Tamm",
+        "imports": [
+            "Russia.PN_Lebedev_Physical_Institute.Vitaly_Ginzburg"
+        ]
+    },
+    {
+        "name": "Union_of_Soviet_Socialist_Republics.PN_Lebedev_Physical_Institute.Pavel_Cherenkov",
+        "imports": []
+    },
+    {
+        "name": "United_Kingdom.Atomic_Energy_Research_Establishment.Sir_Cockcroft",
+        "imports": []
+    },
+    {
+        "name": "United_Kingdom.Bristol_University.Cecil_Powell",
+        "imports": []
+    },
+    {
+        "name": "United_Kingdom.Department_of_Scientific_and_Industrial_Research.Sir_Appleton",
+        "imports": []
+    },
+    {
+        "name": "United_Kingdom.Edinburgh_University.Charles_Barkla",
+        "imports": []
+    },
+    {
+        "name": "United_Kingdom.Edinburgh_University.Max_Born",
+        "imports": [
+            "United_States.University_of_California.Maria_Mayer"
+        ]
+    },
+    {
+        "name": "United_Kingdom.Liverpool_University.James_Chadwick",
+        "imports": []
+    },
+    {
+        "name": "United_Kingdom.London_University.George_Thomson",
+        "imports": []
+    },
+    {
+        "name": "United_Kingdom.London_University.Owen_Richardson",
+        "imports": [
+            "United_States.Bell_Telephone_Laboratories.Clinton_Davisson"
+        ]
+    },
+    {
+        "name": "United_Kingdom.Marconi_Wireless_Telegraph_Co_Ltd.Guglielmo_Marconi",
+        "imports": []
+    },
+    {
+        "name": "United_Kingdom.Royal_Institution_of_Great_Britain.Lord_Strutt",
+        "imports": []
+    },
+    {
+        "name": "United_Kingdom.University_College.Sir_Bragg",
+        "imports": []
+    },
+    {
+        "name": "United_Kingdom.University_of_Cambridge.Brian_Josephson",
+        "imports": []
+    },
+    {
+        "name": "United_Kingdom.University_of_Cambridge.Charles_Wilson",
+        "imports": [
+            "United_Kingdom.Bristol_University.Cecil_Powell"
+        ]
+    },
+    {
+        "name": "United_Kingdom.University_of_Cambridge.Joseph_Thomson",
+        "imports": [
+            "United_Kingdom.Department_of_Scientific_and_Industrial_Research.Sir_Appleton",
+            "United_Kingdom.Edinburgh_University.Charles_Barkla",
+            "United_Kingdom.London_University.George_Thomson",
+            "United_Kingdom.London_University.Owen_Richardson",
+            "United_Kingdom.University_College.Sir_Bragg",
+            "United_Kingdom.University_of_Cambridge.Charles_Wilson"
+        ]
+    },
+    {
+        "name": "United_Kingdom.University_of_Cambridge.Paul_Dirac",
+        "imports": []
+    },
+    {
+        "name": "United_Kingdom.University_of_Cambridge.Sir_Mott",
+        "imports": []
+    },
+    {
+        "name": "United_Kingdom.University_of_Cambridge.Sir_Ryle",
+        "imports": []
+    },
+    {
+        "name": "United_Kingdom.University_of_Edinburgh.Peter_Higgs",
+        "imports": []
+    },
+    {
+        "name": "United_Kingdom.University_of_Manchester.Andre_Geim",
+        "imports": []
+    },
+    {
+        "name": "United_Kingdom.Victoria_University.Patrick_Blackett",
+        "imports": []
+    },
+    {
+        "name": "United_States.Bell_Laboratories.George_Smith",
+        "imports": []
+    },
+    {
+        "name": "United_States.Bell_Telephone_Laboratories.Clinton_Davisson",
+        "imports": []
+    },
+    {
+        "name": "United_States.Bell_Telephone_Laboratories.Philip_Anderson",
+        "imports": [
+            "United_States.Princeton_University.F_Haldane"
+        ]
+    },
+    {
+        "name": "United_States.Bell_Telephone_Laboratories.Walter_Brattain",
+        "imports": []
+    },
+    {
+        "name": "United_States.Brown_University.J_Kosterlitz",
+        "imports": []
+    },
+    {
+        "name": "United_States.Brown_University.Leon_Cooper",
+        "imports": []
+    },
+    {
+        "name": "United_States.Caltech.Carl_Anderson",
+        "imports": [
+            "United_States.University_of_California.Donald_Glaser"
+        ]
+    },
+    {
+        "name": "United_States.Caltech.H_Politzer",
+        "imports": []
+    },
+    {
+        "name": "United_States.Caltech.Murray_Gell-Mann",
+        "imports": [
+            "United_States.Cornell_University.Kenneth_Wilson"
+        ]
+    },
+    {
+        "name": "United_States.Caltech.Richard_Feynman",
+        "imports": []
+    },
+    {
+        "name": "United_States.Caltech.Robert_Millikan",
+        "imports": [
+            "United_States.Caltech.Carl_Anderson"
+        ]
+    },
+    {
+        "name": "United_States.Caltech.William_Fowler",
+        "imports": []
+    },
+    {
+        "name": "United_States.Columbia_University.Isidor_Rabi",
+        "imports": [
+            "United_States.Harvard_University.Julian_Schwinger"
+        ]
+    },
+    {
+        "name": "United_States.Columbia_University.Leo_Rainwater",
+        "imports": []
+    },
+    {
+        "name": "United_States.Columbia_University.Polykarp_Kusch",
+        "imports": []
+    },
+    {
+        "name": "United_States.Columbia_University.Tsung-Dao_Lee",
+        "imports": []
+    },
+    {
+        "name": "United_States.Cornell_University.David_Lee",
+        "imports": [
+            "United_States.Stanford_University.Douglas_Osheroff"
+        ]
+    },
+    {
+        "name": "United_States.Cornell_University.Hans_Bethe",
+        "imports": [
+            "United_States.University_of_Washington.David_Thouless"
+        ]
+    },
+    {
+        "name": "United_States.Cornell_University.Kenneth_Wilson",
+        "imports": []
+    },
+    {
+        "name": "United_States.Cornell_University.Robert_Richardson",
+        "imports": []
+    },
+    {
+        "name": "United_States.Digital_Pathways_Inc.Melvin_Schwartz",
+        "imports": []
+    },
+    {
+        "name": "United_States.Harvard_University.Edward_Purcell",
+        "imports": []
+    },
+    {
+        "name": "United_States.Harvard_University.John_Vleck",
+        "imports": [
+            "United_States.Bell_Telephone_Laboratories.Philip_Anderson"
+        ]
+    },
+    {
+        "name": "United_States.Harvard_University.Julian_Schwinger",
+        "imports": [
+            "Denmark.Nordita.Ben_Mottelson",
+            "United_States.Harvard_University.Roy_Glauber",
+            "United_States.Harvard_University.Sheldon_Glashow"
+        ]
+    },
+    {
+        "name": "United_States.Harvard_University.Nicolaas_Bloembergen",
+        "imports": []
+    },
+    {
+        "name": "United_States.Harvard_University.Percy_Bridgman",
+        "imports": []
+    },
+    {
+        "name": "United_States.Harvard_University.Roy_Glauber",
+        "imports": []
+    },
+    {
+        "name": "United_States.Harvard_University.Sheldon_Glashow",
+        "imports": []
+    },
+    {
+        "name": "United_States.Harvard_University.Steven_Weinberg",
+        "imports": []
+    },
+    {
+        "name": "United_States.Institute_for_Advanced_Study.Chen_Yang",
+        "imports": []
+    },
+    {
+        "name": "United_States.Johns_Hopkins_University.Adam_Riess",
+        "imports": []
+    },
+    {
+        "name": "United_States.Lawrence_Berkeley_National_Laboratory.Saul_Perlmutter",
+        "imports": []
+    },
+    {
+        "name": "United_States.MIT.Charles_Townes",
+        "imports": []
+    },
+    {
+        "name": "United_States.MIT.Frank_Wilczek",
+        "imports": []
+    },
+    {
+        "name": "United_States.MIT.Henry_Kendall",
+        "imports": []
+    },
+    {
+        "name": "United_States.MIT.Jerome_Friedman",
+        "imports": []
+    },
+    {
+        "name": "United_States.MIT.Samuel_Ting",
+        "imports": []
+    },
+    {
+        "name": "United_States.MIT.Wolfgang_Ketterle",
+        "imports": []
+    },
+    {
+        "name": "United_States.NASA_Goddard_Space_Flight_Center.John_Mather",
+        "imports": []
+    },
+    {
+        "name": "United_States.National_Institute_of_Standards_and_Technology.David_Wineland",
+        "imports": []
+    },
+    {
+        "name": "United_States.National_Institute_of_Standards_and_Technology.William_Phillips",
+        "imports": []
+    },
+    {
+        "name": "United_States.Princeton_University.Eugene_Wigner",
+        "imports": [
+            "United_States.University_of_Illinois.John_Bardeen"
+        ]
+    },
+    {
+        "name": "United_States.Princeton_University.F_Haldane",
+        "imports": []
+    },
+    {
+        "name": "United_States.Princeton_University.Joseph_Jr",
+        "imports": [
+            "United_States.Princeton_University.Russell_Hulse"
+        ]
+    },
+    {
+        "name": "United_States.Princeton_University.Russell_Hulse",
+        "imports": []
+    },
+    {
+        "name": "United_States.Princeton_University.Val_Fitch",
+        "imports": []
+    },
+    {
+        "name": "United_States.Princeton_University.Wolfgang_Pauli",
+        "imports": []
+    },
+    {
+        "name": "United_States.Semiconductor_Laboratory_of_Beckman_Instruments_Inc.William_Shockley",
+        "imports": []
+    },
+    {
+        "name": "United_States.Stanford_Linear_Accelerator_Center.Burton_Richter",
+        "imports": []
+    },
+    {
+        "name": "United_States.Stanford_University.Arthur_Schawlow",
+        "imports": []
+    },
+    {
+        "name": "United_States.Stanford_University.Douglas_Osheroff",
+        "imports": []
+    },
+    {
+        "name": "United_States.Stanford_University.Felix_Bloch",
+        "imports": []
+    },
+    {
+        "name": "United_States.Stanford_University.Martin_Perl",
+        "imports": [
+            "United_States.MIT.Samuel_Ting"
+        ]
+    },
+    {
+        "name": "United_States.Stanford_University.Richard_Taylor",
+        "imports": []
+    },
+    {
+        "name": "United_States.Stanford_University.Robert_Laughlin",
+        "imports": []
+    },
+    {
+        "name": "United_States.Stanford_University.Willis_Lamb",
+        "imports": []
+    },
+    {
+        "name": "United_States.University_of_California.David_Gross",
+        "imports": [
+            "United_States.MIT.Frank_Wilczek"
+        ]
+    },
+    {
+        "name": "United_States.University_of_California.Donald_Glaser",
+        "imports": []
+    },
+    {
+        "name": "United_States.University_of_California.Ernest_Lawrence",
+        "imports": []
+    },
+    {
+        "name": "United_States.University_of_California.Frederick_Reines",
+        "imports": []
+    },
+    {
+        "name": "United_States.University_of_California.George_Smoot",
+        "imports": []
+    },
+    {
+        "name": "United_States.University_of_California.Herbert_Kroemer",
+        "imports": []
+    },
+    {
+        "name": "United_States.University_of_California.Luis_Alvarez",
+        "imports": []
+    },
+    {
+        "name": "United_States.University_of_California.Maria_Mayer",
+        "imports": []
+    },
+    {
+        "name": "United_States.University_of_California.Owen_Chamberlain",
+        "imports": []
+    },
+    {
+        "name": "United_States.University_of_Chicago.Albert_Michelson",
+        "imports": []
+    },
+    {
+        "name": "United_States.University_of_Chicago.Arthur_Compton",
+        "imports": [
+            "United_States.University_of_California.Luis_Alvarez"
+        ]
+    },
+    {
+        "name": "United_States.University_of_Colorado.Carl_Wieman",
+        "imports": []
+    },
+    {
+        "name": "United_States.University_of_Illinois.Anthony_Leggett",
+        "imports": []
+    },
+    {
+        "name": "United_States.University_of_Illinois.John_Bardeen",
+        "imports": [
+            "United_States.University_of_Pennsylvania.John_Schrieffer"
+        ]
+    },
+    {
+        "name": "United_States.University_of_Pennsylvania.John_Schrieffer",
+        "imports": []
+    },
+    {
+        "name": "United_States.University_of_Washington.David_Thouless",
+        "imports": [
+            "United_States.Brown_University.J_Kosterlitz"
+        ]
+    }
+]

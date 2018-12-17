@@ -1,7 +1,7 @@
 // In case of not seeing the expected results, run: python -m http.server 8888
 //====================   global_variables   ========================
 // source
-src="http://d3js.org/d3.v4.min.js"
+// src="http://d3js.org/d3.v4.min.js"
 
 // srcsankey="sankey.js"
 
@@ -17,6 +17,8 @@ var r = 2;
 // World Map Variables
 var populationById = {};
 var nameById = {};
+
+
 var world_colors = d3.scaleThreshold()
                       .domain([0,0.5,1,2,5,10,25,70,100,400])
                       .range(["rgb(247,251,255)", "rgb(222,235,247)", "rgb(198,219,239)", "rgb(158,202,225)", "rgb(107,174,214)", "rgb(66,146,198)","rgb(33,113,181)","rgb(8,81,156)","rgb(8,48,107)","rgb(3,19,43)"]);
@@ -150,7 +152,7 @@ function gen_scatterplot(dataset, chart) {
               + "<strong>Worked for: </strong><span class='details'>" + d.affiliation + ", " + d.countryAffiliation + "<br></span>"
               + "<strong>Year: </strong><span class='details'>" + d.year + "</span>";
     })
-    
+
     var w = 600;
     var h = 150;
 
@@ -319,6 +321,13 @@ function gen_scatterplot(dataset, chart) {
                                               .duration(700)
                                               .style("fill","green")
                                               .style("opacity", 1);
+
+                                            console.log(d3v3);
+                                            console.log(d3v3.selectAll("g#node-" + d.name.replace(' ', "_") + ".node"));
+                                            d3v3.selectAll("g#node-" + d.name.replace(' ', "_") + ".node")
+                                              .on("mouseover", function (d) {
+                                                console.log("ola");
+                                              });
                                       })
                       .on('mouseout', cleanMouseEvent);
 
@@ -787,190 +796,219 @@ function gen_sankey(){
 
 //=================== Chord Chart   ======================
 function chord_chart(){
-  var diameter = 400,
-      radius = diameter / 2,
-      innerRadius = radius - 60;
+    // src="//code.jquery.com/jquery-1.12.3.min.js"
+    // src="js/d3.v3.js"
 
-  var cluster = d3.cluster()
-      .size([360, innerRadius]);
+    // d3=d3version3;
 
-  var line = d3.radialLine()
-      .curve(d3.curveBundle.beta(0.85))
-      .radius(function(d) { return d.y; })
-      .angle(function(d) { return d.x / 180 * Math.PI; });
+    console.log('v3.svg', d3v3.version)
 
-  var svg = d3.select("#chord").append("svg")
-      .attr("width", diameter + 100)
-      .attr("height", diameter)
-      .append("g")
-      .attr("transform", "translate(" + radius + "," + radius + ")");
+  var w = 680,
+    h = 650,
+    rx = w / 2,
+    ry = h / 2,
+    m0,
+    rotate = 0
+    pi = Math.PI;
 
-  var link = svg.append("g").selectAll(".link"),
-      node = svg.append("g").selectAll(".node");
+  var splines = [];
 
-  d3.json("data/chordchartPhysics.json", function(error, classes) {
-    if (error) throw error;
+  var cluster = d3v3.layout.cluster()
+    .size([360, ry - 180])
+    .sort(function(a, b) { return d3v3.ascending(a.key, b.key); });
 
-    var root = packageHierarchy(classes)
-        .sum(function(d) { return d.size; });
+  var bundle = d3v3.layout.bundle();
 
-    cluster(root);
+  var line = d3v3.svg.line.radial()
+    .interpolate("bundle")
+    .tension(.85)
+    .radius(function(d) { return d.y; })
+    .angle(function(d) { return d.x / 180 * Math.PI; });
 
-    link = link
-      .data(packageImports(root.leaves()))
-      .enter().append("path")
-        .each(function(d) { d.source = d[0], d.target = d[d.length - 1]; })
-        .attr("class", "link")
-        .attr("d", line);
+  // Chrome 15 bug: <http://code.google.com/p/chromium/issues/detail?id=98951>
+  var div = d3v3.select("#chord")
+    .style("width", 600 + "px")
+    .style("height", 400 + "px")
+    .style("margin-top", "-200px")
+    // .style("position", "absolute")
+    ;
 
+  var svg = div.append("svg:svg")
+    .attr("width", w)
+    .attr("height", w)
+    // .style("top", "0px")
+    .append("svg:g")
+    .attr("transform", "translate(" + rx + "," + ry + ")");
 
-     node.data(root.leaves())
-      .enter().append("text")
-        .attr("class", "node")
-        .attr("dy", "0.31em")
-        .attr("affiliation", function (d) { return (d.data.name).substr(0, (d.data.name).indexOf('.')); })
-        .attr("transform", function(d) { return "rotate(" + (d.x - 90) + ")translate(" + (d.y + 20) + ",0)" + (d.x < 180 ? "" : "rotate(180)"); })
-        .attr("text-anchor", function(d) { return d.x < 180 ? "start" : "end"; })
-        // .text(function(d) { return d.data.key; })
+  svg.append("svg:path")
+    .attr("class", "arc")
+    .attr("d", d3v3.svg.arc().outerRadius(ry - 180).innerRadius(0).startAngle(0).endAngle(2 * Math.PI))
+    .on("mousedown", mousedown);
 
+  d3v3.json("data/chordchartPhysicsWithouAntiSocials_pt2.json", function(classes) { //flare-imports
+  var nodes = cluster.nodes(packages.root(classes)),
+      links = packages.imports(nodes),
+      splines = bundle(links);
 
-        // .attr("x", function(d) { return d.x < Math.PI ? 6 : -6; })
-        // .style("text-anchor", function(d) { return d.x < Math.PI ? "start" : "end"; })
-        // .attr("transform", function(d) { return "rotate(" + (d.x < Math.PI ? d.x - Math.PI / 2 : d.x + Math.PI / 2) * 180 / Math.PI + ")"; })
-        .text(function(d) { return d.data.key; })
-        // .style("fill", findColor)
+  var path = svg.selectAll("path.link")
+      .data(links)
+    .enter().append("svg:path")
+      .attr("class", function(d) { return "link source-" + d.source.key + " target-" + d.target.key; })
+      .attr("d", function(d, i) { return line(splines[i]); });
 
+  var groupData = svg.selectAll("g.group")
+    .data(nodes.filter(function(d) { return (
+                    d.key=='Harvard_University' || d.key == 'University_of_California' || d.key == 'MIT' ||
+                    d.key== "Academy_of_Sciences"|| d.key== "Amsterdam_University"|| d.key== "Atomic_Energy_Research_Establishment"|| d.key== "Australian_National_University"|| d.key== "Bell_Laboratories"|| d.key== "Bell_Telephone_Laboratories"|| d.key== "Berlin_University"|| d.key== "Bristol_University"|| d.key== "Brown_University"|| d.key== "Caltech"|| d.key== "CERN"|| d.key== "Chinese_University_of_Hong_Kong"|| d.key== "CollÃ¨ge_de_France"|| d.key== "Columbia_Univeristy"|| d.key== "Columbia_University"|| d.key== "Copenhagen_University"|| d.key== "Cornell_University"|| d.key== "Department_of_Scientific_and_Industrial_Research"|| d.key== "Digital_Pathways_Inc"|| d.key== "Edinburgh_University"|| d.key== "ETH_Zurich"|| d.key== "Forschungszentrum_J&uuml;lich"|| d.key== "Frankfurt-on-the-Main_University"|| d.key== "Fritz-Haber-Institut_der_Max-Planck-Gesellschaft"|| d.key== "Goettingen_University"|| d.key== "Greifswald_University"|| d.key== "Groningen_University"|| d.key== "Halle_University"|| d.key== "Harvard_University"|| d.key== "Humboldt_University_of_Berlin"|| d.key== "I_Campbell"|| d.key== "IBM_Zurich_Research_Laboratory"|| d.key== "Imperial_College_of_London"|| d.key== "Institute_for_Advanced_Study"|| d.key== "International_Bureau_of_Weights_and_Measures"|| d.key== "International_Centre_for_Theoretical_Physics"|| d.key== "IPHT"|| d.key== "Johns_Hopkins_University"|| d.key== "Kajuro_Tamaki"|| d.key== "KEK"|| d.key== "Kiel_University"|| d.key== "Kyoto_Imperial_University"|| d.key== "Kyoto_Sangyo_University"|| d.key== "Lawrence_Berkeley_National_Laboratory"|| d.key== "Leiden_University"|| d.key== "Leipzig_University"|| d.key== "Liverpool_University"|| d.key== "London_University"|| d.key== "Ludwig-Maximilians-_UniversitÃ¤t"|| d.key== "Marconi_Wireless_Telegraph_Co_Ltd"|| d.key== "Max-Planck-Institut"|| d.key== "Max-Planck_Institut"|| d.key== "Meijo_University"|| d.key== "MIT"|| d.key== "Moscow_State_University"|| d.key== "Munich_University"|| d.key== "Municipal_School_of_Industrial_Physics_and_Chemistry"|| d.key== "Nagoya_Imperial_Univeristy"|| d.key== "Nagoya_University"|| d.key== "NASA_Goddard_Space_Flight_Center"|| d.key== "National_Institute_of_Standards_and_Technology"|| d.key== "Nordita"|| d.key== "PN_Lebedev_Physical_Institute"|| d.key== "Princeton_University"|| d.key== "Queen's_University"|| d.key== "Rome_University"|| d.key== "Royal_Institution_of_Great_Britain"|| d.key== "Semiconductor_Laboratory_of_Beckman_Instruments_Inc"|| d.key== "Sorbonne_University"|| d.key== "Stanford_Linear_Accelerator_Center"|| d.key== "Stanford_University"|| d.key== "Strasbourg_University"|| d.key== "Technical_University_of_Berlin"|| d.key== "Trinity_College"|| d.key== "Unit&eacute;_Mixte_de_Physique_CNRS\/THALES"|| d.key== "Univer_of_Konigsberg"|| d.key== "Univeristy_of_Cambridge"|| d.key== "Univeristy_of_Goettingen"|| d.key== "Univeristy_of_Konigsberg"|| d.key== "Univeristy_of_Oxford"|| d.key== "Univeristy_of_Zurich"|| d.key== "University_College"|| d.key== "University_College_of_London"|| d.key== "University_of_Bologna"|| d.key== "University_of_Bonn"|| d.key== "University_of_Budapest"|| d.key== "University_of_California"|| d.key== "University_of_Cambridge"|| d.key== "University_of_Chicago"|| d.key== "University_of_Colorado"|| d.key== "University_of_Columbia"|| d.key== "University_of_Edinburgh"|| d.key== "University_of_Geneva"|| d.key== "University_of_Giesen"|| d.key== "University_of_Goettingen"|| d.key== "UNiversity_of_Goettingen"|| d.key== "University_of_Grenoble"|| d.key== "University_of_Heidelberg"|| d.key== "University_of_Illinois"|| d.key== "University_of_Innsbruck"|| d.key== "University_of_Konigsberg"|| d.key== "University_of_London"|| d.key== "University_of_Manchester"|| d.key== "University_of_Oxford"|| d.key== "University_of_Pennsylvania"|| d.key== "University_of_Rochester"|| d.key== "University_of_Tokyo"|| d.key== "University_of_Toronto"|| d.key== "University_of_Utrecht"|| d.key== "University_of_Washington"|| d.key== "Victoria_University"|| d.key== "WÃ¼rzburg_University"|| d.key== "École_Normale_Supérieure"|| d.key== "École_Polytechnique"|| d.key== "École_Supérieure_de_Physique_et_Chimie"
 
-        .on("mouseenter", mouseentered)
-        .on("mouseout", mouseouted);
+                  ) && d.children; }))
+    .enter().append("group")
+    .attr("class", "group");
 
+  var groupArc = d3v3.svg.arc()
+  .innerRadius(ry - 177)
+  .outerRadius(ry - 157)
+  .startAngle(function(d) { return (findStartAngle(d.__data__.children)-2) * pi / 180;})
+  .endAngle(function(d) { return (findEndAngle(d.__data__.children)+2) * pi / 180});
+var color = d3v3.scale.category20();
 
-        node.data(root.leaves())
-            .enter()
-            .append('circle')
-            .attr("name",function (d) { return d.data.key; })
-            .attr("affiliation", function (d) { return (d.data.name).substr(0, (d.data.name).indexOf('.')); })
-            .attr("dy", "0.31em")
-            .attr("transform", function(d) { return "rotate(" + (d.x - 90) + ")translate(" + (d.y + 8) + ",0)" + (d.x < 180 ? "" : "rotate(180)"); })
-            .attr('r', 4)
-            .style("fill", determinecolor)
+  svg.selectAll("g.arc")
+      .data(groupData[0])
+      .enter().append("svg:path")
+      .attr("d", groupArc)
+      .attr("class", "groupArc")
+      .attr("fill",function(d,i){return color(i);})
+      .style("fill-opacity", 0.65);
 
-            // .append('title')
+  svg.selectAll("g.node")
+      .data(nodes.filter(function(n) { return !n.children; }))
+    .enter().append("svg:g")
+      .attr("class", "node")
+      .attr("id", function(d) { return "node-" + d.key; })
+      .attr("transform", function(d) { return "rotate(" + (d.x - 90) + ")translate(" + d.y + ")"; })
+    .append("svg:text")
+      .attr("dx", function(d) { return d.x < 180 ? 25 : -25; })
+      .attr("dy", ".31em")
+      .attr("text-anchor", function(d) { return d.x < 180 ? "start" : "end"; })
+      .attr("transform", function(d) { return d.x < 180 ? null : "rotate(180)"; })
+      .text(function(d) { return d.key.replace(/_/g, ' '); })
+      .on("mouseover", mouseover)
+      .on("mouseout", mouseout);
+
+    d3v3.select("input[type=range]").on("change", function() {
+      line.tension(this.value / 100);
+      path.attr("d", function(d, i) { return line(splines[i]); });
+    });
   });
 
-  // function findColor(d) {
-  // 	let c = "";
-  //   if (d.depth == 0 || d.depth == 1 || d.depth === 2) {
-  // 		c = color(d.data.name);
-  // 	}
-  // 	else {
-  // 		c = findColor(d.parent);
-  // 	}
-  // 	return c;
-  // }
-  function determinecolor(d) {
-      if ((d.data.name).substr(0, (d.data.name).indexOf('.')) == "mit" ) {
-        return "#51bfdb";
-      } else if ((d.data.name).substr(0, (d.data.name).indexOf('.')) == "nyu") {
-        return "orange";
-      }
-      return "00cc00";
-    }
+  d3v3.select(window)
+    .on("mousemove", mousemove)
+    .on("mouseup", mouseup);
 
-  function mouseentered(d) {
-    d3.selectAll("circle,rect,path, text")
+  function mouse(e) {
+  return [e.pageX - rx, e.pageY - ry];
+  }
+
+  function mousedown() {
+  m0 = mouse(d3v3.event);
+  d3v3.event.preventDefault();
+  }
+
+  function mousemove() {
+  if (m0) {
+    var m1 = mouse(d3v3.event),
+        dm = Math.atan2(cross(m0, m1), dot(m0, m1)) * 180 / Math.PI;
+    div.style("-webkit-transform", "translate3d(0," + (ry - rx) + "px,0)rotate3d(0,0,0," + dm + "deg)translate3d(0," + (rx - ry) + "px,0)");
+  }
+  }
+
+  function mouseup() {
+  if (m0) {
+    var m1 = mouse(d3v3.event),
+        dm = Math.atan2(cross(m0, m1), dot(m0, m1)) * 180 / Math.PI;
+
+    rotate += dm;
+    if (rotate > 360) rotate -= 360;
+    else if (rotate < 0) rotate += 360;
+    m0 = null;
+
+    div.style("-webkit-transform", "rotate3d(0,0,0,0deg)");
+
+    svg.attr("transform", "translate(" + rx + "," + ry + ")rotate(" + rotate + ")")
+      .selectAll("g.node text")
+        .attr("dx", function(d) { return (d.x + rotate) % 360 < 180 ? 25 : -25; })
+        .attr("text-anchor", function(d) { return (d.x + rotate) % 360 < 180 ? "start" : "end"; })
+        .attr("transform", function(d) { return (d.x + rotate) % 360 < 180 ? null : "rotate(180)"; });
+  }
+  }
+
+  function mouseover(d) {
+    d3.selectAll("#bar_and_cleveland, #worldmap, #sankey_diagram").selectAll("circle,rect,path,text")
       .style("opacity",0.5);
-
-    node
-        .each(function(n) { n.target = n.source = true; })
-        .style("font", "15px")
+    console.log(this);
+    d3v3.select(this)
+        .style("opacity",1)
+        .style("fill","#111111")
         ;
 
-    link
-        .classed("link--target", function(l) { if (l.target === d) return l.source.source = true; })
-        .classed("link--source", function(l) { if (l.source === d) return l.target.target = true; })
-        .filter(function(l) { return l.target === d || l.source === d; })
-        .style("opacity", 1)
-        .raise();
+    d3v3.selectAll("path.link.target-" + d.key)
+        .classed("target", true)
+        .each(updateNodes("source", true));
 
-    node
-        .classed("node--target", function(n) { return n.target; })
-        .classed("node--source", function(n) { return n.source; })
-        .style("font", "15px")
-        .raise()
-        ;
-    d3.select(this)
-      .style("opacity", 1)
+    svg.selectAll("path.link.source-" + d.key)
+        .classed("source", true)
+        .each(updateNodes("target", true));
 
-      ;
-    d3.select("#chemistry").selectAll("circle[name=\'" + d.data.key + "\']")
-      .transition()
-      .style('r',r * 2)
-      .duration(700)
-      .style("opacity", 1)
-      .style("fill", "red");
-  }
 
-  function mouseouted(d) {
-    link
-        .classed("link--target", false)
-        .classed("link--source", false);
 
-    node
-        .classed("node--target", false)
-        .classed("node--source", false);
-    d3.selectAll("circle,rect,path, text")
-        .style("opacity",1);
-
-    d3.select("#chemistry").selectAll("circle[name=\'" + d.data.key + "\']")
-        .transition()
-        .style('r',r )
-        .duration(700)
-        .style("fill",prize_color("chemistry"));
+    d3.selectAll("circle[name=\"" + d.key.replace(/_/g, ' ') + "\"]")
+      .dispatch("mouseenter");
 
   }
+  function mouseout(d) {
+    cleanMouseEvent();
+    d3.selectAll("circle,rect,path,text")
+       .style("opacity",1);
 
-  // Lazily construct the package hierarchy from class names.
-  function packageHierarchy(classes) {
-    var map = {};
+    svg.selectAll("path.link.source-" + d.key)
+        .classed("source", false)
+        .each(updateNodes("target", false));
 
-    function find(name, data) {
-      var node = map[name], i;
-      if (!node) {
-        node = map[name] = data || {name: name, children: []};
-        if (name.length) {
-          node.parent = find(name.substring(0, i = name.lastIndexOf(".")));
-          node.parent.children.push(node);
-          node.key = name.substring(i + 1);
-        }
-      }
-      return node;
-    }
-
-    classes.forEach(function(d) {
-      find(d.name, d);
-    });
-
-    return d3.hierarchy(map[""]);
+    svg.selectAll("path.link.target-" + d.key)
+        .classed("target", false)
+        .each(updateNodes("source", false));
   }
 
-  // Return a list of imports for the given array of nodes.
-  function packageImports(nodes) {
-    var map = {},
-        imports = [];
+  function updateNodes(name, value) {
+    return function(d) {
+      if (value) this.parentNode.appendChild(this);
+      svg.select("#node-" + d[name].key).classed(name, value);
+    };
+  }
 
-    // Compute a map from name to node.
-    nodes.forEach(function(d) {
-      map[d.data.name] = d;
+  function cross(a, b) {
+  return a[0] * b[1] - a[1] * b[0];
+  }
+
+  function dot(a, b) {
+  return a[0] * b[0] + a[1] * b[1];
+  }
+
+  function findStartAngle(children) {
+    var min = children[0].x;
+    children.forEach(function(d) {
+       if (d.x < min)
+           min = d.x;
     });
+    return min;
+  }
 
-    // For each import, construct a link from the source to target node.
-    nodes.forEach(function(d) {
-      if (d.data.imports) d.data.imports.forEach(function(i) {
-        imports.push(map[d.data.name].path(map[i]));
-      });
+  function findEndAngle(children) {
+    var max = children[0].x;
+    children.forEach(function(d) {
+       if (d.x > max)
+           max = d.x;
     });
-
-    return imports;
+    return max;
   }
 }

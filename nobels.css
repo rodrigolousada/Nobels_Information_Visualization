@@ -234,91 +234,149 @@ div.tooltip {
 
 /*========================Sankey Diagram===========================*/
 
-.node rect {
+#sankey_diagram .node rect {
   cursor: move;
   fill-opacity: .9;
   shape-rendering: crispEdges;
 }
 
-.node text {
-  pointer-events: none;
-  text-shadow: 0 1px 0 #fff;
+#sankey_diagram .node text {
+  font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  /* pointer-events: none; */
+  /* text-shadow: 0 1px 0 #fff; */
 }
 
-.link {
+#sankey_diagram .link {
   fill: none;
   stroke: #000;
   stroke-opacity: .2;
 }
 
-.link:hover {
+#sankey_diagram .link:hover {
   stroke-opacity: .5;
 }
 
-/*====================== Chord Chart ==========================*/
 
+/*======================== New Chord Chart=======================*/
+#chord tbody {
+  font: 300 36px "Helvetica Neue";
+  height: 640px;
+  /*margin: 80px 160px 80px 160px;
+  overflow: hidden;*/
+  position: relative;
+}
 
-#limit .node {
-  font: 300 6px "Helvetica Neue", Helvetica, Arial, sans-serif;
-  fill: #2b2727;
+#chord a:link, a:visited {
+  color: #777;
+  text-decoration: none;
+}
+
+#chord a:hover {
+  color: #666;
+}
+
+#chord blockquote {
+  margin: 0;
+}
+
+#chord blockquote:before {
+  content: "“";
+  /* position: absolute; */
+  left: -.4em;
+}
+
+#chord blockquote:after {
+  content: "”";
+  /* position: absolute; */
 }
 
 
-#limit .link {
-  stroke: steelblue;
-  stroke-opacity: 0.4;
+#chord .invert {
+  background: #1f1f1f;
+  color: #dcdccc;
+}
+
+#chord .invert h2, .invert h3 {
+  color: #7f9f7f;
+}
+
+#chord .string, .regexp {
+  color: #f39;
+}
+
+#chord .keyword {
+  color: #00c;
+}
+
+#chord .comment {
+  color: #777;
+  font-style: oblique;
+}
+
+#chord .number {
+  color: #369;
+}
+
+#chord .class, .special {
+  color: #1181B8;
+}
+
+#chord body > svg {
+  /* position: absolute; */
+  top: 0px;
+  left: -160px;
+}
+
+#chord path.arc {
+  cursor: move;
+  fill: #fff;
+}
+
+#chord .node {
+  font: 4px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* font-size: 10px; */
+}
+
+#chord .node:hover {
+  font-size: 15px;
+
+  fill: #0d0e0e;
+}
+
+#chord .link {
   fill: none;
+  stroke: #1f77b4;
+  stroke-opacity: .4;
   pointer-events: none;
 }
 
-#limit .node:hover,
-#limit .node--source,
-#limit .node--target {
-  font: 300 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
-  fill: #000;
-  opacity: 1;
-
-  font-weight: 700;
-}
-#limit .node--target--new {
-  font: 300 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
-  fill: #000;
-  opacity: 1;
-
-  font-weight: 700;
-}
-#limit .node--source {
-  font: 300 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
-
-  fill: #2ca02c;
-}
-
-#limit .node--target {
-  font: 300 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
-
-  fill: #d62728;
-}
-
-#limit .link--source,
-#limit .link--target {
+#chord .link.source, .link.target {
 
   stroke-opacity: 1;
   stroke-width: 2px;
 }
 
-#limit .link--source {
-  stroke-opacity: 1;
+#chord .node.target {
+  font-size: 15px;
 
+  /* fill: #d62728 ; /* !important */ */
+}
+
+#chord .link.source {
+  stroke-opacity: 1;
   stroke: #d62728;
 }
 
-#limit .link--target {
+#chord .node.source {
+  background-color: #000;
+
+  font-size: 15px;
+  /* fill: #2ca02c; */
+}
+
+#chord .link.target {
   stroke-opacity: 1;
 
   stroke: #2ca02c;
-}
-.node circle {
-  fill: #d62333;
-  stroke: #fff;
-  stroke-width: 1px;
 }

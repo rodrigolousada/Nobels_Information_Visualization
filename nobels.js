@@ -17,7 +17,9 @@ var r = 2;
 // World Map Variables
 var populationById = {};
 var nameById = {};
-
+var birthWinningColor = "#dd5ef5";
+var affiliationWinningColor = "#6d88f3";
+var birthAndAffiliationWinningColor = "#FF9933";
 
 var world_colors = d3.scaleThreshold()
                       .domain([0,1,2,5,10,25,70,100,400])
@@ -171,7 +173,7 @@ function gen_scatterplot(dataset, chart) {
                   .append("svg")
                   .attr("width",w)
                   .attr("height",h)
-  		            .style("fill", "#6d88f3")
+  		            .style("fill", birthWinningColor)
                   ;
 
 
@@ -199,7 +201,7 @@ function gen_scatterplot(dataset, chart) {
     var cscale = d3.scaleLinear()
                    .domain([d3.min(dataset, function(d) { return d.year;}),
                             d3.max(dataset, function(d) { return d.year;})])
-                   .range(["#dd5ef5", "#6d88f3"]);
+                   .range([affiliationWinningColor, birthWinningColor]);
 
 
     gY = svg.append("g")
@@ -331,12 +333,18 @@ function gen_scatterplot(dataset, chart) {
                                               .transition()
                                               .duration(700)
                                               .style("opacity", 1)
-                                              .style("fill","#6d88f3");
+                                              .style("fill", birthWinningColor);
                                             d3.selectAll("path[country = \'" + d.countryAffiliation + "\']")
                                               .transition()
                                               .duration(700)
                                               .style("opacity", 1)
-                                              .style("fill","#dd5ef5");
+                                              .style("fill", function(d1) {
+                                                                  if(d.countryBorn == d.countryAffiliation)
+                                                                      return birthAndAffiliationWinningColor;
+                                                                  else
+                                                                      return affiliationWinningColor;
+                                                              });
+
 
                                             //Sankey
                                             d3.select("rect[affiliationName=\'" + d.affiliation + "\']")
@@ -583,10 +591,18 @@ function world_map(){
                 .attr("viewBox", "0 0 700 400")
                 .classed("svg-content-responsive", true)
                 .on("mouseover", function(d) {
-                      //TODO
+                    // //Uncomment for world map legend effect
+                    // svg.selectAll("g.legend")
+                    //     .transition()
+                    //     .duration(3000)
+                    //     .style("display","initial")
                 })
                 .on("mouseout", function(d){
-                      //TODO
+                    // //Uncomment for world map legend effect
+                    // svg.selectAll("g.legend")
+                    //     .transition()
+                    //     .duration(1000)
+                    //     .style("display", "none")
                 });
 
     var g = svg.append('g')
@@ -659,13 +675,19 @@ function world_map(){
                                       .duration(700)
                                       .style('r',r * 2)
                                       .style("opacity", 1)
-                                      .style("fill", "#dd5ef5");
+                                      .style("fill", affiliationWinningColor);
                                     d3.selectAll("circle[countryBorn=\"" + nameById[d.id] + "\"]")
+                                      .transition()
+                                      .duration(700)
+                                      .style('r', r * 2)
+                                      .style("opacity", 1)
+                                      .style("fill", birthWinningColor);
+                                    d3.selectAll("circle[countryBorn=\"" + nameById[d.id] + "\"]").filter("circle[countryAffiliation=\"" + nameById[d.id] + "\"]")
                                       .transition()
                                       .duration(700)
                                       .style('r',r * 2)
                                       .style("opacity", 1)
-                                      .style("fill", "#6d88f3");
+                                      .style("fill", birthAndAffiliationWinningColor);
 
                                     //Sankey
                                     d3.selectAll("rect[affiliationCountry=\"" + nameById[d.id] + "\"]")
@@ -744,10 +766,14 @@ function world_map(){
         .text(function (d, i) {
           return legend_labels[i];
         })
+        .style("pointer-events", "none")
         .style("font-size","10px")
         .style("font-family", "calibri, sans serif")
         .style("white-space", "pre")
         .style("fill", "rgb(247,251,255)");
+
+
+      //svg.selectAll("g.legend").style("display", "none")
 }
 
 //==================== Sankey Diagram   ========================

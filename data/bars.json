@@ -1,43 +1,42 @@
-[
-
-  {
-    "degree":"PhD",
-    "number": 1,
-    "category":"Chemistry"
-  },
-  {
-    "degree":"McS",
-    "number": 2,
-    "category":"Chemistry"
-  },
-  {
-    "degree":"graduate",
-    "number": 0,
-    "category":"Chemistry"
-  },
-  {
-    "degree":"nograd",
-    "number": 0,
-    "category":"Chemistry"
-  },
-  {
-    "degree":"PhD",
-    "number": 1,
-    "category":"Physics"
-  },
-  {
-    "degree":"McS",
-    "number": 0,
-    "category":"Physics"
-  },
-  {
-    "degree":"graduate",
-    "number": 1,
-    "category":"Physics"
-  },
-  {
-    "degree":"nograd",
-    "number": 1,
-    "category":"Physics"
-  }
-]
+ [
+        {
+            "category": "Chemistry",
+            "prizeShare": "1/1",
+            "number": 67
+        },
+        {
+            "category": "Chemistry",
+            "prizeShare": "1/2",
+            "number": 59
+        },
+        {
+            "category": "Chemistry",
+            "prizeShare": "1/3",
+            "number": 54
+        },
+        {
+            "category": "Chemistry",
+            "prizeShare": "1/4",
+            "number": 14
+        },
+        {
+            "category": "Physics",
+            "prizeShare": "1/1",
+            "number": 49
+        },
+        {
+            "category": "Physics",
+            "prizeShare": "1/2",
+            "number": 86
+        },
+        {
+            "category": "Physics",
+            "prizeShare": "1/3",
+            "number": 53
+        },
+        {
+            "category": "Physics",
+            "prizeShare": "1/4",
+            "number": 35
+        }
+    ]

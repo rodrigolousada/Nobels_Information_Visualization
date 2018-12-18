@@ -1,0 +1,57 @@
+[
+  {
+    "name":"Eduard Buchner",
+    "year": 1960,
+    "age": 23,
+    "degree": "McS",
+    "category":"Chemistry",
+    "countryAffiliation":"Russia",
+    "countryBorn": "China",
+    "affiliation": "NYU"
+  },
+  {
+    "name": "Sofia Aparicio",
+    "year": 2018,
+    "age": 22,
+    "degree": "PhD",
+    "category":"Chemistry",
+    "countryAffiliation":"Portugal",
+    "countryBorn": "Portugal",
+    "affiliation": "MIT"
+  },
+  {
+    "name": "Pedro Pires",
+    "year": 2018,
+    "age": 30,
+    "degree": "PhD",
+    "category":"Physics",
+    "countryAffiliation":"United States",
+    "countryBorn": "Spain",
+    "affiliation": "Harvard"
+  },
+  {
+    "name": "Albert Einstein",
+    "year": 1980,
+    "age": 65,
+    "degree": "graduate",
+    "category":"Physics",
+    "countryBorn": "Russia",
+    "affiliation": "NYU"
+  },
+  {
+    "name": "Joana Margarida",
+    "year": 1984,
+    "age": 34,
+    "degree": "McS",
+    "category":"Chemistry",
+    "affiliation": "Harvard"
+  },
+  {
+    "name": "Ilda Jesus",
+    "year": 1990,
+    "age": 67,
+    "degree": "nograd",
+    "category":"Physics",
+    "affiliation": "NYU"
+  }
+]

@@ -117,7 +117,7 @@ function cleanMouseEvent(){
 // dispatch.on("mouseout", cleanMouseEvent);
 
 //====================   dataset_extraction   ========================
-d3.json("data/bars_new.json").then(function(data) {
+d3.json("data/bars.json").then(function(data) {
     var bar_chart_dataset = data.slice(0,35);
 
     gen_bar_chart(bar_chart_dataset, "chemistry");
@@ -128,7 +128,7 @@ d3.json("data/bars_new.json").then(function(data) {
     // gen_bar_chart(bar_chart_dataset, "peace");
 });
 
-d3.json("data/clevelandClean1.json").then(function(data) {
+d3.json("data/cleveland.json").then(function(data) {
     var cleveland_dataset = data.slice(0,400);
 
     gen_scatterplot(cleveland_dataset, "chemistry");

@@ -50,7 +50,7 @@ function choose_sankey_color(name) {
     return color;
 }
 
-var worldmap_tip, scatter_tip;
+var worldmap_tip, scatter_tip , sankey_tip;
 function cleanMouseEvent(){
     d3.selectAll("*").interrupt();
     //Cleveland Plot
@@ -90,6 +90,7 @@ function cleanMouseEvent(){
       // .interrupt()
       // .transition()
       .style("fill", function(d1) {
+        sankey_tip.hide(d1);
         if(d1.node>1) {
           return choose_sankey_color(d1.name);
         }
@@ -357,12 +358,23 @@ function gen_scatterplot(dataset, chart) {
                                               .duration(700)
                                               .style("opacity",0.2);
 
+                                            // console.log(d3v3.selectAll("g.node-" + d.name.replace(' ', '_')))
+                                            // d3v3.selectAll("path.link.target-" + d.name.replace(' ', '_'))
+                                            //   .classed("target", true)
+                                            //   .each(updateNodes("source", true));
+
+                                            // svg.selectAll("path.link.source-" + d.name.replace(' ', '_'))
+                                            //   .classed("source", true)
+                                            //   .each(updateNodes("target", true))
+                                            //   // .transition()
+                                            //   // .duration(800)
+                                            //   .style("opacity", 1);
                                             //console.log(d3v3);
                                             //console.log(d3v3.selectAll("g#node-" + d.name.replace(' ', "_") + ".node"));
-                                            d3v3.selectAll("g#node-" + d.name.replace(' ', "_") + ".node")
-                                              .on("mouseover", function (d) {
-                                                //console.log("ola");
-                                              });
+                                            // d3v3.selectAll("g#node-" + d.name.replace(' ', "_") + ".node")
+                                            //   .on("mouseover", function (d) {
+                                            //     //console.log("ola");
+                                            //   });
                                       })
                       .on('mouseout', cleanMouseEvent)
                       .on('drag', function(d){console.log("please do not crash")});
@@ -673,8 +685,9 @@ function world_map(){
 
 //==================== Sankey Diagram   ========================
 function gen_sankey(){
-    var units = "Widgets";
+    var units = "Connections";
     var rect;
+  
     // set the dimensions and margins of the graph
     var margin = {top: 10, right: 10, bottom: 10, left: 10},
                   width = 450 - margin.left - margin.right,
@@ -685,6 +698,16 @@ function gen_sankey(){
         format = function(d) { return formatNumber(d) + " " + units; },
         color = d3.scaleOrdinal(d3.schemeSet2 ); //schemeCategory20 /20c
 
+    // Set tooltips
+    sankey_tip = d3.tip()
+      .attr('class', 'd3-tip')
+      .offset([-10, 0])
+      .html(function (d) {
+        return "<strong></strong><span class='details'>" + (d.name ? d.name : d.source.name + " → " +
+            d.target.name) + "<br></span>" +
+          "<strong>Nº Winners: </strong><span class='details'>" + format(d.value) + "</span>";
+      })
+    
     sankey_colors=color;
     // append the svg object to the body of the page
     var svg = d3.select("#sankey_diagram")
@@ -703,6 +726,7 @@ function gen_sankey(){
 
     var path = sankey.link();
 
+    svg.call(sankey_tip);
     // load the data
     d3.json("data/sankeyTop5.json", function(error, graph) {
 
@@ -735,6 +759,7 @@ function gen_sankey(){
                                             .style("opacity",0.2);
 
                                           //Change this
+                                          sankey_tip.show(d);
                                           d3.select(this)
                                             .transition()
                                             .duration(700)
@@ -772,13 +797,6 @@ function gen_sankey(){
                                        })
                       .on("mouseout", cleanMouseEvent);
 
-        // add the link titles
-        link.append("title")
-            .text(function(d) {
-                  		return d.source.name + " → " +
-                              d.target.name + "\n" + format(d.value);
-                  });
-
         // add in the nodes
         var node = svg.append("g").selectAll(".node")
                       .data(graph.nodes)
@@ -813,6 +831,7 @@ function gen_sankey(){
                           .style("opacity", 0.2);
 
                         //Change this
+                        sankey_tip.show(d);
                         d3.select(this)
                           .transition()
                           .duration(700)
@@ -849,10 +868,7 @@ function gen_sankey(){
                           .duration(700)
                           .style("opacity",0.2);
                       })
-                      .on("mouseout", cleanMouseEvent)
-                    .append("title")
-                    .text(function(d) {return d.name + "\n" + format(d.value); })
-                    .style("pointer-events", "none");
+                      .on("mouseout", cleanMouseEvent);
 
         // add in the title for the nodes
         node.append("text")
@@ -1032,16 +1048,18 @@ var color = d3v3.scale.category20c();
   }
 
   function mouseover(d) {
-
+    console.log(d);
     d3.selectAll("circle[name=\"" + d.key.replace(/_/g, ' ') + "\"]")
       .dispatch("mouseenter");
 
     d3.selectAll("#bar_and_cleveland, #worldmap, #sankey_diagram").selectAll("circle,rect,path")
       .style("opacity",0.2);
+
     d3v3.select(this)
-        .style("opacity",1)
-        .style("fill","#ffffff")
-        ;
+        .transition()
+        .delay(50)
+        .duration(700)
+        .style("opacity",1);
 
     d3v3.selectAll("path.link.target-" + d.key)
         .classed("target", true)
@@ -1050,9 +1068,6 @@ var color = d3v3.scale.category20c();
     svg.selectAll("path.link.source-" + d.key)
         .classed("source", true)
         .each(updateNodes("target", true));
-
-
-
 
   }
   function mouseout(d) {

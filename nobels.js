@@ -379,23 +379,8 @@ function gen_scatterplot(dataset, chart) {
                                               .duration(700)
                                               .style("opacity",0.2);
 
-                                            // console.log(d3v3.selectAll("g.node-" + d.name.replace(' ', '_')))
-                                            // d3v3.selectAll("path.link.target-" + d.name.replace(' ', '_'))
-                                            //   .classed("target", true)
-                                            //   .each(updateNodes("source", true));
-
-                                            // svg.selectAll("path.link.source-" + d.name.replace(' ', '_'))
-                                            //   .classed("source", true)
-                                            //   .each(updateNodes("target", true))
-                                            //   // .transition()
-                                            //   // .duration(800)
-                                            //   .style("opacity", 1);
-                                            //console.log(d3v3);
-                                            //console.log(d3v3.selectAll("g#node-" + d.name.replace(' ', "_") + ".node"));
-                                            // d3v3.selectAll("g#node-" + d.name.replace(' ', "_") + ".node")
-                                            //   .on("mouseover", function (d) {
-                                            //     //console.log("ola");
-                                            //   });
+                                            // d3.selectAll("#node-" + d.name.replace(/ /g, "_"))
+                                            //   .dispatch("mouseover");
                                       })
                       .on('mouseout', cleanMouseEvent)
                       .on('drag', function(d){console.log("please do not crash")});
@@ -1294,14 +1279,14 @@ function chord_chart(){
     function mouseover(d) {
         cleanMouseEvent();
         //Call Cleveland Action
-        // d3.selectAll("circle[name=\"" + d.key.replace(/_/g, ' ') + "\"]")
-        //   .dispatch("mouseenter");
+        d3.selectAll("circle[name=\"" + d.key.replace(/_/g, ' ') + "\"]")
+          .dispatch("mouseenter");
 
-        //Get everything with opacity 1
-        d3.selectAll("#bar_and_cleveland, #worldmap, #sankey_diagram").selectAll("circle,rect,path")
-          .transition()
-          .duration(750)
-          .style("opacity",0.2);
+        // //Get everything with opacity 1
+        // d3.selectAll("#bar_and_cleveland, #worldmap, #sankey_diagram").selectAll("circle,rect,path")
+        //   .transition()
+        //   .duration(750)
+        //   .style("opacity",0.2);
 
         d3.selectAll("#chord").selectAll("rect,path,text")
           .transition()

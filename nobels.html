@@ -48,25 +48,37 @@
 
 
 
-  
+
 
   </head>
 
   <body>
-    <div style="display: inline-flex; width:100%;background-color:#007399; color:white;">
-      <img src="img/nobelprize.png" style="padding:2px; padding-top:10px;" width ="40" height="40" alt="nobelprize">
-      <h1>Nobel Prize: Tracking Human Excellence</h1>
-      <div class="topnav" style="padding:2px; padding-top:10px; padding-left:500px;">
-        <form action="/action_page.php">
-            <select style="padding:7.5px; margin-top:8px;margin-right:10px" name="Search">
-              <option value="Person">Person</option>
-              <option value="Degree">Degree</option>
-              <option value="Country">Country</option>
-              <option value="Affiliation">Affiliation</option>
-            </select>
-            <input type="text" placeholder="Search..">
-        </form></div>
-        <button style="margin-left: -10px;height:35px; margin-top:16px;" type="submit"><i class="fa fa-search"></i></button>
+    <div id="header" style="top: 0;display: inline-flex;  width:100%;background-color:#007399; color:white;">
+        <img src="img/nobelprize.png"  width ="40" height="40" alt="nobelprize">
+        <h1>Nobel Prize: Tracking Human Excellence</h1>
+        <div class="select-style" >
+          <select>
+            <option value="0">Search for:</option>
+            <option value="1">Degree</option>
+            <option value="2">Country</option>
+            <option value="3">Affiliation</option>
+          </select>
+        </div>
+
+        <div id="cover">
+          <form method="get" action="">
+            <div class="tb">
+              <div class="td"><input type="text" placeholder="Search" required></div>
+              <div class="td" id="s-cover">
+                <button type="submit">
+                  <div id="s-circle"></div>
+                  <span></span>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- <button style="margin-left: -10px;height:35px; margin-top:16px;" type="submit"><i class="fa fa-search"></i></button> -->
       </div>
 
 
@@ -80,14 +92,60 @@
       <!-- <img src="img/searchbar.png"  style="padding:2px; padding-top:10px; padding-left:600px;" height="40" alt="searchbar"> -->
     </div>
 
+    <div id="filters" >
+      <table id="table">
+        <tr>
+            <h1 > Filters </h1>
+        </tr>
+        <tr>
+          <td>
+            <h2 id="tension" style="font-size:18px;">Tension:</h2>
+          </td>
+          <td>
+            <div class="slidecontainer">
+                <input style="position:relative;top:3px; left:60px;" type="range" min="0" max="100" value="85" class="slider" id="myRange">
+             </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+          <h2 id="tension" style="font-size:20px;">Gender:</h2>
+        </td>
+        </tr>
+        <tr>
+          <td>
+            <h2>
+            <!-- <h2 id="tension" style="font-size:18px;">Woman</h2> -->
+            <label class="container" >Woman
+              <input type="checkbox" id="woman" checked="checked" name="radio" onclick="womanClicked()">
+              <span class="checkmark"></span>
+            </label>
+          </h2>
+          </td>
+          <td>
+            <h2>
+            <!-- <h2 id="tension" style="font-size:18px;">Woman</h2> -->
+            <label class="container" >Men
+              <input type="checkbox" id="men" checked="checked" name="radio" onclick="manClicked()">
+              <span class="checkmark"></span>
+            </label>
+          </h2>
+          </td>
+        </tr>
+
+    </table>
+    </div>
+
     <div id="limit" style="height:430px" style="width:2000px">
       <table id="table">
         <tr>
           <td id="categories" style="width:630px">
-            <div id="worldmap"></div>
+            <div id="worldmap" ></div>
+            <!-- style="background-color: #3b3a3c" -->
           </td>
 
-          <td id="categories" >
+          <td id="categories">
+            <!-- style="background-color: #3b3a3c" -->
             <!-- <img src="img/chord.png" width="350" height="350" style="margin-left:200"> -->
             <div id="chord"  >
                 <!--   style="position: relative" -->
@@ -97,10 +155,10 @@
         </tr>
       </table>
     </div>
-    <div style="bottom:0;font-size:18px;">tension: <input style="position:relative;top:3px;" type="range" min="0" max="100" value="85"></div>
 
-    <div id="categories" style="padding-left:20px; width:1300px" style="width:90%" style="border:300px; border-color:#f2f2f2;">
-      <small style="font-family:verdana;" ><b>Nobel Prizes for each Category:</b></small>
+    <div id="categories" style="padding-left:20px; width:1225px; " style="width:90%" style="border:300px;
+    border-color:#f2f2f2">
+      <small ><b  >Nobel Prizes for each Category:</b></small>
       <table>
         <tr>
           <td id="bar_and_cleveland" style="width:850px">
@@ -129,6 +187,7 @@
         </tr>
       </table>
     </div>
+
 
   </body>
 </html>

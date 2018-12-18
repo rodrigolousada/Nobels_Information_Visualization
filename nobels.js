@@ -22,7 +22,7 @@ var affiliationWinningColor = "#6d88f3";
 var birthAndAffiliationWinningColor = "#FF9933";
 
 var world_colors = d3.scaleThreshold()
-                      .domain([0,1,2,5,10,25,70,100,400])
+                      .domain([0,1,2,5,10,25,70,100])
                       .range(["rgb(247,251,255)", "rgb(198,219,239)", "rgb(158,202,225)", "rgb(107,174,214)", "rgb(66,146,198)","rgb(33,113,181)","rgb(8,81,156)","rgb(8,48,107)","rgb(18, 36, 62)"]);
 var sankey_colors;
 
@@ -90,7 +90,12 @@ function cleanMouseEvent(){
      d3.select("#worldmap").selectAll("rect")
        .style("opacity", 0.8)
        .style("stroke-width", 0.3);
-   
+
+     d3.selectAll("g.legend")
+        .style("display","initial")
+     d3.selectAll("g.legend_color")
+        .style("display", "none")
+
      //Sankey
      d3.select("#sankey_diagram").selectAll("rect")
        // .interrupt()
@@ -345,6 +350,20 @@ function gen_scatterplot(dataset, chart) {
                                                                       return affiliationWinningColor;
                                                               });
 
+                                            d3.selectAll("g.legend")
+                                              .transition()
+                                              .duration(10000)
+                                              .ease(d3.easeLinear)
+                                              .style("display", "none");
+                                            d3.selectAll("g.legend_color")
+                                              .transition()
+                                              .duration(10000)
+                                              .ease(d3.easeLinear)
+                                              .style("display", "initial");
+                                            d3.selectAll("g.legend_color").selectAll("rect")
+                                              .transition()
+                                              .duration(700)
+                                              .style("opacity", 1);
 
                                             //Sankey
                                             d3.select("rect[affiliationName=\'" + d.affiliation + "\']")
@@ -714,11 +733,10 @@ function world_map(){
             .attr("d", path);
       }
 
-      //Adding legend for our Choropleth/WorldMap
+      //Adding legend for our Choropleth on WorldMap 
       var legend_labels = ["0", "1", "2   -  4", "5   -  9", "10 - 24", "25 - 69", "70 - 99", "100+"]
-      var ext_color_domain = [0, 1, 2, 5, 10, 25, 70, 100]
       var legend = svg.selectAll("g.legend")
-                      .data(ext_color_domain)
+                      .data(world_colors.domain())
                     .enter().append("g")
                       .attr("class", "legend");
 
@@ -726,6 +744,7 @@ function world_map(){
           ls_h = 12;
 
       legend.append("rect")
+        .attr("class", "map_colors")
         .attr("x", 20)
         .attr("y", function (d, i) {
           return height/1.7 - (i * ls_h) - 2 * ls_h;
@@ -759,6 +778,7 @@ function world_map(){
         .on("mouseout", cleanMouseEvent);
 
       legend.append("text")
+        .attr("class", "map_colors")
         .attr("x", 35)
         .attr("y", function (d, i) {
           return height/1.7 - (i * ls_h) - ls_h - 4;
@@ -774,6 +794,49 @@ function world_map(){
 
 
       //svg.selectAll("g.legend").style("display", "none")
+
+
+      //Adding legend for our highlighted colors 
+      var highlights_legend_labels = ["Born in", "Won for", "Born and Won for"]
+      var colorScale = d3.scaleOrdinal()
+                          .domain(highlights_legend_labels)
+                          .range([birthWinningColor, affiliationWinningColor, birthAndAffiliationWinningColor]);
+      var highlights_legend = svg.selectAll("g.legend_color")
+                                  .data(colorScale.domain())
+                                .enter().append("g")
+                                  .attr("class", "legend_color");
+
+      highlights_legend.append("rect")
+        .attr("class", "map_highlight_colors")
+        .attr("x", 20)
+        .attr("y", function (d, i) {
+          return height / 1.7 - (i * ls_h) - 2 * ls_h;
+        })
+        .attr("width", ls_w)
+        .attr("height", ls_h)
+        .attr("color", function (d, i) { return colorScale(i); })
+        .style("fill", function (d, i) { return colorScale(i); })
+        .style("opacity", 0.8)
+        .style("stroke", "white")
+        .style('stroke-width', 0.3);
+
+      highlights_legend.append("text")
+        .attr("class", "map_highlight_colors")
+        .attr("x", 35)
+        .attr("y", function (d, i) {
+          return height / 1.7 - (i * ls_h) - ls_h - 4;
+        })
+        .text(function (d, i) {
+          return highlights_legend_labels[i];
+        })
+        .style("pointer-events", "none")
+        .style("font-size", "10px")
+        .style("font-family", "calibri, sans serif")
+        .style("white-space", "pre")
+        .style("fill", "rgb(247,251,255)");
+
+
+      svg.selectAll("g.legend_color").style("display", "none")
 }
 
 //==================== Sankey Diagram   ========================
@@ -1141,7 +1204,6 @@ var color = d3v3.scale.category20c();
   }
 
   function mouseover(d) {
-    console.log(d);
     d3.selectAll("circle[name=\"" + d.key.replace(/_/g, ' ') + "\"]")
       .dispatch("mouseenter");
 

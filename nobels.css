@@ -110,9 +110,14 @@ line#average_age {
 }
 /*========================= Bar Chart==========================*/
 
+/* rect {
+  fill: transparent;
+  shape-rendering: crispEdges;
+} */
+/* 
 bar_chart text {
   pointer-events: none;
-}
+} */
 
 /*======================== World Map ===========================*/
 

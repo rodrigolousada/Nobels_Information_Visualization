@@ -55,6 +55,7 @@ function choose_sankey_color(name) {
 var worldmap_tip, scatter_tip , sankey_tip;
 function cleanMouseEvent(){
     d3.selectAll("*").interrupt();
+    
     //Cleveland Plot
     d3.select("#bar_and_cleveland").selectAll("circle")
       // .interrupt()
@@ -66,6 +67,9 @@ function cleanMouseEvent(){
         scatter_tip.hide(d1);
         return prize_color(d1.category);
       });
+
+    d3.selectAll("g.scatter_legend_color").selectAll("*")
+      .style("opacity", 0);
 
     //Bar Chart
     d3.select("#bar_and_cleveland").selectAll("bar_chart").selectAll("rect")
@@ -91,7 +95,7 @@ function cleanMouseEvent(){
        .style("opacity", 0.8)
        .style("stroke-width", 0.3);
 
-     d3.selectAll("g.legend_color").selectAll("*")
+     d3.selectAll("g.world_legend_color").selectAll("*")
         .style("opacity", 0);
 
      //Sankey
@@ -324,6 +328,11 @@ function gen_scatterplot(dataset, chart) {
                                               .style('r',r * 3)
                                               .style("opacity",1);
 
+                                            d3.selectAll("g.scatter_legend_color").selectAll("*")
+                                              .transition()
+                                              .duration(700)
+                                              .style("opacity", 0);
+
                                             //Bar Chart
                                             d3.select("#" + chart)
                                               .selectAll("rect[prizeShare=\'" + d.prizeShare + "\']")
@@ -348,7 +357,7 @@ function gen_scatterplot(dataset, chart) {
                                                                       return affiliationWinningColor;
                                                               });
 
-                                            d3.selectAll("g.legend_color").selectAll("*")
+                                            d3.selectAll("g.world_legend_color").selectAll("*")
                                               .transition()
                                               .duration(700)
                                               .style("opacity", 1);
@@ -447,6 +456,55 @@ function gen_scatterplot(dataset, chart) {
             .attr('y1', yscale(svg.select('line#average_age').attr('averageAge')))
             .attr('y2', yscale(svg.select('line#average_age').attr('averageAge')))
       }
+
+       //Adding scatter_legend for our highlighted colors
+       var highlights_scatter_legend_labels = ["Born in", "Won for", "Born and Won for"];
+       var colorScale = d3.scaleOrdinal()
+                          .domain(highlights_scatter_legend_labels)
+                          .range([birthWinningColor, affiliationWinningColor, birthAndAffiliationWinningColor]);
+       var highlights_scatter_legend = svg.selectAll("g.scatter_legend_color")
+                                          .data(colorScale.domain())
+                                          .enter().append("g")
+                                          .attr("class", "scatter_legend_color");
+
+       var ls_w = 12,
+           ls_h = 12;
+
+       highlights_scatter_legend.append("rect")
+         .attr("class", "map_highlight_colors")
+         .attr("x", function (d, i) {
+           return w/6 + (i * 8 * ls_w) - 2 * ls_w;
+         })
+         .attr("y", 10)
+         .attr("width", ls_w)
+         .attr("height", ls_h)
+         .attr("color", function (d, i) {
+           return colorScale(i);
+         })
+         .style("fill", function (d, i) {
+           return colorScale(i);
+         })
+         .style("opacity", 0.8)
+         .style("stroke", "white")
+         .style('stroke-width', 0.3);
+
+       highlights_scatter_legend.append("text")
+         .attr("class", "map_highlight_colors")
+         .attr("x", function (d, i) {
+           return w / 6 + (i * 8 * ls_w) - 8;
+         })
+         .attr("y", 20)
+         .text(function (d, i) {
+           return highlights_scatter_legend_labels[i];
+         })
+         .style("pointer-events", "none")
+         .style("font-size", "12px")
+         .style("font-family", "calibri, sans serif")
+         .style("white-space", "pre")
+         .style("fill", "rgb(247,251,255)");
+
+
+       svg.selectAll("g.scatter_legend_color").selectAll("*").style("opacity", 0);
 }
 
 //====================   gen_bar_chart   ========================
@@ -522,8 +580,13 @@ function gen_bar_chart(dataset, chart){
                                   .style('r',r * 2)
                                   .style("opacity", 1);
 
+                                d3.selectAll("g.scatter_legend_color").selectAll("*")
+                                  .transition()
+                                  .duration(700)
+                                  .style("opacity", 0);
+
                                 //Map
-                                d3.selectAll("g.legend_color").selectAll("*")
+                                d3.selectAll("g.world_legend_color").selectAll("*")
                                   .transition()
                                   .duration(700)
                                   .style("opacity", 0);
@@ -604,15 +667,15 @@ function world_map(){
                 .attr("viewBox", "0 0 700 400")
                 .classed("svg-content-responsive", true)
                 .on("mouseover", function(d) {
-                    // //Uncomment for world map legend effect
-                    // svg.selectAll("g.legend")
+                    // //Uncomment for world map world_legend effect
+                    // svg.selectAll("g.world_legend")
                     //     .transition()
                     //     .duration(3000)
                     //     .style("display","initial")
                 })
                 .on("mouseout", function(d){
-                    // //Uncomment for world map legend effect
-                    // svg.selectAll("g.legend")
+                    // //Uncomment for world map world_legend effect
+                    // svg.selectAll("g.world_legend")
                     //     .transition()
                     //     .duration(1000)
                     //     .style("display", "none")
@@ -682,7 +745,7 @@ function world_map(){
                                       .style("opacity", 1)
                                       .style("stroke-width", 1.5);
 
-                                    d3.selectAll("g.legend_color").selectAll("*")
+                                    d3.selectAll("g.world_legend_color").selectAll("*")
                                       .style("opacity", 0);
 
                                     //Cleveland Plot
@@ -704,6 +767,11 @@ function world_map(){
                                       .style('r',r * 2)
                                       .style("opacity", 1)
                                       .style("fill", birthAndAffiliationWinningColor);
+
+                                    d3.selectAll("g.scatter_legend_color").selectAll("*")
+                                      .transition()
+                                      .duration(700)
+                                      .style("opacity", 1);
 
                                     //Sankey
                                     d3.selectAll("rect[affiliationCountry=\"" + nameById[d.id] + "\"]")
@@ -730,17 +798,17 @@ function world_map(){
             .attr("d", path);
       }
 
-      //Adding legend for our Choropleth on WorldMap 
-      var legend_labels = ["0", "1", "2   -  4", "5   -  9", "10 - 24", "25 - 69", "70 - 99", "100+"]
-      var legend = svg.selectAll("g.legend")
+      //Adding world_legend for our Choropleth on WorldMap 
+      var world_legend_labels = ["0", "1", "2   -  4", "5   -  9", "10 - 24", "25 - 69", "70 - 99", "100+"]
+      var world_legend = svg.selectAll("g.world_legend")
                       .data(world_colors.domain())
                     .enter().append("g")
-                      .attr("class", "legend");
+                      .attr("class", "world_legend");
 
       var ls_w = 12,
           ls_h = 12;
 
-      legend.append("rect")
+      world_legend.append("rect")
         .attr("class", "map_colors")
         .attr("x", 20)
         .attr("y", function (d, i) {
@@ -768,7 +836,11 @@ function world_map(){
               .style("opacity", 1)
               .style("stroke-width", 1.5);
 
-            d3.selectAll("g.legend_color").selectAll("*")
+            //forget other legends
+            d3.selectAll("g.world_legend_color").selectAll("*")
+              .style("opacity", 0);
+
+            d3.selectAll("g.scatter_legend_color").selectAll("*")
               .style("opacity", 0);
 
             //Chord Chart
@@ -777,14 +849,14 @@ function world_map(){
         })
         .on("mouseout", cleanMouseEvent);
 
-      legend.append("text")
+      world_legend.append("text")
         .attr("class", "map_colors")
         .attr("x", 35)
         .attr("y", function (d, i) {
           return height/1.7 - (i * ls_h) - ls_h - 4;
         })
         .text(function (d, i) {
-          return legend_labels[i];
+          return world_legend_labels[i];
         })
         .style("pointer-events", "none")
         .style("font-size","10px")
@@ -793,20 +865,20 @@ function world_map(){
         .style("fill", "rgb(247,251,255)");
 
 
-      //svg.selectAll("g.legend").style("display", "none")
+      //svg.selectAll("g.world_legend").style("display", "none")
 
 
-      //Adding legend for our highlighted colors 
-      var highlights_legend_labels = ["Born and Won for", "Won for", "Born in"];
+      //Adding world_legend for our highlighted colors 
+      var highlights_world_legend_labels = ["Born and Won for", "Won for", "Born in"];
       var colorScale = d3.scaleOrdinal()
-                          .domain(highlights_legend_labels)
+                          .domain(highlights_world_legend_labels)
                           .range([birthAndAffiliationWinningColor, affiliationWinningColor, birthWinningColor]);
-      var highlights_legend = svg.selectAll("g.legend_color")
+      var highlights_world_legend = svg.selectAll("g.world_legend_color")
                                   .data(colorScale.domain())
                                 .enter().append("g")
-                                  .attr("class", "legend_color");
+                                  .attr("class", "world_legend_color");
 
-      highlights_legend.append("rect")
+      highlights_world_legend.append("rect")
         .attr("class", "map_highlight_colors")
         .attr("x", 20)
         .attr("y", function (d, i) {
@@ -820,14 +892,14 @@ function world_map(){
         .style("stroke", "white")
         .style('stroke-width', 0.3);
 
-      highlights_legend.append("text")
+      highlights_world_legend.append("text")
         .attr("class", "map_highlight_colors")
         .attr("x", 35)
         .attr("y", function (d, i) {
           return height / 2.3 - (i * ls_h) - ls_h - 2;
         })
         .text(function (d, i) {
-          return highlights_legend_labels[i];
+          return highlights_world_legend_labels[i];
         })
         .style("pointer-events", "none")
         .style("font-size", "12px")
@@ -836,7 +908,7 @@ function world_map(){
         .style("fill", "rgb(247,251,255)");
 
 
-      svg.selectAll("g.legend_color").selectAll("*").style("opacity", 0);
+      svg.selectAll("g.world_legend_color").selectAll("*").style("opacity", 0);
 }
 
 //==================== Sankey Diagram   ========================
@@ -937,6 +1009,11 @@ function gen_sankey(){
                                             .duration(700)
                                             .style('r',r*2);
 
+                                          d3.selectAll("g.scatter_legend_color").selectAll("*")
+                                            .transition()
+                                            .duration(700)
+                                            .style("opacity", 0);
+
                                           //Map
                                           d3.selectAll("path[country=\'" + d.target.country + "\']")
                                             .transition()
@@ -945,7 +1022,7 @@ function gen_sankey(){
                                             .style("stroke", "white")
                                             .style("stroke-width", 1.5);
 
-                                          d3.selectAll("g.legend_color").selectAll("*")
+                                          d3.selectAll("g.world_legend_color").selectAll("*")
                                             .transition()
                                             .duration(700)
                                             .style("opacity", 0);
@@ -1004,7 +1081,7 @@ function gen_sankey(){
                           .style("opacity", 1)
                           .style("stroke-opacity", 0.7);
 
-                        d3.selectAll("g.legend_color").selectAll("*")
+                        d3.selectAll("g.world_legend_color").selectAll("*")
                           .transition()
                           .duration(700)
                           .style("opacity", 0);
@@ -1020,6 +1097,11 @@ function gen_sankey(){
                           .duration(700)
                           .style("opacity", 1);
 
+                        d3.selectAll("g.scatter_legend_color").selectAll("*")
+                          .transition()
+                          .duration(700)
+                          .style("opacity", 0);
+
                         //Map
                         d3.selectAll("path[country=\'" + d.country + "\']")
                           .transition()
@@ -1028,7 +1110,7 @@ function gen_sankey(){
                           .style("stroke", "white")
                           .style("stroke-width", 1.5);
 
-                        d3.selectAll("g.legend_color").selectAll("*")
+                        d3.selectAll("g.world_legend_color").selectAll("*")
                           .style("opacity", 0);
 
                         //Chord Chart
@@ -1223,7 +1305,10 @@ var color = d3v3.scale.category20c();
     d3.selectAll("#bar_and_cleveland, #worldmap, #sankey_diagram").selectAll("circle,rect,path")
       .style("opacity",0.2);
 
-    d3.selectAll("g.legend_color").selectAll("*")
+    d3.selectAll("g.world_legend_color").selectAll("*")
+      .style("opacity", 0);
+
+    d3.selectAll("g.scatter_legend_color").selectAll("*")
       .style("opacity", 0);
 
     d3v3.select(this)

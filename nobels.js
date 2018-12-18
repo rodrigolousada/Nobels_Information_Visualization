@@ -21,15 +21,15 @@ var nameById = {};
 
 var world_colors = d3.scaleThreshold()
                       .domain([0,0.5,1,2,5,10,25,70,100,400])
-                      .range(["rgb(247,251,255)", "rgb(222,235,247)", "rgb(198,219,239)", "rgb(158,202,225)", "rgb(107,174,214)", "rgb(66,146,198)","rgb(33,113,181)","rgb(8,81,156)","rgb(8,48,107)","rgb(3,19,43)"]);
+                      .range(["rgb(247,251,255)", "rgb(222,235,247)", "rgb(198,219,239)", "rgb(158,202,225)", "rgb(107,174,214)", "rgb(66,146,198)","rgb(33,113,181)","rgb(8,81,156)","rgb(8,48,107)","rgb(18, 36, 62)"]);
 var sankey_colors;
 
 function prize_color(chart) {
   switch(chart.toLowerCase()) {
     case "chemistry":
-      return "purple";
+      return "#b8f878";
     case "physics":
-      return "#1f77b4";
+      return "#8ad0f8";
     case "economics":
       return "gold";
     case "medicine":
@@ -168,7 +168,8 @@ function gen_scatterplot(dataset, chart) {
                   .append("svg")
                   .attr("width",w)
                   .attr("height",h)
-  		            .style("fill", "blue");
+  		            .style("fill", "#6d88f3")
+                  ;
 
 
     var padding = 30;
@@ -185,7 +186,8 @@ function gen_scatterplot(dataset, chart) {
 
     var yaxis = d3.axisLeft()
                   .scale(yscale)
-                  .ticks(8);
+                  .ticks(8)
+                  ;
 
     var xaxis = d3.axisBottom()
 	                .scale(xscale)
@@ -194,7 +196,7 @@ function gen_scatterplot(dataset, chart) {
     var cscale = d3.scaleLinear()
                    .domain([d3.min(dataset, function(d) { return d.year;}),
                             d3.max(dataset, function(d) { return d.year;})])
-                   .range(["red", "blue"]);
+                   .range(["#dd5ef5", "#6d88f3"]);
 
 
     gY = svg.append("g")
@@ -234,7 +236,7 @@ function gen_scatterplot(dataset, chart) {
         .call(yaxis);
 
     svg.call(scatter_tip);
-    
+
 
     //Zoom and Brush
     var brush = d3.brush()
@@ -254,7 +256,8 @@ function gen_scatterplot(dataset, chart) {
     svg_brush = svg_brush.append("g")
                         .attr("transform", "translate(" + (-padding) + "," + (-padding) + ")")
                         .attr("class", "brush")
-                        .call(brush);
+                        .call(brush)
+                        ;
 
     // Average Line creation
     d3.json("data/statistics.json", function(data) {
@@ -275,8 +278,8 @@ function gen_scatterplot(dataset, chart) {
                         .duration(3000)
                         .attr('x2', w+padding);
     });
-    
-    
+
+
     //Circles Creation
     var circles = svg_brush.selectAll("circle")
                       .data(dataset)
@@ -296,6 +299,7 @@ function gen_scatterplot(dataset, chart) {
                       .attr("countryBorn", function(d){ return d.countryBorn })
                       .attr("affiliation", function(d){ return d.affiliation })
                       .attr("category", function(d){ return d.category })
+                      .attr("gender", function(d){ return d.Gender })
                       .on("mouseenter", function(d){
                                             cleanMouseEvent();
                                             //Opacity 0.5
@@ -319,25 +323,26 @@ function gen_scatterplot(dataset, chart) {
                                               .transition()
                                               .duration(700)
                                               .style("opacity",1)
-                                              .style("fill","green");
+                                              // .style("fill","green")
+                                              ;
 
                                             //Map
                                             d3.selectAll("path[country = \'" + d.countryBorn + "\']")
                                               .transition()
                                               .duration(700)
                                               .style("opacity", 1)
-                                              .style("fill","blue");
+                                              .style("fill","#6d88f3");
                                             d3.selectAll("path[country = \'" + d.countryAffiliation + "\']")
                                               .transition()
                                               .duration(700)
                                               .style("opacity", 1)
-                                              .style("fill","red");
+                                              .style("fill","#dd5ef5");
 
                                             //Sankey
                                             d3.select("rect[affiliationName=\'" + d.affiliation + "\']")
                                               .transition()
                                               .duration(700)
-                                              .style("fill","green")
+                                              // .style("fill","green")
                                               .style("opacity", 1);
 
                                             d3.select("#sankey_diagram").selectAll("path[affiliationName=\'" + d.affiliation + "\']")
@@ -371,7 +376,7 @@ function gen_scatterplot(dataset, chart) {
       //     return is_brushed;
       //   });
       // }
-        
+
       function brushended() {
         var s = d3.event.selection;
         if (!s) {
@@ -418,11 +423,13 @@ function gen_bar_chart(dataset, chart){
     dataset = dataset.filter(function(d){ return d.category.toLowerCase()==chart;});
 
     var h = 150;
-    var w = 200;
+    var w = 170;
 
     var svg = d3.select("#" + chart)
                 .append("bar_chart")
                 .append("svg")
+                .style("margin-left", "-30px")
+
                 .attr("width",w)
                 .attr("height",h);
 
@@ -473,7 +480,8 @@ function gen_bar_chart(dataset, chart){
                                   .transition()
                                   .duration(700)
                                   .style("opacity", 1)
-                                  .style("fill", "green");
+                                  // .style("fill", "green")
+                                  ;
 
                                 //Cleveland Plot
                                 d3.select("#" + chart).selectAll("circle[prizeShare=\'" + d.prizeShare + "\']")
@@ -505,11 +513,11 @@ function gen_bar_chart(dataset, chart){
       return i * (90 / dataset.length) + 46;  // +5
     })
     .attr("x", function (d) {
-      return h -  + 0;              // +15
+      return h -  + 27;              // +15
     })
     .attr("font-family", "sans-serif")
     .attr("font-size", "11px")
-    .attr("fill", "white")
+    .attr("fill", "#3b3a3c")
     .style("pointer-events", "none");
 
 
@@ -621,13 +629,13 @@ function world_map(){
                                       .style('r',r * 2)
                                       .duration(700)
                                       .style("opacity", 1)
-                                      .style("fill", "red");
+                                      .style("fill", "#dd5ef5");
                                     d3.selectAll("circle[countryBorn=\"" + nameById[d.id] + "\"]")
                                       .transition()
                                       .style('r',r * 2)
                                       .duration(700)
                                       .style("opacity", 1)
-                                      .style("fill", "blue");
+                                      .style("fill", "#6d88f3");
 
                                     //Sankey
                                     d3.selectAll("rect[affiliationCountry=\"" + nameById[d.id] + "\"]")
@@ -665,7 +673,7 @@ function gen_sankey(){
     // format variables
     var formatNumber = d3.format(",.0f"),    // zero decimal places
         format = function(d) { return formatNumber(d) + " " + units; },
-        color = d3.scaleOrdinal(d3.schemeCategory10); //schemeCategory20 /20c
+        color = d3.scaleOrdinal(d3.schemeSet2 ); //schemeCategory20 /20c
 
     sankey_colors=color;
     // append the svg object to the body of the page
@@ -887,7 +895,9 @@ function chord_chart(){
   var div = d3v3.select("#chord")
     .style("width", 600 + "px")
     .style("height", 400 + "px")
-    .style("margin-top", "-200px")
+    .style("margin-top", "-250px")
+    .style("margin-left", "-70px")
+
     // .style("position", "absolute")
     ;
 
@@ -928,7 +938,7 @@ function chord_chart(){
   .outerRadius(ry - 157)
   .startAngle(function(d) { return (findStartAngle(d.__data__.children)-2) * pi / 180;})
   .endAngle(function(d) { return (findEndAngle(d.__data__.children)+2) * pi / 180});
-var color = d3v3.scale.category20();
+var color = d3v3.scale.category20c();
 
   svg.selectAll("g.arc")
       .data(groupData[0])
@@ -1001,11 +1011,15 @@ var color = d3v3.scale.category20();
   }
 
   function mouseover(d) {
+
+    d3.selectAll("circle[name=\"" + d.key.replace(/_/g, ' ') + "\"]")
+      .dispatch("mouseenter");
+
     d3.selectAll("#bar_and_cleveland, #worldmap, #sankey_diagram").selectAll("circle,rect,path")
       .style("opacity",0.5);
     d3v3.select(this)
         .style("opacity",1)
-        .style("fill","#111111")
+        .style("fill","#ffffff")
         ;
 
     d3v3.selectAll("path.link.target-" + d.key)
@@ -1018,8 +1032,6 @@ var color = d3v3.scale.category20();
 
 
 
-    d3.selectAll("circle[name=\"" + d.key.replace(/_/g, ' ') + "\"]")
-      .dispatch("mouseenter");
 
   }
   function mouseout(d) {
@@ -1065,5 +1077,61 @@ var color = d3v3.scale.category20();
            max = d.x;
     });
     return max;
+  }
+}
+//=================== Aux Func   ======================
+function womanClicked(){
+  var checkBox = document.getElementById("woman");
+  if (checkBox.checked == true){
+
+    d3.select("#chemistry").selectAll("circle[gender=\"" + "Female" + "\"]")
+      .transition()
+      .duration(700)
+      .style("opacity", 1)
+      ;
+    d3.select("#physics").selectAll("circle[gender=\"" + "Female" + "\"]")
+      .transition()
+      .duration(700)
+      .style("opacity", 1)
+      ;
+  } else {
+    d3.select("#chemistry").selectAll("circle[gender=\"" + "Female" + "\"]")
+      .transition()
+      .duration(700)
+      .style("opacity", 0.1)
+      ;
+    d3.select("#physics").selectAll("circle[gender=\"" + "Female" + "\"]")
+      .transition()
+      .duration(700)
+      .style("opacity", 0.1)
+      ;
+  }
+}
+function manClicked(){
+  var checkBox = document.getElementById("men");
+  if (checkBox.checked == true){
+
+
+    d3.select("#chemistry").selectAll("circle[gender=\"" + "Male" + "\"]")
+      .transition()
+      .duration(700)
+      .style("opacity", 1)
+      ;
+    d3.select("#physics").selectAll("circle[gender=\"" + "Male" + "\"]")
+      .transition()
+      .duration(700)
+      .style("opacity", 1)
+      ;
+  } else {
+    d3.select("#chemistry").selectAll("circle[gender=\"" + "Male" + "\"]")
+      .transition()
+      .duration(700)
+      .style("opacity", 0.1)
+      ;
+    d3.select("#physics").selectAll("circle[gender=\"" + "Male" + "\"]")
+      .transition()
+      .duration(700)
+      .style("opacity", 0.1)
+      ;
   }
 }

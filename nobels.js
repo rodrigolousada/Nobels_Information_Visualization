@@ -118,6 +118,9 @@ function cleanMouseEvent(){
      //Chord Chart
      d3.select("#chord").selectAll("circle,rect,path,text")
        .style("opacity", 1);
+
+    d3.selectAll("g.chord_legend_color").selectAll("*")
+      .style("opacity", 0);
 }
 
 // var dispatch = d3.dispatch("mouseout");
@@ -379,6 +382,11 @@ function gen_scatterplot(dataset, chart) {
                                               .duration(700)
                                               .style("opacity",0.2);
 
+                                            d3.selectAll("g.chord_legend_color").selectAll("*")
+                                              .transition()
+                                              .duration(700)
+                                              .style("opacity", 0);
+
                                             // d3.selectAll("#node-" + d.name.replace(/ /g, "_"))
                                             //   .dispatch("mouseover");
                                       })
@@ -576,6 +584,11 @@ function gen_bar_chart(dataset, chart){
                                   .transition()
                                   .duration(700)
                                   .style("opacity",0.2);
+
+                                d3.selectAll("g.chord_legend_color").selectAll("*")
+                                  .transition()
+                                  .duration(700)
+                                  .style("opacity", 0);
                           })
         .on('mouseout', cleanMouseEvent)
         .transition()
@@ -768,6 +781,9 @@ function world_map(){
                                     //Chord Chart
                                     d3.select("#chord").selectAll("text")
                                       .style("opacity",0.2);
+
+                                    d3.selectAll("g.chord_legend_color").selectAll("*")
+                                      .style("opacity", 0);
                                 })
                 .on('mouseout', cleanMouseEvent);
 
@@ -826,6 +842,9 @@ function world_map(){
             //Chord Chart
             d3.select("#chord").selectAll("text")
               .style("opacity", 0.2);
+
+            d3.selectAll("g.chord_legend_color").selectAll("*")
+              .style("opacity", 0);
         })
         .on("mouseout", cleanMouseEvent);
 
@@ -1012,6 +1031,11 @@ function gen_sankey(){
                                             .transition()
                                             .duration(700)
                                             .style("opacity",0.2);
+
+                                          d3.selectAll("g.chord_legend_color").selectAll("*")
+                                            .transition()
+                                            .duration(700)
+                                            .style("opacity", 0);
                                        })
                       .on("mouseout", cleanMouseEvent);
 
@@ -1098,6 +1122,11 @@ function gen_sankey(){
                           .transition()
                           .duration(700)
                           .style("opacity",0.2);
+
+                        d3.selectAll("g.chord_legend_color").selectAll("*")
+                          .transition()
+                          .duration(700)
+                          .style("opacity", 0);
                       })
                       .on("mouseout", cleanMouseEvent);
 
@@ -1292,6 +1321,11 @@ function chord_chart(){
           .transition()
           .duration(750)
           .style("opacity", 0.2);
+
+      d3.selectAll("g.chord_legend_color").selectAll("*")
+        .transition()
+        .duration(750)
+        .style("opacity", 1);
         
         //Clear legends
         d3.selectAll("g.world_legend_color").selectAll("*")
@@ -1380,6 +1414,53 @@ function chord_chart(){
       });
       return max;
     }
+
+
+    //Adding chord_legend for our highlighted colors 
+    var highlights_chord_legend_labels = ["Students", "Advisors"];
+    var colorScale = d3.scaleOrdinal()
+                        .domain(highlights_chord_legend_labels)
+                        .range(["#d62728", "#2ca02c"]);
+    var highlights_chord_legend = svg.selectAll("g.chord_legend_color")
+                                      .data(colorScale.domain())
+                                      .enter().append("g")
+                                      .attr("class", "chord_legend_color");
+
+    var ls_w = 12,
+        ls_h = 12;
+    
+    highlights_chord_legend.append("line")
+                            .attr("class", "chord_highlight_colors")
+                            .attr("x1", 230)
+                            .attr("x2", 230 + 20)
+                            .attr("y1", function (d, i) {
+                              return 500 / 2.34 - (i * ls_h) - 2 * ls_h;
+                            })
+                            .attr("y2", function (d, i) {
+                              return 500 / 2.34 - (i * ls_h) - 2 * ls_h;
+                            })
+                            .attr("color", function (d, i) { return colorScale(i); })
+                            .style("stroke", function (d, i) { return colorScale(i); })
+                            .style("opacity", 1)
+                            .style('stroke-width', 3);
+
+    highlights_chord_legend.append("text")
+                            .attr("class", "chord_highlight_colors")
+                            .attr("x", 180)
+                            .attr("y", function (d, i) {
+                              return 500 / 2.4 - (i * ls_h) - ls_h - 2;
+                            })
+                            .text(function (d, i) {
+                              return highlights_chord_legend_labels[i];
+                            })
+                            .style("pointer-events", "none")
+                            .style("font-size", "12px")
+                            .style("font-family", "calibri, sans serif")
+                            .style("white-space", "pre")
+                            .style("fill", "rgb(247,251,255)");
+
+    svg.selectAll("g.chord_legend_color").selectAll("*").style("opacity", 0);
+
 }
 
 

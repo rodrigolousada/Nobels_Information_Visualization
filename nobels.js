@@ -20,8 +20,8 @@ var nameById = {};
 
 
 var world_colors = d3.scaleThreshold()
-                      .domain([0,0.5,1,2,5,10,25,70,100,400])
-                      .range(["rgb(247,251,255)", "rgb(222,235,247)", "rgb(198,219,239)", "rgb(158,202,225)", "rgb(107,174,214)", "rgb(66,146,198)","rgb(33,113,181)","rgb(8,81,156)","rgb(8,48,107)","rgb(18, 36, 62)"]);
+                      .domain([0,1,2,5,10,25,70,100,400])
+                      .range(["rgb(247,251,255)", "rgb(198,219,239)", "rgb(158,202,225)", "rgb(107,174,214)", "rgb(66,146,198)","rgb(33,113,181)","rgb(8,81,156)","rgb(8,48,107)","rgb(18, 36, 62)"]);
 var sankey_colors;
 
 function prize_color(chart) {
@@ -85,33 +85,35 @@ function cleanMouseEvent(){
        })
        .style("opacity", 0.8);
 
-    //Sankey
-    d3.select("#sankey_diagram").selectAll("rect")
-      // .interrupt()
-      // .transition()
-      .style("fill", function(d1) {
-        sankey_tip.hide(d1);
-        if(d1.node>1) {
-          return choose_sankey_color(d1.name);
-        }
-        else{
-          return prize_color(d1.name);
-        }
-      })
-      .style("opacity", 1);
+     d3.select("#worldmap").selectAll("rect")
+       .style("opacity", 0.8)
+       .style("stroke-width", 0.3);
+   
+     //Sankey
+     d3.select("#sankey_diagram").selectAll("rect")
+       // .interrupt()
+       // .transition()
+       .style("fill", function(d1) {
+          sankey_tip.hide(d1);
+          if(d1.node>1) {
+            return choose_sankey_color(d1.name);
+          }
+          else{
+            return prize_color(d1.name);
+          }
+       })
+       .style("opacity", 1);
 
-    d3.select("#sankey_diagram").selectAll("path.link")
-      // .interrupt()
-      // .transition()
-      .style("opacity", 0.8)
-      .style("stroke-opacity", 0.2)
-      .style("stroke", function (d1) { return choose_sankey_color(d1.target.name) })
-                      ;
+     d3.select("#sankey_diagram").selectAll("path.link")
+       // .interrupt()
+       // .transition()
+       .style("opacity", 0.8)
+       .style("stroke-opacity", 0.2)
+       .style("stroke", function (d1) { return choose_sankey_color(d1.target.name) });
 
-
-    //Chord Chart
-    d3.select("#chord").selectAll("circle,rect,path,text")
-      .style("opacity", 1);
+     //Chord Chart
+     d3.select("#chord").selectAll("circle,rect,path,text")
+       .style("opacity", 1);
 }
 
 // var dispatch = d3.dispatch("mouseout");
@@ -310,7 +312,7 @@ function gen_scatterplot(dataset, chart) {
                                               .style("opacity",0.2);
 
                                             //Change this
-                                          scatter_tip.show(d);
+                                            scatter_tip.show(d);
                                             d3.select(this)
                                               .transition()
                                               .duration(700)
@@ -554,7 +556,7 @@ function world_map(){
                 .html(function(d) {
                           return "<strong>Country: </strong><span class='details'>" + d.properties.name + "<br></span>" + "<strong>Nº Winners: </strong><span class='details'>" + format(d.population) +"</span>";
                       })
-
+    
     var margin = {top: 0, right: 0, bottom: 0, left: 0},
         width = 1200 - margin.left - margin.right,
         height = 690 - margin.top - margin.bottom,
@@ -579,7 +581,13 @@ function world_map(){
                 .attr("height", 400)
                 .attr("preserveAspectRatio", "xMinYMin meet")
                 .attr("viewBox", "0 0 700 400")
-                .classed("svg-content-responsive", true);
+                .classed("svg-content-responsive", true)
+                .on("mouseover", function(d) {
+                      //TODO
+                })
+                .on("mouseout", function(d){
+                      //TODO
+                });
 
     var g = svg.append('g')
                 .attr('class', 'map');
@@ -623,18 +631,16 @@ function world_map(){
               .enter().append("path")
                 .attr("d", path)
                 .attr("country", function(d) { return nameById[d.id]; })
+                .attr("color", function (d) { return world_colors(populationById[d.id]); })
                 .style("fill", function(d) { return world_colors(populationById[d.id]); })
-                .style('stroke', 'white')
-                .style('stroke-width', 1.5)
                 .style("opacity",0.8)
-                // tooltips
                 .style("stroke","white")
                 .style('stroke-width', 0.3)
                 .on('mouseenter', function (d) {
                                     cleanMouseEvent();
-                                    //Opacity 0.5
+                                    //Opacity 0.2
                                     d3.selectAll("circle,rect,path")
-                                      .style("opacity",0.2);
+                                      .style("opacity", 0.2);
 
                                     //Change this
                                     worldmap_tip.show(d);
@@ -642,6 +648,10 @@ function world_map(){
                                       .style("opacity", 1)
                                       .style("stroke","white")
                                       .style("stroke-width",1.5);
+                                  
+                                    d3.select("#worldmap").selectAll("rect[color=\'" + world_colors(populationById[d.id]) + "\']")
+                                      .style("opacity", 1)
+                                      .style("stroke-width", 1.5);
 
                                     //Cleveland Plot
                                     d3.selectAll("circle[countryAffiliation=\"" + nameById[d.id] + "\"]")
@@ -681,6 +691,63 @@ function world_map(){
             .attr("class", "names")
             .attr("d", path);
       }
+
+      //Adding legend for our Choropleth/WorldMap
+      var legend_labels = ["0", "1", "2   -  4", "5   -  9", "10 - 24", "25 - 69", "70 - 99", "100+"]
+      var ext_color_domain = [0, 1, 2, 5, 10, 25, 70, 100]
+      var legend = svg.selectAll("g.legend")
+                      .data(ext_color_domain)
+                    .enter().append("g")
+                      .attr("class", "legend");
+
+      var ls_w = 12,
+          ls_h = 12;
+
+      legend.append("rect")
+        .attr("x", 20)
+        .attr("y", function (d, i) {
+          return height/1.7 - (i * ls_h) - 2 * ls_h;
+        })
+        .attr("width", ls_w)
+        .attr("height", ls_h)
+        .attr("color", function (d, i) { return world_colors(d); })
+        .style("fill", function (d, i) { return world_colors(d); })
+        .style("opacity", 0.8)
+        .style("stroke", "white")
+        .style('stroke-width', 0.3)
+        .on("mouseenter", function(d){
+            cleanMouseEvent();
+            //Opacity 0.2
+            d3.selectAll("circle,rect,path")
+              .style("opacity", 0.2);
+
+            d3.select(this)
+              .style("opacity", 1)
+              .style("stroke", "white")
+              .style("stroke-width", 1.5);
+
+            d3.select("#worldmap").selectAll("path[color=\'" + world_colors(d) + "\']")
+              .style("opacity", 1)
+              .style("stroke-width", 1.5);
+
+            //Chord Chart
+            d3.select("#chord").selectAll("text")
+              .style("opacity", 0.2);
+        })
+        .on("mouseout", cleanMouseEvent);
+
+      legend.append("text")
+        .attr("x", 35)
+        .attr("y", function (d, i) {
+          return height/1.7 - (i * ls_h) - ls_h - 4;
+        })
+        .text(function (d, i) {
+          return legend_labels[i];
+        })
+        .style("font-size","10px")
+        .style("font-family", "calibri, sans serif")
+        .style("white-space", "pre")
+        .style("fill", "rgb(247,251,255)");
 }
 
 //==================== Sankey Diagram   ========================

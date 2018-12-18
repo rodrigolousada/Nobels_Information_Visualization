@@ -62,56 +62,60 @@
         <tr>
           <td>
               <h2 id="tension" style="font-size:20px;">Search filter:</h2>
-          </td>
-          <td>
-            <div class="select-style">
-              <select>
-                <option value="0">Everything</option>
-                <option value="1">Person</option>
-                <option value="2">Country</option>
-                <option value="3">Prize Share</option>
-                <option value="4">Affiliation</option>
-              </select>
-            </div>
+              <h2>
+                <div class="select-style">
+                  <select>
+                    <option value="0">Everything</option>
+                    <option value="1">Person</option>
+                    <option value="2">Country</option>
+                    <option value="3">Prize Share</option>
+                    <option value="4">Affiliation</option>
+                  </select>
+                </div>
+              </h2>
           </td>
         </tr>
         <tr>
           <td>
-            <h2 id="tension" style="font-size:20px;">Chord Chart Category:</h2>
-          </td>
-          <td>
-            <form action="">
-                <input type="radio" name="chordChart" onclick="document.getElementById('ChemistryChord').style.display='initial'; document.getElementById('PhysicsChord').style.display='none';" value="male"> Chemistry<br>
-                <input type="radio" name="chordChart" onclick="document.getElementById('ChemistryChord').style.display='none'; document.getElementById('PhysicsChord').style.display='initial';" value="male" checked="checked"> Physics<br>
-            </form>
+              <h2 id="tension" style="font-size:20px;">Chord Chart Category:</h2>
+              <h2>
+                <label class="container">Chemistry
+                  <input type="radio" name="radio" onclick="document.getElementById('ChemistryChord').style.display='initial'; document.getElementById('PhysicsChord').style.display='none';">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="container">Physics
+                  <input type="radio"  checked="checked" name="radio" onclick="document.getElementById('ChemistryChord').style.display='none'; document.getElementById('PhysicsChord').style.display='initial';">
+                  <span class="checkmark"></span>
+                </label>
+              </h2>
           </td>
         </tr>
         <tr>
           <td>
               <h2 id="tension" style="font-size:20px;">Chords Tension:</h2>
-          </td>
-          <td>
               <div class="slidecontainer">
-                <input style="position:relative;top:3px; left:-5px;" type="range" min="0" max="100" value="85" class="slider" id="myRange">
+                <input style="position:relative;top:3px; left:10px;" type="range" min="0" max="100" value="85" class="slider" id="myRange">
              </div>
           </td>
         </tr>
+        <tr><br></tr>
+        <tr>
+          <td>
+            <h2 id="tension" style="font-size:20px;">Statistics:</h2>
+            <h2>
+              <label class="container">Average Age
+                <input type="checkbox" id="averageAgeStatistic" checked="checked" name="radio" onclick="toggleAverageAge()">
+                <span class="checkmark"></span>
+              </label>
+            </h2>
+          </td>
+        </tr>
+        <tr><br></tr>
         <tr>
           <td>
               <h2 id="tension" style="font-size:20px;">Gender:</h2>
-          </td>
-          <td>
-              <!-- <div class="select-style">
-                <select id="ddlViewBy">
-                  <option value="0">Everything</option>
-                  <option value="1">Person</option>
-                  <option value="2">Country</option>
-                  <option value="3">Prize Share</option>
-                  <option value="4">Affiliation</option>
-                </select>
-              </div> -->
               <h2>
-                <label class="container">Woman
+                <label class="container">Women
                   <input type="checkbox" id="woman" checked="checked" name="radio" onclick="womanClicked()">
                   <span class="checkmark"></span>
                 </label>

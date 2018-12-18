@@ -1521,3 +1521,18 @@ function manClicked(){
       ;
   }
 }
+
+function toggleAverageAge() {
+  var checkBox = document.getElementById("averageAgeStatistic");
+  if (!checkBox.checked) {
+    d3.selectAll("#average_age")
+      .transition()
+      .duration(700)
+      .style("opacity", 0);
+  } else {
+    d3.selectAll("#average_age")
+      .transition()
+      .duration(700)
+      .style("opacity", 1);
+  }
+}

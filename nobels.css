@@ -226,11 +226,10 @@ line#average_age {
 /*==========================Search Bar==========================*/
 
 
-
 .tb
 {
     display: table;
-    width: 100%;
+    width:100%;
 }
 
 .td
@@ -250,14 +249,13 @@ input, button
 
 #cover
 {
-    position: absolute;
-    top: 50px;
-    left: 0;
+    position: relative;
     right: 0;
-    width: 200px;
+    top: 50px;
+    width: 300px;
     height: 10px;
     padding: 10px;
-    margin: -35px auto 0 auto;
+    margin: -35px 30px 0 auto;
     background-color: #454747;
     border-radius: 20px;
     box-shadow: 0 10px 20px #747677, 0 0 0 8px rgba(255, 255, 255, 0.5);

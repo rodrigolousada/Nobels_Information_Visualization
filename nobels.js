@@ -91,10 +91,8 @@ function cleanMouseEvent(){
        .style("opacity", 0.8)
        .style("stroke-width", 0.3);
 
-     d3.selectAll("g.legend")
-        .style("display","initial")
-     d3.selectAll("g.legend_color")
-        .style("display", "none")
+     d3.selectAll("g.legend_color").selectAll("*")
+        .style("opacity", 0);
 
      //Sankey
      d3.select("#sankey_diagram").selectAll("rect")
@@ -350,17 +348,7 @@ function gen_scatterplot(dataset, chart) {
                                                                       return affiliationWinningColor;
                                                               });
 
-                                            d3.selectAll("g.legend")
-                                              .transition()
-                                              .duration(10000)
-                                              .ease(d3.easeLinear)
-                                              .style("display", "none");
-                                            d3.selectAll("g.legend_color")
-                                              .transition()
-                                              .duration(10000)
-                                              .ease(d3.easeLinear)
-                                              .style("display", "initial");
-                                            d3.selectAll("g.legend_color").selectAll("rect")
+                                            d3.selectAll("g.legend_color").selectAll("*")
                                               .transition()
                                               .duration(700)
                                               .style("opacity", 1);
@@ -534,6 +522,12 @@ function gen_bar_chart(dataset, chart){
                                   .style('r',r * 2)
                                   .style("opacity", 1);
 
+                                //Map
+                                d3.selectAll("g.legend_color").selectAll("*")
+                                  .transition()
+                                  .duration(700)
+                                  .style("opacity", 0);
+                                
                                 //Chord Chart
                                 d3.select("#chord").selectAll("text")
                                   .transition()
@@ -688,6 +682,9 @@ function world_map(){
                                       .style("opacity", 1)
                                       .style("stroke-width", 1.5);
 
+                                    d3.selectAll("g.legend_color").selectAll("*")
+                                      .style("opacity", 0);
+
                                     //Cleveland Plot
                                     d3.selectAll("circle[countryAffiliation=\"" + nameById[d.id] + "\"]")
                                       .transition()
@@ -771,6 +768,9 @@ function world_map(){
               .style("opacity", 1)
               .style("stroke-width", 1.5);
 
+            d3.selectAll("g.legend_color").selectAll("*")
+              .style("opacity", 0);
+
             //Chord Chart
             d3.select("#chord").selectAll("text")
               .style("opacity", 0.2);
@@ -797,10 +797,10 @@ function world_map(){
 
 
       //Adding legend for our highlighted colors 
-      var highlights_legend_labels = ["Born in", "Won for", "Born and Won for"]
+      var highlights_legend_labels = ["Born and Won for", "Won for", "Born in"];
       var colorScale = d3.scaleOrdinal()
                           .domain(highlights_legend_labels)
-                          .range([birthWinningColor, affiliationWinningColor, birthAndAffiliationWinningColor]);
+                          .range([birthAndAffiliationWinningColor, affiliationWinningColor, birthWinningColor]);
       var highlights_legend = svg.selectAll("g.legend_color")
                                   .data(colorScale.domain())
                                 .enter().append("g")
@@ -810,7 +810,7 @@ function world_map(){
         .attr("class", "map_highlight_colors")
         .attr("x", 20)
         .attr("y", function (d, i) {
-          return height / 1.7 - (i * ls_h) - 2 * ls_h;
+          return height / 2.3 - (i * ls_h) - 2 * ls_h;
         })
         .attr("width", ls_w)
         .attr("height", ls_h)
@@ -824,19 +824,19 @@ function world_map(){
         .attr("class", "map_highlight_colors")
         .attr("x", 35)
         .attr("y", function (d, i) {
-          return height / 1.7 - (i * ls_h) - ls_h - 4;
+          return height / 2.3 - (i * ls_h) - ls_h - 2;
         })
         .text(function (d, i) {
           return highlights_legend_labels[i];
         })
         .style("pointer-events", "none")
-        .style("font-size", "10px")
+        .style("font-size", "12px")
         .style("font-family", "calibri, sans serif")
         .style("white-space", "pre")
         .style("fill", "rgb(247,251,255)");
 
 
-      svg.selectAll("g.legend_color").style("display", "none")
+      svg.selectAll("g.legend_color").selectAll("*").style("opacity", 0);
 }
 
 //==================== Sankey Diagram   ========================
@@ -945,6 +945,11 @@ function gen_sankey(){
                                             .style("stroke", "white")
                                             .style("stroke-width", 1.5);
 
+                                          d3.selectAll("g.legend_color").selectAll("*")
+                                            .transition()
+                                            .duration(700)
+                                            .style("opacity", 0);
+
                                           //Chord Chart
                                           d3.select("#chord").selectAll("text")
                                             .transition()
@@ -999,6 +1004,11 @@ function gen_sankey(){
                           .style("opacity", 1)
                           .style("stroke-opacity", 0.7);
 
+                        d3.selectAll("g.legend_color").selectAll("*")
+                          .transition()
+                          .duration(700)
+                          .style("opacity", 0);
+
                         //Cleveland Plot
                         d3.selectAll("circle[affiliation=\'" + d.name + "\']")
                           .transition()
@@ -1017,6 +1027,9 @@ function gen_sankey(){
                           .style("opacity", 1)
                           .style("stroke", "white")
                           .style("stroke-width", 1.5);
+
+                        d3.selectAll("g.legend_color").selectAll("*")
+                          .style("opacity", 0);
 
                         //Chord Chart
                         d3.select("#chord").selectAll("text")
@@ -1209,6 +1222,9 @@ var color = d3v3.scale.category20c();
 
     d3.selectAll("#bar_and_cleveland, #worldmap, #sankey_diagram").selectAll("circle,rect,path")
       .style("opacity",0.2);
+
+    d3.selectAll("g.legend_color").selectAll("*")
+      .style("opacity", 0);
 
     d3v3.select(this)
         .transition()

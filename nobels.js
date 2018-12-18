@@ -150,7 +150,9 @@ d3.json("data/cleveland.json").then(function(data) {
 
     world_map();
     gen_sankey();
-    chord_chart();
+    chord_chart("data/chordchartChemistryWithouAntiSocials_pt2.json", "Chemistry");
+    chord_chart("data/chordchartPhysicsWithouAntiSocials_pt2.json", "Physics");
+    d3.select("#ChemistryChord").attr("display","none");
 });
 
 
@@ -1158,7 +1160,7 @@ function gen_sankey(){
 }
 
 //=================== Chord Chart   ======================
-function chord_chart(){
+function chord_chart(jsonfile, category_name){
 
     console.log('v3.svg', d3v3.version)
 
@@ -1189,12 +1191,10 @@ function chord_chart(){
       .style("width", 600 + "px")
       .style("height", 400 + "px")
       .style("margin-top", "-250px")
-      .style("margin-left", "-70px")
-
-      // .style("position", "absolute")
-      ;
+      .style("margin-left", "-70px");
 
     var svg = div.append("svg:svg")
+      .attr("id", category_name + "Chord")
       .attr("width", w)
       .attr("height", w)
       // .style("top", "0px")
@@ -1206,7 +1206,7 @@ function chord_chart(){
       .attr("d", d3v3.svg.arc().outerRadius(ry - 180).innerRadius(0).startAngle(0).endAngle(2 * Math.PI))
       .on("mousedown", mousedown);
 
-    d3v3.json("data/chordchartPhysicsWithouAntiSocials_pt2.json", function(classes) {
+    d3v3.json(jsonfile, function(classes) {
           var nodes = cluster.nodes(packages.root(classes)),
               links = packages.imports(nodes),
               splines = bundle(links);

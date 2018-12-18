@@ -1292,17 +1292,31 @@ function chord_chart(){
     }
 
     function mouseover(d) {
+        cleanMouseEvent();
         //Call Cleveland Action
         // d3.selectAll("circle[name=\"" + d.key.replace(/_/g, ' ') + "\"]")
         //   .dispatch("mouseenter");
 
         //Get everything with opacity 1
         d3.selectAll("#bar_and_cleveland, #worldmap, #sankey_diagram").selectAll("circle,rect,path")
+          .transition()
+          .duration(750)
           .style("opacity",0.2);
 
+        d3.selectAll("#chord").selectAll("rect,path,text")
+          .transition()
+          .duration(750)
+          .style("opacity", 0.2);
+        
         //Clear legends
-        d3.selectAll("g.world_legend_color").selectAll("*").style("opacity", 0);
-        d3.selectAll("g.scatter_legend_color").selectAll("*").style("opacity", 0);
+        d3.selectAll("g.world_legend_color").selectAll("*")
+          .transition()
+          .duration(750)
+          .style("opacity", 0);
+        d3.selectAll("g.scatter_legend_color").selectAll("*")
+          .transition()
+          .duration(750)
+          .style("opacity", 0);
 
         //MouseOver this
         d3v3.select(this)
@@ -1348,11 +1362,16 @@ function chord_chart(){
 
     function updateNodes(name, value) {
       return function(d) {
-        console.log(this);
-        console.log(d);
+        // console.log(d3.select("#chord").selectAll("#link source-" + d.source.key + " target-" + d.target.key))
+        // console.log(this);
+        // console.log(d.source.key);
         if (value) this.parentNode.appendChild(this);
         d3.select("#chord").select("#node-" + d[name].key)
             .classed(name, value);
+         d3.select("#chord").select("#node-" + d[name].key).selectAll("text")
+            .transition()
+            .duration(700)
+            .style("opacity", 1);
       };
     }
 
